@@ -10,7 +10,7 @@ function normalizeBasePath(value) {
 // PUBLIC_SITE_URL is set to the independent production host during publishing.
 // The fallback is intentionally unrelated to the personal website.
 export const siteUrl = normalizeSiteUrl(
-  process.env.PUBLIC_SITE_URL ?? "https://research-notes-130u.invalid",
+  process.env.PUBLIC_SITE_URL ?? "https://research-notes-130u.jiligualapiqiu.chatgpt.site",
 );
 export const basePath = normalizeBasePath(process.env.PUBLIC_BASE_PATH ?? "");
 

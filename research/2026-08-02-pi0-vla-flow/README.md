@@ -6,8 +6,7 @@ This folder contains the canonical, section-aligned sources for the π₀ deep r
 - [English full text](README.en.md)
 - [Content and interface audit / 内容与界面审计](AUDIT.md)
 - [Structured source registry](SOURCES.yaml)
-- Generated bilingual reader: independent production URL is listed in the root
-  [README](../../../README.md).
+- [Generated bilingual reader](https://research-notes-130u.jiligualapiqiu.chatgpt.site/pi0/)
 
 The two language files use the same 57 ordered section anchors. Equations,
 evidence qualifiers, numerical claims, and source links are audited as a pair.
