@@ -9,7 +9,7 @@ source, and generated reading page.
 <!-- portfolio:index:start -->
 | ID | Date | Article / 文章 | Read |
 |---|---|---|---|
-| R-001 | 2026-08-02 | π₀：机器人怎样把“看懂任务”变成连续动作<br>π₀: How a Robot Turns Understanding into Continuous Action | [中文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English](research/2026-08-02-pi0-vla-flow/README.en.md) · [Web](https://www.theodoreoy.com/portfolio/pi0/) |
+| R-001 | 2026-08-02 | π₀：机器人怎样把“看懂任务”变成连续动作<br>π₀: How a Robot Turns Understanding into Continuous Action | [中文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English](research/2026-08-02-pi0-vla-flow/README.en.md) · [Web](https://research-notes-130u.invalid/pi0/) |
 <!-- portfolio:index:end -->
 
 ## Collections
@@ -49,9 +49,10 @@ against conflicts created in separate worktrees or on separately synced devices.
 The operational rules are documented in [Publishing Standard](PUBLISHING_STANDARD.md)
 and the framework decision in [ADR-001](ARCHITECTURE.md).
 
-GitHub Pages must use **Settings → Pages → Source: GitHub Actions** once for the
-repository. After that one-time repository setting, every successful push to
-`main` validates, builds, and deploys the site automatically.
+GitHub Actions validates every push to `main`, but this repository's GitHub
+Pages site must remain disabled. Production is published to an independent
+provider URL from the exact validated `main` commit, so it cannot inherit or
+redirect through the personal website's custom domain.
 
 ## Source-of-truth rule
 
@@ -61,8 +62,8 @@ article, substantive edits begin here so copies do not drift. Original media
 belongs under the article folder; published routes and section anchors are
 treated as stable public interfaces.
 
-`130U/130U.github.io` is not part of this build and is not modified by this
-repository.
+`130U/130U.github.io` and every `theodoreoy.com` route are outside this build's
+writable and deployment scope. This repository must not publish through either.
 
 ## Rights
 

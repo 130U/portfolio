@@ -19,18 +19,21 @@ Accepted
 `130U/portfolio` is a long-lived writing archive whose Markdown files are the
 canonical sources. It needs a maintainable article index, bilingual Chinese and
 English reading modes, aligned comparison, mathematical notation, and a small
-client-side footprint. Publication is through GitHub Pages from this repository;
-`130U/130U.github.io` remains outside the writable scope.
+client-side footprint. Publication uses an independent provider URL;
+`130U/130U.github.io` and `theodoreoy.com` remain outside both the writable and
+deployment scope.
 
 The architecture must preserve these constraints:
 
-- GitHub Pages serves the project below `/portfolio`, not the domain root;
+- the production site must not inherit, redirect through, or publish below
+  `theodoreoy.com`;
+- this repository's GitHub Pages site remains disabled;
 - each language remains an independently readable canonical Markdown file;
 - the current π₀ pair has 57 ordered bilingual anchors, which must remain a
   build-blocking invariant;
 - mathematics is rendered during the build, with no runtime MathJax CDN;
-- only `main` may deploy the production Pages site; pull requests may build and
-  validate but must not publish;
+- only an exact, validated `main` commit may be published; pull requests may
+  build and validate but must not publish;
 - framework and integration versions are exact-pinned with a committed lockfile.
 
 ## Decision
@@ -62,8 +65,9 @@ We will:
    metadata, but a repository check must separately enforce the 57 logical
    `data-pair-id` values, language-prefixed unique DOM IDs, and paired equation
    and source-link invariants.
-5. Configure `site` and `base: "/portfolio"`; generated links and assets must be
-   tested from the production build under that base path.
+5. Configure `site` from `PUBLIC_SITE_URL` and use the domain root as the default
+   base. Generated links, assets, canonicals, RSS, and sitemap entries must be
+   tested from the same production build.
 6. Render mathematics at build time through Astro's maintained Unified adapter,
    `remark-math`, and `rehype-katex`:
 
@@ -87,9 +91,10 @@ We will:
    GitHub, `remark-math`, and KaTeX. The former `\(...\)` and `\[...\]`
    delimiters were mechanically normalized without changing equation bodies.
    Runtime CDN rendering is not an acceptable fallback.
-7. Use Astro's official GitHub Pages action. Validation may run on pull requests,
-   while the deploy job is triggered and authorized only from `main`. The
-   repository's one-time Pages source setting must be `GitHub Actions`.
+7. Keep GitHub Actions validation-only. The build also stages a minimal static
+   Worker artifact (`dist/client` plus `dist/server/index.js`) for an independent
+   host. Publishing is a separate, explicit operation tied to the exact pushed
+   `main` commit; no GitHub Pages deployment permission is granted to CI.
 
 ## Consequences
 
@@ -99,8 +104,8 @@ We will:
   and page assembly are replaced by maintained framework facilities.
 - Content Collections provide typed, build-time metadata validation and scale to
   future articles without introducing a database or CMS.
-- Static output works directly with GitHub Pages and sends no framework runtime
-  JavaScript by default; only explicit interactive islands ship client code.
+- Static output is provider-neutral and sends no framework runtime JavaScript by
+  default; only explicit progressive-enhancement scripts ship client code.
 - Both locale documents are present in the initial static HTML, improving
   accessibility and archival durability while a shareable query parameter
   selects Chinese, English, or aligned comparison mode.
@@ -119,8 +124,8 @@ We will:
   conversion to the Markdown math convention.
 - Astro does not prove semantic translation equivalence; bilingual consistency
   remains a repository-specific responsibility.
-- GitHub Pages project-base handling makes root-relative links unsafe unless they
-  deliberately include Astro's configured base.
+- Independent publishing adds a small packaging layer and a second source push;
+  the committed SHA and packaged build must always identify the same source.
 
 ### Neutral
 
@@ -152,7 +157,8 @@ the archive grows.
 - [Markdown in Astro](https://docs.astro.build/en/guides/markdown-content/)
 - [Astro internationalization routing](https://docs.astro.build/en/guides/internationalization/)
 - [Astro static and on-demand rendering](https://docs.astro.build/en/guides/on-demand-rendering/)
-- [Deploy Astro to GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
+- [Astro deployment guides](https://docs.astro.build/en/guides/deploy/)
+- [GitHub Pages custom-domain inheritance](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-a-custom-domain-across-multiple-repositories)
 - [Astro islands and default client-JavaScript behavior](https://docs.astro.build/en/concepts/islands/)
 - [Astro 7 release and Sätteri adoption](https://astro.build/blog/astro-7/)
 - [Astro 7.1 release](https://astro.build/blog/astro-710/)

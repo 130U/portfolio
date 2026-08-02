@@ -14,11 +14,10 @@ const number = String(data.seriesNo).padStart(2, "0");
 <article class="note-card">
   <a class="note-card-link" href={articleHref(data.slug)}>
     <div class="note-card-meta">
-      <span>{collectionCopy[data.collection].en} · {data.topics.slice(0, 2).join(" · ")}</span>
+      <span>No. {number} · {collectionCopy[data.collection].en} · {data.topics.slice(0, 2).join(" · ")}</span>
       <time datetime={data.publishedAt ?? undefined}>{formatDate(data.publishedAt)}</time>
     </div>
     <div class="note-card-body">
-      <div class="note-index" aria-hidden="true">{number}</div>
       <div class="note-card-copy">
         <div data-content-lang="zh" lang="zh-CN">
           <p class="note-kicker">{collectionCopy[data.collection].zh} · {data.readingMinutes} 分钟</p>
@@ -31,11 +30,6 @@ const number = String(data.seriesNo).padStart(2, "0");
           <p>{data.languages.en.summary}</p>
         </div>
       </div>
-    </div>
-    <div class="note-card-footer">
-      <span data-content-lang="zh" lang="zh-CN">阅读文章</span>
-      <span data-content-lang="en" lang="en">Read the note</span>
-      <span class="arrow" aria-hidden="true">↗</span>
     </div>
   </a>
 </article>

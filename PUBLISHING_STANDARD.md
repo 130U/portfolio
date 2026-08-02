@@ -411,7 +411,7 @@ research/
 6. 验证站内链接、canonical URL 和静态资源；
 7. 将完整站点输出到 `_site/`。
 
-首次发布前，仓库必须在 GitHub **Settings → Pages** 中把 Source 设为 **GitHub Actions**；此后只有 `main` 的成功工作流可以部署生产站点。
+本仓库的 GitHub Pages 必须保持关闭。GitHub Actions 只负责校验；生产发布必须使用与个人网站无关的独立托管地址，并且只能发布已经通过全部检查、与远端 `main` SHA 完全一致的构建产物。
 
 每篇公开页面应当生成：
 

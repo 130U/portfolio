@@ -1,10 +1,11 @@
 import { readFile, readdir } from "node:fs/promises";
 import { dirname, extname, join, relative, resolve, sep } from "node:path";
-import { publicUrl } from "../site.config.mjs";
+import { basePath, publicUrl } from "../site.config.mjs";
 import { loadPosts, repoRoot } from "./lib/content.mjs";
 
 const outputDir = join(repoRoot, "_site");
 const failures = [];
+const absoluteBase = `${basePath || ""}/`;
 
 async function filesUnder(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -60,8 +61,8 @@ for (const file of htmlFiles) {
     }
     const clean = decodeURIComponent(raw.split(/[?#]/)[0]);
     if (!clean) continue;
-    const target = clean.startsWith("/portfolio/")
-      ? join(outputDir, clean.slice("/portfolio/".length))
+    const target = clean.startsWith(absoluteBase)
+      ? join(outputDir, clean.slice(absoluteBase.length))
       : resolve(dirname(file), clean);
     if (!(await targetExists(target))) failures.push(`${file}: broken local reference ${raw}`);
   }

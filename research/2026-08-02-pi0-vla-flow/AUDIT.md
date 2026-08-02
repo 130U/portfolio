@@ -92,4 +92,6 @@ Local production build checks:
 
 - The reader's interpretive π₀-versus-WM/WAM analysis remains in the public note and is explicitly labeled as interpretation rather than paper evidence.
 - The default reading mode remains `中英对照`; Chinese-only and English-only states remain shareable through `?lang=zh` and `?lang=en`.
-- The GitHub Pages workflow validates pull requests and publishes only after a successful push to `main`.
+- GitHub Actions is validation-only. This repository's GitHub Pages site remains
+  disabled; production publishing uses an independent provider URL from the
+  exact validated `main` commit.

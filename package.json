@@ -13,7 +13,7 @@
     "check:index": "node scripts/generate-indexes.mjs --check",
     "check:types": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro check",
     "check": "npm run check:content && npm run check:index && npm run check:types",
-    "build": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/copy-public-sources.mjs && node scripts/check-built-site.mjs",
+    "build": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/copy-public-sources.mjs && node scripts/check-built-site.mjs && node scripts/prepare-sites-dist.mjs",
     "dev": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro dev",
     "preview": "cross-env ASTRO_TELEMETRY_DISABLED=1 astro preview"
   },
