@@ -1,0 +1,42 @@
+---
+import type { PostEntry } from "../lib/site";
+import { collectionCopy } from "../lib/site";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "./PostCard.astro";
+
+interface Props {
+  collection: "article" | "research" | "reflection";
+  posts: PostEntry[];
+}
+
+const { collection, posts } = Astro.props;
+const copy = collectionCopy[collection];
+const description = `${copy.en} / ${copy.zh} — Theodore Ouyang's bilingual writing archive.`;
+---
+
+<BaseLayout title={`${copy.en} — Theodore Ouyang`} description={description} canonicalPath={`${copy.path}/`}>
+  <main id="main-content">
+    <section class="collection-hero">
+      <p class="eyebrow">Collection · 内容集合</p>
+      <div class="parallel-copy">
+        <div data-content-lang="zh" lang="zh-CN">
+          <h1>{copy.zh}</h1>
+          <p>可审阅、可引用、可长期维护的写作档案。</p>
+        </div>
+        <div data-content-lang="en" lang="en">
+          <h1>{copy.en}</h1>
+          <p>Reviewable, citable writing designed to remain maintainable over time.</p>
+        </div>
+      </div>
+    </section>
+    <section class="notes-section" aria-label={`${copy.en} archive`}>
+      <div class="section-heading">
+        <h2>Archive · 归档</h2>
+        <p>{String(posts.length).padStart(2, "0")}</p>
+      </div>
+      <div class="card-stack">
+        {posts.length ? posts.map((post) => <PostCard post={post} />) : <p class="empty-state">No published notes yet · 暂无已发布内容</p>}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

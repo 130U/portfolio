@@ -1,0 +1,124 @@
+# Stable source registry for the π₀ bilingual reading note.
+# `primary: true` means an original paper, project page, or official repository.
+
+- id: pi0-paper
+  type: paper
+  title: "π₀: A Vision-Language-Action Flow Model for General Robot Control"
+  url: "https://arxiv.org/abs/2410.24164"
+  primary: true
+
+- id: pi0-paper-v4
+  type: paper
+  title: "π₀: A Vision-Language-Action Flow Model for General Robot Control"
+  version: "arXiv v4"
+  url: "https://arxiv.org/html/2410.24164v4"
+  primary: true
+
+- id: pi0-paper-v1
+  type: paper
+  title: "π₀: A Vision-Language-Action Flow Model for General Robot Control"
+  version: "arXiv v1"
+  url: "https://arxiv.org/html/2410.24164v1"
+  primary: true
+
+- id: pi0-project
+  type: project
+  title: "π₀ — Physical Intelligence"
+  url: "https://www.pi.website/blog/pi0"
+  primary: true
+
+- id: openpi
+  type: code
+  title: "Physical-Intelligence/openpi"
+  url: "https://github.com/Physical-Intelligence/openpi"
+  primary: true
+
+- id: huggingface-pi0
+  type: index
+  title: "Hugging Face Papers — 2410.24164"
+  url: "https://huggingface.co/papers/2410.24164"
+  primary: false
+
+- id: paligemma
+  type: paper
+  title: "PaliGemma: A versatile 3B VLM for transfer"
+  url: "https://arxiv.org/abs/2407.07726"
+  primary: true
+
+- id: flow-matching
+  type: paper
+  title: "Flow Matching for Generative Modeling"
+  url: "https://arxiv.org/abs/2210.02747"
+  primary: true
+
+- id: rectified-flow
+  type: paper
+  title: "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow"
+  url: "https://arxiv.org/abs/2209.14577"
+  primary: true
+
+- id: rt2
+  type: paper
+  title: "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control"
+  url: "https://arxiv.org/abs/2307.15818"
+  primary: true
+
+- id: diffusion-policy
+  type: paper
+  title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
+  url: "https://arxiv.org/abs/2303.04137"
+  primary: true
+
+- id: octo
+  type: paper
+  title: "Octo: An Open-Source Generalist Robot Policy"
+  url: "https://arxiv.org/abs/2405.12213"
+  primary: true
+
+- id: openvla
+  type: paper
+  title: "OpenVLA: An Open-Source Vision-Language-Action Model"
+  url: "https://arxiv.org/abs/2406.09246"
+  primary: true
+
+- id: pi0-5
+  type: paper
+  title: "π₀.₅: a Vision-Language-Action Model with Open-World Generalization"
+  url: "https://arxiv.org/abs/2504.16054"
+  primary: true
+
+- id: real-time-chunking
+  type: paper
+  title: "Real-Time Execution of Action Chunking Flow Policies"
+  url: "https://arxiv.org/abs/2506.07339"
+  primary: true
+
+- id: wam-survey
+  type: paper
+  title: "World Action Models: The Next Frontier in Embodied AI"
+  url: "https://arxiv.org/abs/2605.12090"
+  primary: true
+
+- id: video-prediction-policy
+  type: paper
+  title: "Video Prediction Policy: A Generalist Robot Policy with Predictive Visual Representations"
+  url: "https://arxiv.org/abs/2412.14803"
+  primary: true
+
+- id: dreamzero
+  type: paper
+  title: "World Action Models are Zero-shot Policies"
+  url: "https://arxiv.org/abs/2602.15922"
+  primary: true
+
+- id: fast-wam
+  type: paper
+  title: "Fast-WAM: Do World Action Models Need Test-time Future Imagination?"
+  url: "https://arxiv.org/abs/2603.16666"
+  primary: true
+
+- id: gigaworld-policy
+  type: paper
+  title: "GigaWorld-Policy: An Efficient Action-Centered World--Action Model"
+  url: "https://arxiv.org/abs/2603.17240"
+  primary: true

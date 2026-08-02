@@ -1,7 +1,11 @@
+---
+postId: research.001
+lang: zh-CN
+---
+
 # π₀：机器人怎样把“看懂任务”变成连续动作
 
 > 一份兼顾直觉、公式与路线思辨的双语读书笔记。
-> 状态：审阅稿
 > 配对版本：[English](./README.en.md)
 > 核心论文：[π₀: A Vision-Language-Action Flow Model for General Robot Control](https://arxiv.org/abs/2410.24164)
 > 核验口径：[arXiv v4，2026-01-08](https://arxiv.org/html/2410.24164v4)；历史措辞参考：[arXiv v1，2024-10-31](https://arxiv.org/html/2410.24164v1)
@@ -16,27 +20,27 @@
 
 ---
 
-<a id="quick-take"></a>
+<a id="zh-quick-take" data-pair-id="quick-take"></a>
 ## 一、先用一分钟抓住 π₀
 
-<a id="quick-take-what"></a>
+<a id="zh-quick-take-what" data-pair-id="quick-take-what"></a>
 ### 1. π₀ 是什么
 
 π₀（读作 pi-zero）是 Physical Intelligence 发布的第一代通用机器人策略。它不是“Physical Intelligence Zero”的正式全称，也不是一个显式预测未来视频的 World Model。它是一种 Vision-Language-Action policy：根据视觉、语言指令和机器人本体状态，直接生成连续动作。
 
 最简洁的架构表达是：
 
-\[
+$$
 \pi_0
 =
 \underbrace{\text{VLM 语义骨干}}_{\text{编码看到了什么、任务要求什么}}
 +
 \underbrace{\text{连续 Flow 动作专家}}_{\text{决定接下来怎样运动}}
-\]
+$$
 
 但 Flow Matching 只是动作生成机制，不是 π₀ 的全部。完整配方还包括：
 
-\[
+$$
 \boxed{
 \pi_0
 =
@@ -50,16 +54,16 @@
 +
 \text{滚动执行}
 }
-\]
+$$
 
 **论文事实：**
 
 - 视觉语言骨干采用约 30 亿参数的 PaliGemma；
 - action expert 约 3 亿参数，总参数量约 33 亿；
-- 模型一次生成 \(H=50\) 个连续物理动作；
-- 推理时对同一个动作块执行 \(K=10\) 次 Euler 更新。
+- 模型一次生成 $H=50$ 个连续物理动作；
+- 推理时对同一个动作块执行 $K=10$ 次 Euler 更新。
 
-<a id="quick-take-gap"></a>
+<a id="zh-quick-take-gap" data-pair-id="quick-take-gap"></a>
 ### 2. 它弥合了什么设计缺口
 
 π₀ 出现之前，两类模型各自解决了问题的一部分：
@@ -74,12 +78,12 @@
 
 ---
 
-<a id="execution-loop"></a>
+<a id="zh-execution-loop" data-pair-id="execution-loop"></a>
 ## 二、机器人实际执行时发生了什么
 
 假设指令是：“把桌上的盘子和杯子收进周转箱。”
 
-<a id="execution-loop-observe"></a>
+<a id="zh-execution-loop-observe" data-pair-id="execution-loop-observe"></a>
 ### 1. 观察现实
 
 机器人接收：
@@ -88,12 +92,12 @@
 - 自然语言指令；
 - 当前关节角、夹爪状态等本体状态。
 
-<a id="execution-loop-context"></a>
+<a id="zh-execution-loop-context" data-pair-id="execution-loop-context"></a>
 ### 2. 形成任务上下文
 
 PaliGemma 编码与任务有关的视觉语言信息：哪些物体是盘子、杯子和箱子，当前目标是什么，物体与指令有什么关系。这里不是“VLM 先说出一句话，再交给动作解码器”；action expert 通过 attention 读取内部隐藏表示。
 
-<a id="execution-loop-generate"></a>
+<a id="zh-execution-loop-generate" data-pair-id="execution-loop-generate"></a>
 ### 3. 从噪声生成动作
 
 action expert 从一块高斯噪声开始，经过 10 次 Flow 更新，得到一段包含 50 个连续动作的 action chunk。教学上可以把它描述为：
@@ -102,7 +106,7 @@ action expert 从一块高斯噪声开始，经过 10 次 Flow 更新，得到�
 
 真实输出是连续数值，而不是自然语言步骤。
 
-<a id="execution-loop-prefix"></a>
+<a id="zh-execution-loop-prefix" data-pair-id="execution-loop-prefix"></a>
 ### 4. 只执行动作块前缀
 
 π₀ 虽然预测 50 步，却不会盲目执行全部动作：
@@ -110,7 +114,7 @@ action expert 从一块高斯噪声开始，经过 10 次 Flow 更新，得到�
 - 20 Hz 平台执行前 16 步，约 0.8 秒后重新规划；
 - 50 Hz 平台执行前 25 步，约 0.5 秒后重新规划。
 
-<a id="execution-loop-reobserve"></a>
+<a id="zh-execution-loop-reobserve" data-pair-id="execution-loop-reobserve"></a>
 ### 5. 重新观察并滚动规划
 
 机器人重新拍摄真实场景。如果物体移动、夹持失败或姿态偏离，下一轮动作会根据新观察重新生成：
@@ -128,78 +132,78 @@ action expert 从一块高斯噪声开始，经过 10 次 Flow 更新，得到�
 
 ---
 
-<a id="inputs-outputs"></a>
+<a id="zh-inputs-outputs" data-pair-id="inputs-outputs"></a>
 ## 三、模型的输入和输出
 
-<a id="inputs-outputs-observation"></a>
+<a id="zh-inputs-outputs-observation" data-pair-id="inputs-outputs-observation"></a>
 ### 1. 当前观察
 
-物理时间 \(t\) 的观察可写为：
+物理时间 $t$ 的观察可写为：
 
-\[
+$$
 o_t=[I_t^1,\ldots,I_t^n,\ell_t,q_t]
-\]
+$$
 
 其中：
 
-- \(I_t^i\)：第 \(i\) 路相机图像；
-- \(\ell_t\)：语言指令；
-- \(q_t\)：机器人本体状态，例如关节角和夹爪状态。
+- $I_t^i$：第 $i$ 路相机图像；
+- $\ell_t$：语言指令；
+- $q_t$：机器人本体状态，例如关节角和夹爪状态。
 
-\(q_t\) 不是模型内部状态，也不是所谓“action 状态”，而是机器人当前真实的物理状态。
+$q_t$ 不是模型内部状态，也不是所谓“action 状态”，而是机器人当前真实的物理状态。
 
-<a id="inputs-outputs-vector"></a>
+<a id="zh-inputs-outputs-vector" data-pair-id="inputs-outputs-vector"></a>
 ### 2. 单步动作向量
 
-\[
+$$
 a_t\in\mathbb R^d
-\]
+$$
 
-\(a_t\) 表示一个物理时间步的连续控制向量；\(d\) 是单步动作维数，不同机器人可以不同。
+$a_t$ 表示一个物理时间步的连续控制向量；$d$ 是单步动作维数，不同机器人可以不同。
 
-<a id="inputs-outputs-chunk"></a>
+<a id="zh-inputs-outputs-chunk" data-pair-id="inputs-outputs-chunk"></a>
 ### 3. 动作块
 
-\[
+$$
 A_t=[a_t,a_{t+1},\ldots,a_{t+H-1}]
 \in\mathbb R^{H\times d}
-\]
+$$
 
-π₀ 使用 \(H=50\)。若展平：
+π₀ 使用 $H=50$。若展平：
 
-\[
+$$
 \operatorname{vec}(A_t)\in\mathbb R^D,
 \qquad D=Hd
-\]
+$$
 
 几个容易混淆的概念必须分开：
 
 | 概念 | 表示 | 含义 |
 |---|---|---|
-| action vector | \(a_t\) | 一个物理时间步的动作 |
-| action chunk | \(A_t\) | 连续 \(H\) 个物理动作 |
+| action vector | $a_t$ | 一个物理时间步的动作 |
+| action chunk | $A_t$ | 连续 $H$ 个物理动作 |
 | action slot | Transformer 序列位置 | 承载一个连续动作向量的内部槽位 |
 | discrete action token | 词表 ID | 某些 VLA 使用的离散动作表示 |
 
 π₀ 的 action slot 承载连续向量，不等于语言词表中的离散 token。
 
-<a id="inputs-outputs-distribution"></a>
+<a id="zh-inputs-outputs-distribution" data-pair-id="inputs-outputs-distribution"></a>
 ### 4. 模型真正学习的对象
 
-\[
+$$
 \boxed{
 p_{\mathrm{data}}(A_t\mid o_t)
 }
-\]
+$$
 
 通俗地说：给定当前画面、语言目标和机器人姿态，生成一段合理的未来动作。生成的是动作，不是未来图像或未来世界状态。
 
 ---
 
-<a id="architecture"></a>
+<a id="zh-architecture" data-pair-id="architecture"></a>
 ## 四、架构：VLM 与 action expert 怎样协作
 
-<a id="architecture-specialization"></a>
+<a id="zh-architecture-specialization" data-pair-id="architecture-specialization"></a>
 ### 1. 两套专长
 
 π₀ 可以理解为同一系统中的两套专长权重：
@@ -209,14 +213,14 @@ p_{\mathrm{data}}(A_t\mid o_t)
 
 一个粗略比喻是“领班 + 编舞师”：领班掌握现场与目标，编舞师把任务意图转成各关节的协调运动。这个比喻只描述分工；模型内部交换的是隐藏表示，并非可读语言。
 
-<a id="architecture-not-moe"></a>
+<a id="zh-architecture-not-moe" data-pair-id="architecture-not-moe"></a>
 ### 2. 它不是普通的稀疏 MoE
 
 图像和语言固定进入 VLM 权重，本体状态和动作固定进入 action-expert 权重，两者通过 self-attention 交换信息。系统没有学习一个路由器，临时决定每个 token 应该进入哪个专家。
 
 更准确地说，π₀ 使用固定的模态分工，让语义骨干与动作专家在同一 Transformer 式注意力系统中协作。
 
-<a id="architecture-continuous"></a>
+<a id="zh-architecture-continuous" data-pair-id="architecture-continuous"></a>
 ### 3. 为什么不把动作直接当作语言 token
 
 机器人动作天然是连续数值，并要求多个关节在时间上协调。把动作量化成离散词表并逐 token 输出，可能引入：
@@ -229,92 +233,92 @@ p_{\mathrm{data}}(A_t\mid o_t)
 
 ---
 
-<a id="flow-matching"></a>
+<a id="zh-flow-matching" data-pair-id="flow-matching"></a>
 ## 五、Conditional Flow Matching：从噪声学习到动作的流
 
-<a id="flow-matching-noise"></a>
+<a id="zh-flow-matching-noise" data-pair-id="flow-matching-noise"></a>
 ### 1. 为什么从噪声开始
 
 高斯噪声是容易采样的简单分布：
 
-\[
+$$
 \epsilon\sim\mathcal N(0,I)
-\]
+$$
 
-\(\epsilon\) 与动作块 \(A_t\) 形状相同。这里的噪声不是注入真实机器人的物理干扰，也不是普通正则化噪声；它是生成模型的起始分布。
+$\epsilon$ 与动作块 $A_t$ 形状相同。这里的噪声不是注入真实机器人的物理干扰，也不是普通正则化噪声；它是生成模型的起始分布。
 
 模型要学习的是：
 
-\[
+$$
 \text{简单高斯分布}
 \longrightarrow
 \text{给定观察条件后的动作分布}
-\]
+$$
 
-<a id="flow-matching-path"></a>
+<a id="zh-flow-matching-path" data-pair-id="flow-matching-path"></a>
 ### 2. 构造训练路径
 
 采样 Flow 时间：
 
-\[
+$$
 \tau\in[0,1]
-\]
+$$
 
 在噪声和真实示范动作之间做线性插值：
 
-\[
+$$
 \boxed{
 A_t^\tau=(1-\tau)\epsilon+\tau A_t
 }
-\]
+$$
 
 端点为：
 
-\[
+$$
 A_t^0=\epsilon,
 \qquad
 A_t^1=A_t
-\]
+$$
 
-\(\tau=0\) 是纯噪声，\(\tau=1\) 是真实动作块，中间状态是一块“半噪声、半动作”的候选动作。这条直线位于生成空间，不代表机械臂在物理空间中沿直线移动。
+$\tau=0$ 是纯噪声，$\tau=1$ 是真实动作块，中间状态是一块“半噪声、半动作”的候选动作。这条直线位于生成空间，不代表机械臂在物理空间中沿直线移动。
 
-<a id="flow-matching-target"></a>
+<a id="zh-flow-matching-target" data-pair-id="flow-matching-target"></a>
 ### 3. 得到配对训练目标
 
 将插值式写成：
 
-\[
+$$
 A_t^\tau=\epsilon+\tau(A_t-\epsilon)
-\]
+$$
 
-对 \(\tau\) 求导：
+对 $\tau$ 求导：
 
-\[
+$$
 \boxed{
 \frac{dA_t^\tau}{d\tau}=A_t-\epsilon
 }
-\]
+$$
 
-因此，对每一组采样的 \((\epsilon,A_t)\)，监督目标速度是：
+因此，对每一组采样的 $(\epsilon,A_t)$，监督目标速度是：
 
-\[
+$$
 u=A_t-\epsilon
-\]
+$$
 
 通俗地说，它告诉模型这块尚未完成的候选动作应该朝什么方向、以多大幅度修改。
 
-<a id="flow-matching-loss"></a>
+<a id="zh-flow-matching-loss" data-pair-id="flow-matching-loss"></a>
 ### 4. action expert 学习条件向量场
 
 模型预测：
 
-\[
+$$
 v_\theta(A_t^\tau,o_t,\tau)
-\]
+$$
 
 训练损失为：
 
-\[
+$$
 \boxed{
 \mathcal L(\theta)
 =
@@ -326,16 +330,16 @@ v_\theta(A_t^\tau,o_t,\tau)
 \right\|_2^2
 \right]
 }
-\]
+$$
 
-<a id="flow-matching-qualification"></a>
+<a id="zh-flow-matching-qualification" data-pair-id="flow-matching-qualification"></a>
 ### 5. 必须保留的专业限定
 
-训练时，每个噪声—示范动作配对都有目标 \(A_t-\epsilon\)；实际推理时，模型并不知道某个预先指定的真实动作 \(A_t\)。
+训练时，每个噪声—示范动作配对都有目标 $A_t-\epsilon$；实际推理时，模型并不知道某个预先指定的真实动作 $A_t$。
 
 在理想的无限数据和均方误差优化下，模型学习的是条件向量场：
 
-\[
+$$
 v^*(x,o,\tau)
 =
 \mathbb E
@@ -344,47 +348,47 @@ A_t-\epsilon
 \mid
 A_t^\tau=x,\ o_t=o,\ \tau
 \right]
-\]
+$$
 
 这意味着 π₀ 学习的是怎样把高斯噪声分布运输成当前条件下的动作分布，而不是检索某一条训练示范。不同初始噪声仍可对应不同的合理动作；条件期望向量场不等于简单输出一条“平均动作”。
 
 ---
 
-<a id="inference"></a>
+<a id="zh-inference" data-pair-id="inference"></a>
 ## 六、推理：10 次 Euler 更新究竟做了什么
 
-<a id="inference-start"></a>
+<a id="zh-inference-start" data-pair-id="inference-start"></a>
 ### 1. 从新噪声开始
 
-\[
+$$
 \hat A_t^{(0)}\sim\mathcal N(0,I)
-\]
+$$
 
-推理时有当前观察 \(o_t\)，但没有真实动作答案 \(A_t\)。
+推理时有当前观察 $o_t$，但没有真实动作答案 $A_t$。
 
-<a id="inference-ode"></a>
+<a id="zh-inference-ode" data-pair-id="inference-ode"></a>
 ### 2. 学到的 ODE
 
-\[
+$$
 \frac{d\hat A_t^\tau}{d\tau}
 =
 v_\theta(\hat A_t^\tau,o_t,\tau)
-\]
+$$
 
-<a id="inference-euler"></a>
+<a id="zh-inference-euler" data-pair-id="inference-euler"></a>
 ### 3. 使用 Forward Euler 离散求解
 
 π₀ 设置：
 
-\[
+$$
 K=10,
 \qquad
 \delta=\frac{1}{K}=0.1
-\]
+$$
 
 更新公式：
 
-\[
+$$
 \boxed{
 \hat A_t^{(k+1)}
 =
@@ -396,64 +400,64 @@ v_\theta
 \hat A_t^{(k)},o_t,\frac{k}{K}
 \right)
 }
-\]
+$$
 
-其中 \(k=0,1,\ldots,9\)，最后得到：
+其中 $k=0,1,\ldots,9$，最后得到：
 
-\[
+$$
 \hat A_t=\hat A_t^{(10)}
-\]
+$$
 
-<a id="inference-no-proof"></a>
+<a id="zh-inference-no-proof" data-pair-id="inference-no-proof"></a>
 ### 4. Euler 法没有证明“10 步必然得到真实动作”
 
 在一个教学特例中，若假设速度始终为已知常数：
 
-\[
+$$
 v_\theta=A_t-\epsilon
-\]
+$$
 
 则：
 
-\[
+$$
 \hat A_t^{(k)}
 =
 \epsilon+\frac{k}{K}(A_t-\epsilon)
-\]
+$$
 
-当 \(k=K\) 时，确实有：
+当 $k=K$ 时，确实有：
 
-\[
+$$
 \hat A_t^{(K)}
 =
 \epsilon+(A_t-\epsilon)
 =A_t
-\]
+$$
 
-这只验证了一条已知、恒速的配对直线路径，不能证明真实模型中 10 步理论上必需、一定足够，或每个噪声样本都会逼近某个指定示范动作。事实上，如果速度恒定且终点已知，一步 \(\delta=1\) 也能到达终点。
+这只验证了一条已知、恒速的配对直线路径，不能证明真实模型中 10 步理论上必需、一定足够，或每个噪声样本都会逼近某个指定示范动作。事实上，如果速度恒定且终点已知，一步 $\delta=1$ 也能到达终点。
 
-真实模型需要多步，因为学到的向量场随候选动作位置、当前观察和 \(\tau\) 改变，同时存在网络近似误差与 Euler 离散误差。因此，10 步是生成质量、数值精度和推理计算之间的工程折中，不是“十步收敛定理”。
+真实模型需要多步，因为学到的向量场随候选动作位置、当前观察和 $\tau$ 改变，同时存在网络近似误差与 Euler 离散误差。因此，10 步是生成质量、数值精度和推理计算之间的工程折中，不是“十步收敛定理”。
 
-<a id="inference-h-vs-k"></a>
-### 5. \(H=50\) 与 \(K=10\) 完全不同
+<a id="zh-inference-h-vs-k" data-pair-id="inference-h-vs-k"></a>
+### 5. $H=50$ 与 $K=10$ 完全不同
 
-\[
+$$
 \boxed{
 10\text{ 次 Flow 更新}
 \longrightarrow
 1\text{ 个包含 50 步物理动作的 action chunk}
 }
-\]
+$$
 
-- \(H=50\)：动作块包含的物理时间步数；
-- \(K=10\)：生成同一个动作块时的数值积分步数。
+- $H=50$：动作块包含的物理时间步数；
+- $K=10$：生成同一个动作块时的数值积分步数。
 
 ---
 
-<a id="training-deployment"></a>
+<a id="zh-training-deployment" data-pair-id="training-deployment"></a>
 ## 七、训练与运行不要混在一起
 
-<a id="training-deployment-training"></a>
+<a id="zh-training-deployment-training" data-pair-id="training-deployment-training"></a>
 ### 训练阶段
 
 ~~~text
@@ -465,7 +469,7 @@ v_\theta=A_t-\epsilon
 → 更新模型参数
 ~~~
 
-<a id="training-deployment-deployment"></a>
+<a id="zh-training-deployment-deployment" data-pair-id="training-deployment-deployment"></a>
 ### 运行阶段
 
 ~~~text
@@ -481,10 +485,10 @@ v_\theta=A_t-\epsilon
 
 ---
 
-<a id="data-recipe"></a>
+<a id="zh-data-recipe" data-pair-id="data-recipe"></a>
 ## 八、公式之外：数据与训练配方同样是核心
 
-<a id="data-recipe-scale"></a>
+<a id="zh-data-recipe-scale" data-pair-id="data-recipe-scale"></a>
 ### 1. 数据规模
 
 论文报告：
@@ -498,34 +502,34 @@ v_\theta=A_t-\epsilon
 
 903M 指时间步，不是 903M 条完整轨迹；9.1% 是采样混合占比，不是原始时间步占比。
 
-<a id="data-recipe-pretraining"></a>
+<a id="zh-data-recipe-pretraining" data-pair-id="data-recipe-pretraining"></a>
 ### 2. 广泛预训练
 
 预训练数据覆盖多机器人、多任务、多物体和多场景，也包含不完美动作、偏离状态与恢复过程。它的目标不是让每项任务立即达到最高熟练度，而是扩大模型见过的状态和行为范围。
 
-<a id="data-recipe-posttraining"></a>
+<a id="zh-data-recipe-posttraining" data-pair-id="data-recipe-posttraining"></a>
 ### 3. 高质量 post-training
 
 任务后训练使用更一致、更熟练、更有针对性的示范，使动作趋于稳定和流畅。简单任务可能需要约 5 小时专项数据，复杂任务可能需要 100 小时以上。
 
 π₀ 没有消灭任务数据收集，而是把专项数据的作用从“从零学习全部能力”转变为“校准和精修已有能力”。
 
-<a id="data-recipe-system"></a>
+<a id="zh-data-recipe-system" data-pair-id="data-recipe-system"></a>
 ### 4. 整套配方
 
-\[
+$$
 \boxed{
 \text{广泛预训练负责能力覆盖}
 \quad+\quad
 \text{高质量后训练负责动作熟练度}
 }
-\]
+$$
 
 这在方法论上类似“先广泛预训练，再有针对性地适配”，但 π₀ 的任务后训练不应简单等同于语言模型的 RLHF 或 alignment。
 
 ---
 
-<a id="evidence"></a>
+<a id="zh-evidence" data-pair-id="evidence"></a>
 ## 九、实验究竟证明了什么
 
 论文从四个层级验证系统：
@@ -539,21 +543,21 @@ v_\theta=A_t-\epsilon
 
 其中 0.75–1.00 是对论文图 7 的近似读图范围，并非论文表格给出的精确数值。
 
-<a id="evidence-zero-shot"></a>
+<a id="zh-evidence-zero-shot" data-pair-id="evidence-zero-shot"></a>
 ### 1. v1 与 v4 的 zero-shot 口径
 
 首发 v1 使用了 zero-shot，但同一版本说明五个基础评测任务族存在于预训练中。当前 v4 已改为 direct prompting / out-of-box。
 
 准确的解释是：模型没有针对相应测试版本做任务专门 post-training，不等于它从未见过相关任务族、机器人或行为分布。
 
-<a id="evidence-long-horizon"></a>
+<a id="zh-evidence-long-horizon" data-pair-id="evidence-long-horizon"></a>
 ### 2. 长任务不等于完整自主规划
 
 部分长任务依赖人类或独立高层 VLM 提供中间指令。π₀ 主要证明了通用底层策略能力，并没有由单个模型同时包办长期目标分解、持久记忆、成功验证、安全判断和底层连续控制。
 
 ---
 
-<a id="innovation"></a>
+<a id="zh-innovation" data-pair-id="innovation"></a>
 ## 十、π₀ 的核心创新究竟是什么
 
 π₀ 不是下列任何单项概念的发明者：
@@ -581,12 +585,12 @@ v_\theta=A_t-\epsilon
 
 ---
 
-<a id="route-analysis"></a>
+<a id="zh-route-analysis" data-pair-id="route-analysis"></a>
 ## 十一、我的思考：π₀ 与 WM/WAM 路线有什么区别
 
 > 本章属于路线分析，不是 π₀ 论文已经证明的结论。WAM 是仍在形成中的非标准化术语，不同研究对其边界和耦合方式并没有统一定义。
 
-<a id="route-analysis-information"></a>
+<a id="zh-route-analysis-information" data-pair-id="route-analysis-information"></a>
 ### 1. 根本区别不是“语言介质 vs 视频介质”
 
 我原来的直觉是：π₀ 与 LLM/VLM 的关联更深，VLA 的信息更像语言，而 WM/WAM 的信息更像视频或 latent。这个直觉抓住了信息侧重点，却把中间表示说得过于简单。
@@ -599,29 +603,29 @@ v_\theta=A_t-\epsilon
 
 π₀ 式直接策略学习：
 
-\[
+$$
 p(A_t\mid o_t)
-\]
+$$
 
 它问：“根据当前观察，我现在应该怎样行动？”
 
 World Model 可以学习：
 
-\[
+$$
 p(z_{t+1:t+H}\mid z_t,A_t)
-\]
+$$
 
-它问：“如果执行这些动作，未来世界可能怎样变化？”其中 \(z\) 可以是图像、视觉 latent、状态或其他世界表征，不必是人类可读视频。
+它问：“如果执行这些动作，未来世界可能怎样变化？”其中 $z$ 可以是图像、视觉 latent、状态或其他世界表征，不必是人类可读视频。
 
 联合型 WAM 的一种教学抽象是：
 
-\[
+$$
 p(A_t,z_{t+1:t+H}\mid o_t)
-\]
+$$
 
 但这不是统一定义；具体系统也可以采用其他分解方式、训练期预测监督或部署期 action-only 输出。
 
-<a id="route-analysis-before-after"></a>
+<a id="zh-route-analysis-before-after" data-pair-id="route-analysis-before-after"></a>
 ### 2. “行动后看结果”与“行动前推演”是教学性对比
 
 π₀ 的闭环是：
@@ -640,7 +644,7 @@ World Model 路线可以采用：
 
 没有显式 World Model，也不等于 π₀ 毫无物理知识。为了从示范中生成有效动作，其参数可能编码与接触、物体和机器人动力学有关的行动规律。区别在于：π₀ 没有使用一个可单独检查的未来预测目标来训练这些规律，也不天然提供反事实模拟器。它可能“会做”，却不一定显式展示动作之后世界会怎样变化。
 
-<a id="route-analysis-latency"></a>
+<a id="zh-route-analysis-latency" data-pair-id="route-analysis-latency"></a>
 ### 3. 决策路径可能更短，但不保证更快
 
 直接策略不必先生成未来世界、评估候选轨迹再选择动作，因此可能拥有较短的决策路径。但：
@@ -651,7 +655,7 @@ World Model 路线可以采用：
 
 因此，π₀ 倾向于以更直接的动作接口换取执行效率；WM/WAM 倾向于以更丰富的动态表征换取后果推演能力。具体快慢需要实测。
 
-<a id="route-analysis-tradeoff"></a>
+<a id="zh-route-analysis-tradeoff" data-pair-id="route-analysis-tradeoff"></a>
 ### 4. 两条路线的真实权衡
 
 | 维度 | π₀ 式直接 VLA | WM/WAM-first 路线 |
@@ -664,7 +668,7 @@ World Model 路线可以采用：
 | 典型优势 | 语义接口清晰、执行链短、适合连续控制 | 动态信息丰富，适合规划和后果判断 |
 | 典型风险 | 可能流畅地做错，却缺少显式成功验证 | 计算、内存、数据要求和模型误差可能更高 |
 
-<a id="route-analysis-fusion"></a>
+<a id="zh-route-analysis-fusion" data-pair-id="route-analysis-fusion"></a>
 ### 5. 长期更可能融合
 
 我的判断是：World Model 更适合慢速推演、长期规划、后果判断和异常检测；VLA action expert 更适合快速、连续的底层执行。这是由两条路线的互补性推导出的架构判断，不是论文结论。
@@ -681,17 +685,17 @@ World Model 路线可以采用：
 
 ---
 
-<a id="strengths-limitations"></a>
+<a id="zh-strengths-limitations" data-pair-id="strengths-limitations"></a>
 ## 十二、最大的优点与最耐久的缺点
 
-<a id="strengths-limitations-strength"></a>
+<a id="zh-strengths-limitations-strength" data-pair-id="strengths-limitations-strength"></a>
 ### 1. 最大优点：建立“语义—运动接口”
 
 π₀ 最耐久的贡献不是某个榜单分数，也不一定是 Flow Matching 永远最好，而是把大型 VLM 的通用语义能力与一个可以替换和扩展的连续动作专家接在一起。
 
 未来可以更换 VLM 主干、动作编码、Flow 求解器、chunk 长度或机器人平台，但“通用语义骨干 + 连续控制专家”的分工仍可能保留。
 
-<a id="strengths-limitations-structural"></a>
+<a id="zh-strengths-limitations-structural" data-pair-id="strengths-limitations-structural"></a>
 ### 2. 最大结构性缺点：能力边界受示范支持域约束
 
 π₀ 本质上仍是离线示范驱动的条件行为克隆。它没有显式提供：
@@ -704,7 +708,7 @@ World Model 路线可以采用：
 
 因此，它可能在陌生状态下流畅而自信地做错。更多数据能扩大覆盖面，但不会自动带来对未知状态的自知。
 
-<a id="strengths-limitations-evidence"></a>
+<a id="zh-strengths-limitations-evidence" data-pair-id="strengths-limitations-evidence"></a>
 ### 3. 论文证据的耐久限制：难以因果归因
 
 - 核心万小时数据无法被第三方完整获得；
@@ -719,7 +723,7 @@ World Model 路线可以采用：
 
 ---
 
-<a id="misconceptions"></a>
+<a id="zh-misconceptions" data-pair-id="misconceptions"></a>
 ## 十三、最容易出现的误读
 
 1. **π₀ 是 Physical Intelligence Zero 的正式全称。**
@@ -731,7 +735,7 @@ World Model 路线可以采用：
 3. **VLM 先输出一句语言，再交给动作模型。**
    不是；action expert 读取内部隐藏上下文。
 
-4. **\(H=50\) 表示动作是 50 维。**
+4. **$H=50$ 表示动作是 50 维。**
    不是；它表示 50 个物理时间步。
 
 5. **10 次 Flow 更新会生成 10 个动作块。**
@@ -754,32 +758,32 @@ World Model 路线可以采用：
 
 ---
 
-<a id="recap"></a>
+<a id="zh-recap" data-pair-id="recap"></a>
 ## 十四、一分钟复述
 
 > π₀ 是 Physical Intelligence 的第一代通用机器人策略。它用约 30 亿参数的 PaliGemma 编码图像和语言，再用约 3 亿参数的 action expert，通过 Conditional Flow Matching 生成包含 50 个连续物理动作的 action chunk。训练时，模型在高斯噪声和真实动作之间构造直线路径，学习候选动作应该怎样修改；推理时从新噪声开始，使用 10 次 Forward Euler 更新得到动作块，然后只执行其中一部分并重新观察现实。π₀ 真正的创新不是一条孤立公式，而是将 VLM 语义、连续动作专家、万小时跨机器人预训练和高质量 post-training 整合成一套 foundation-policy 配方。它与 World Model 的根本区别是：π₀ 直接学习条件动作分布，而 World Model 显式学习世界可能怎样变化。长期看，两条路线更可能在规划层和执行层融合。
 
 ---
 
-<a id="self-check"></a>
+<a id="zh-self-check" data-pair-id="self-check"></a>
 ## 十五、复盘自测
 
 如果能够回答下面十个问题，就基本掌握了 π₀：
 
 1. π₀ 的输入和输出分别是什么？
-2. \(a_t\)、\(A_t\)、\(H\)、\(d\)、\(D\) 分别表示什么？
+2. $a_t$、$A_t$、$H$、$d$、$D$ 分别表示什么？
 3. action chunk 与 discrete action token 有什么区别？
 4. 为什么使用高斯噪声作为起点？
-5. 为什么配对训练目标是 \(A_t-\epsilon\)？
-6. 推理时为什么不存在一个已知的真实 \(A_t\)？
+5. 为什么配对训练目标是 $A_t-\epsilon$？
+6. 推理时为什么不存在一个已知的真实 $A_t$？
 7. Forward Euler 在系统中负责什么，又不负责什么？
-8. 为什么 \(H=50\) 与 \(K=10\) 完全不同？
+8. 为什么 $H=50$ 与 $K=10$ 完全不同？
 9. π₀ 的创新为什么是系统配方，而不是单一 Flow 公式？
 10. π₀ 与 World Model/WAM 的学习目标有什么区别？
 
 ---
 
-<a id="sources"></a>
+<a id="zh-sources" data-pair-id="sources"></a>
 ## 主要来源
 
 - 核心论文：[π₀ v4](https://arxiv.org/html/2410.24164v4)、[π₀ v1](https://arxiv.org/html/2410.24164v1)
@@ -790,13 +794,13 @@ World Model 路线可以采用：
 - WAM 路线参考：[WAM Survey](https://arxiv.org/abs/2605.12090)、[VPP](https://arxiv.org/abs/2412.14803)、[DreamZero](https://arxiv.org/abs/2602.15922)、[Fast-WAM](https://arxiv.org/abs/2603.16666)、[GigaWorld-Policy](https://arxiv.org/abs/2603.17240)
 - 论文索引：[Hugging Face paper page](https://huggingface.co/papers/2410.24164)
 
-<a id="verification"></a>
+<a id="zh-verification" data-pair-id="verification"></a>
 ## 版本与核验说明
 
 - 公式、模型、数据与实验事实主要使用 π₀ arXiv v4；
 - “zero-shot”历史措辞使用 v1，并明确当前 v4 已改写；
-- 论文推导使用 \(\tau=0\) 为噪声、\(\tau=1\) 为动作；当前 openpi 代码采用相反的时间方向（\(t=1\) 为噪声、\(t=0\) 为动作，\(dt<0\)），两者通过 \(t=1-\tau\) 等价，并不矛盾；
-- 正文始终用一般动作维数 \(d\)。18 维是论文跨机器人数据接口的补齐维数；当前 openpi 的 `Pi0Config` 默认 `action_dim=32`，属于当前开源实现配置，不能混成同一个数字；
+- 论文推导使用 $\tau=0$ 为噪声、$\tau=1$ 为动作；当前 openpi 代码采用相反的时间方向（$t=1$ 为噪声、$t=0$ 为动作，$dt<0$），两者通过 $t=1-\tau$ 等价，并不矛盾；
+- 正文始终用一般动作维数 $d$。18 维是论文跨机器人数据接口的补齐维数；当前 openpi 的 `Pi0Config` 默认 `action_dim=32`，属于当前开源实现配置，不能混成同一个数字；
 - openpi 公共仓库状态于 2026-08-02 通过 GitHub connector 确认为公开仓库；
 - Hugging Face 页面沿用 2026-08-01 已核验快照，仅用于元数据与生态索引；
 - “我的思考”属于解释性推断，应与论文事实分开阅读。

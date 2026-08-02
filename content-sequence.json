@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "collections": {
+    "article": 0,
+    "research": 1,
+    "reflection": 0
+  }
+}

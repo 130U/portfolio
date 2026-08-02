@@ -1,12 +1,12 @@
 # π₀ 双语读书笔记审计 / Bilingual Reading Note Audit
 
 审计日期 / Audit date: 2026-08-02
-状态 / Status: review-ready, not yet merged to `main`
+状态 / Status: passed, ready for publication from `main`
 
 ## 1. 交付边界 / Delivery boundary
 
-- 唯一被修改的远程目标是 `130U/portfolio` 的工作分支；参考仓库 `130U/130U.github.io` 仅作只读设计观察。
-- The only writable target is a working branch of `130U/portfolio`. `130U/130U.github.io` was used as a read-only design reference.
+- 唯一被修改的远程目标是 `130U/portfolio`；参考仓库 `130U/130U.github.io` 仅作只读设计观察。
+- The only writable target is `130U/portfolio`. `130U/130U.github.io` was used as a read-only design reference.
 - 中文与英文 Markdown 是 canonical sources；HTML/CSS/JavaScript 是派生阅读界面。
 - The Chinese and English Markdown files are canonical. HTML, CSS, and JavaScript are derived presentation layers.
 
@@ -14,7 +14,7 @@
 
 | Check | 中文 | English | Result |
 |---|---:|---:|---|
-| Total lines | 803 | 803 | Pass |
+| Total lines | 806 | 806 | Pass |
 | Ordered section anchors | 57 | 57 | Exact order match |
 | Display-equation blocks | 31 | 31 | Count and structure match |
 | External source links | 27 | 27 | URL order match |
@@ -69,17 +69,27 @@ Local production build checks:
 
 - `npm run check`: pass;
 - `npm run build`: pass;
+- the Draft 2020-12 manifest schema is executed by AJV, while Astro applies a strict matching Zod contract;
+- publication status is read only from `post.json`; canonical Markdown does not duplicate a stale draft/review label;
+- all 20 unique external URLs are registered in `SOURCES.yaml`, and every registered URL appears in both language sources;
+- stable collection numbers use a strict committed high-water registry, fsynced atomic replacement, and an exclusive local allocation lock; gaps are retained, while CI blocks cross-worktree or cross-device ID conflicts;
 - 58 rendered rows including the preamble, 116 language panes, and 17 TOC entries;
 - Chinese, English, and bilingual modes update `?lang=`, `lang`, `aria-pressed`, visibility, and persisted state;
-- Arrow-key switching moves focus and changes language correctly;
-- no duplicate DOM IDs and no browser console warnings or errors;
+- Arrow keys, Home, and End move focus within the language-control group; activating a focused control changes the reading mode;
+- language controls remain hidden when JavaScript is unavailable, while both complete documents and the no-JavaScript TOC remain readable;
+- 114 language-prefixed source anchors and 58 enhanced paired rows retain unique DOM IDs; TOC links resolve to the visible paired row;
+- no browser console warnings or errors;
 - desktop and 390 × 844 responsive checks show no horizontal page overflow;
 - all three language controls retain a 44 px minimum height on mobile;
+- the sticky header keeps all three collection links and the language switcher available while reading; a real-pointer mode change preserved the active paired section within one CSS pixel;
 - bilingual desktop mode aligns each semantic block side by side; mobile mode stacks each Chinese block immediately before its English pair;
+- 62 display equations and 162 total math elements are pre-rendered as KaTeX HTML + MathML with no runtime math CDN;
+- the root and collection README indexes are generated from `post.json` and match the published registry;
+- build QA validates local fragment targets, canonical URLs, and `TechArticle` JSON-LD identity, dates, languages, and citation;
 - `prefers-reduced-motion`, increased-contrast, forced-colors, skip link, focus-visible, and semantic headings are covered.
 
-## 6. Remaining review questions
+## 6. Publication decision
 
-- Confirm whether the first-person route analysis should remain in the final public version.
-- Confirm whether the default view should remain `中英对照` or switch to Chinese-first.
-- GitHub Pages deployment is configured as a manual workflow and should occur only after review, merge to `main`, and explicit Pages enablement.
+- The reader's interpretive π₀-versus-WM/WAM analysis remains in the public note and is explicitly labeled as interpretation rather than paper evidence.
+- The default reading mode remains `中英对照`; Chinese-only and English-only states remain shareable through `?lang=zh` and `?lang=en`.
+- The GitHub Pages workflow validates pull requests and publishes only after a successful push to `main`.

@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import PostCard from "../components/PostCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { collectionCopy, collectionHref, published } from "../lib/site";
+
+const posts = published(await getCollection("posts"));
+const latest = posts.slice(0, 6);
+const counts = Object.fromEntries(
+  Object.keys(collectionCopy).map((collection) => [
+    collection,
+    posts.filter((post) => post.data.collection === collection).length,
+  ]),
+);
+---
+
+<BaseLayout
+  title="Theodore Ouyang — Research Notes"
+  description="A bilingual archive of evidence-led research notes, essays, and reflections on AI, robotics, and technical strategy."
+>
+  <main id="main-content">
+    <section class="hero" aria-label="Portfolio introduction / 作品集介绍">
+      <p class="eyebrow">Research notes · 研究笔记</p>
+      <div class="parallel-copy">
+        <div data-content-lang="zh" lang="zh-CN">
+          <h1>把复杂问题，写到真正看懂为止。</h1>
+          <p class="hero-deck">关于人工智能、机器人与技术路径的研究笔记：保留证据，也保留推理发生的过程。</p>
+        </div>
+        <div data-content-lang="en" lang="en">
+          <h1>Follow a difficult question until it becomes legible.</h1>
+          <p class="hero-deck">Research on AI, robotics, and technical strategy—preserving both the evidence and the reasoning that connects it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-strip" aria-label="Collections / 内容集合">
+      {
+        Object.entries(collectionCopy).map(([key, copy]) => (
+          <a href={collectionHref(key as keyof typeof collectionCopy)}>
+            <span lang="zh-CN">{copy.zh}</span>
+            <span>{copy.en}</span>
+            <strong>{String(counts[key]).padStart(2, "0")}</strong>
+          </a>
+        ))
+      }
+    </section>
+
+    <section class="notes-section" aria-labelledby="recent-notes-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Latest writing · 最新整理</p>
+          <h2 id="recent-notes-title">Published notes</h2>
+        </div>
+        <p aria-label={`${posts.length} published notes`}>{String(posts.length).padStart(2, "0")}</p>
+      </div>
+      <div class="card-stack">
+        {latest.map((post) => <PostCard post={post} />)}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "research.001",
+  "seriesNo": 1,
+  "slug": "pi0",
+  "collection": "research",
+  "status": "published",
+  "publishedAt": "2026-08-02T00:00:00-04:00",
+  "updatedAt": "2026-08-02T00:00:00-04:00",
+  "featured": true,
+  "readingMinutes": 35,
+  "sourceLanguage": "zh-CN",
+  "languages": {
+    "zh-CN": {
+      "file": "README.zh-CN.md",
+      "title": "π₀：机器人怎样把“看懂任务”变成连续动作",
+      "summary": "从 VLM 语义骨干、连续动作专家到 Conditional Flow Matching，逐层解释 π₀ 如何把视觉、语言与本体状态变成可执行的动作块。"
+    },
+    "en": {
+      "file": "README.en.md",
+      "title": "π₀: How a Robot Turns Understanding into Continuous Action",
+      "summary": "A layered account of the VLM backbone, continuous action expert, and Conditional Flow Matching that turn vision, language, and proprioception into executable action chunks."
+    }
+  },
+  "topics": ["Robotics", "Embodied AI", "Vision-Language-Action", "Flow Matching"],
+  "paper": {
+    "title": "π₀: A Vision-Language-Action Flow Model for General Robot Control",
+    "publishedAt": "2024-10-31",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2410.24164",
+    "arxivId": "2410.24164"
+  },
+  "audit": {
+    "status": "passed",
+    "file": "AUDIT.md",
+    "reviewedAt": "2026-08-02T00:00:00-04:00",
+    "reviewedBy": "Codex structural audit",
+    "openIssueCount": 0
+  }
+}
