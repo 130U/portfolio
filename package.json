@@ -1,0 +1,10 @@
+{
+  "name": "theodore-portfolio-notes",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-bilingual.mjs",
+    "build": "node scripts/build-site.mjs"
+  }
+}
