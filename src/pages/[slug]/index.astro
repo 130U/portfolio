@@ -78,41 +78,52 @@ const publicSourceBase = `${import.meta.env.BASE_URL}${data.slug}/`;
         <p data-content-lang="en" lang="en">{data.languages.en.summary}</p>
       </div>
       <div class="article-meta">
-        <span>{formatDate(data.publishedAt)} / {formatDate(data.publishedAt, "zh-CN")}</span>
-        <span>Updated {formatDate(data.updatedAt)}</span>
-        <span>{data.readingMinutes} min</span>
-        <span>{data.audit?.status === "passed" ? "Audited · 已审计" : "Review · 审阅中"}</span>
-        {data.audit?.reviewedAt && <span>Reviewed {formatDate(data.audit.reviewedAt)}</span>}
-        {data.paper && <a href={data.paper.url}>arXiv {data.paper.arxivId}</a>}
-        <a href={`${publicSourceBase}${data.languages["zh-CN"].file}`}>中文源稿</a>
-        <a href={`${publicSourceBase}${data.languages.en.file}`}>English source</a>
-        {data.collection === "research" && <a href={`${publicSourceBase}SOURCES.yaml`}>Sources</a>}
-        {data.audit && <a href={`${publicSourceBase}${data.audit.file}`}>Audit</a>}
+        <div class="article-facts" aria-label="Publication details / 发布信息">
+          <span>{formatDate(data.publishedAt)} / {formatDate(data.publishedAt, "zh-CN")}</span>
+          <span>Updated {formatDate(data.updatedAt)}</span>
+          <span>{data.readingMinutes} min</span>
+          <span>{data.audit?.status === "passed" ? "Audited · 已审计" : "Review · 审阅中"}</span>
+          {data.audit?.reviewedAt && <span>Reviewed {formatDate(data.audit.reviewedAt)}</span>}
+        </div>
+        <nav class="article-resources" aria-label="Article resources / 文章资料">
+          {data.paper && <a href={data.paper.url}>arXiv {data.paper.arxivId}</a>}
+          <a href={`${publicSourceBase}${data.languages["zh-CN"].file}`}>中文源稿</a>
+          <a href={`${publicSourceBase}${data.languages.en.file}`}>English source</a>
+          {data.collection === "research" && <a href={`${publicSourceBase}SOURCES.yaml`}>Sources</a>}
+          {data.audit && <a href={`${publicSourceBase}${data.audit.file}`}>Audit</a>}
+        </nav>
       </div>
     </section>
 
     <div class="reading-layout">
       <aside class="article-rail" aria-label="Table of contents / 文章目录">
-        <p class="rail-heading">Contents · 目录</p>
-        <nav class="article-toc">
-          <ol>
-            {toc.map((item) => (
-              <li>
-                <a href={`#zh-${item.id}`} data-pair-target={item.id}>
-                  <span data-content-lang="zh" lang="zh-CN">{item.label}</span>
-                  <span data-content-lang="en" lang="en">{item.en}</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
-        <div class="evidence-legend">
-          <p><span class="legend-dot legend-paper"></span>Paper evidence · 论文事实</p>
-          <p><span class="legend-dot legend-claim"></span>Author claim · 作者声明</p>
-          <p><span class="legend-dot legend-code"></span>Code snapshot · 代码快照</p>
-          <p><span class="legend-dot legend-explanation"></span>Explanation · 通俗解释</p>
-          <p><span class="legend-dot legend-interpretation"></span>Interpretation · 我的思考</p>
-        </div>
+        <details class="article-outline" open data-article-outline>
+          <summary class="rail-summary">
+            <span>Contents · 目录</span>
+            <span class="rail-summary-hint">Open / Close · 展开 / 收起</span>
+          </summary>
+          <div class="article-outline-body">
+            <nav class="article-toc">
+              <ol>
+                {toc.map((item) => (
+                  <li>
+                    <a href={`#zh-${item.id}`} data-pair-target={item.id}>
+                      <span data-content-lang="zh" lang="zh-CN">{item.label}</span>
+                      <span data-content-lang="en" lang="en">{item.en}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+            <div class="evidence-legend">
+              <p><span class="legend-dot legend-paper"></span>Paper evidence · 论文事实</p>
+              <p><span class="legend-dot legend-claim"></span>Author claim · 作者声明</p>
+              <p><span class="legend-dot legend-code"></span>Code snapshot · 代码快照</p>
+              <p><span class="legend-dot legend-explanation"></span>Explanation · 通俗解释</p>
+              <p><span class="legend-dot legend-interpretation"></span>Interpretation · 我的思考</p>
+            </div>
+          </div>
+        </details>
       </aside>
 
       <article class="paired-reader" data-paired-reader>

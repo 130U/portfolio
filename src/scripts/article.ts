@@ -68,3 +68,12 @@ function enhancePairedReader() {
 }
 
 enhancePairedReader();
+
+function setOutlineDefault() {
+  const outline = document.querySelector<HTMLDetailsElement>("[data-article-outline]");
+  if (!outline) return;
+
+  if (window.matchMedia("(max-width: 82rem)").matches) outline.removeAttribute("open");
+}
+
+setOutlineDefault();
