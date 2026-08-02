@@ -62,8 +62,9 @@ article, substantive edits begin here so copies do not drift. Original media
 belongs under the article folder; published routes and section anchors are
 treated as stable public interfaces.
 
-`130U/130U.github.io` and every `theodoreoy.com` route are outside this build's
-writable and deployment scope. This repository must not publish through either.
+The personal-site repository, its domain, and all of its public routes are
+outside this build's writable and deployment scope. This repository must not
+publish through any of them.
 
 ## Rights
 

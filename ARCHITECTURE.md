@@ -19,14 +19,14 @@ Accepted
 `130U/portfolio` is a long-lived writing archive whose Markdown files are the
 canonical sources. It needs a maintainable article index, bilingual Chinese and
 English reading modes, aligned comparison, mathematical notation, and a small
-client-side footprint. Publication uses an independent provider URL;
-`130U/130U.github.io` and `theodoreoy.com` remain outside both the writable and
-deployment scope.
+client-side footprint. Publication uses an independent provider URL. The
+personal-site repository, its custom domain, and every derived route remain
+outside both the writable and deployment scope.
 
 The architecture must preserve these constraints:
 
-- the production site must not inherit, redirect through, or publish below
-  `theodoreoy.com`;
+- the production site must not inherit, redirect through, or publish below the
+  personal site's custom domain;
 - this repository's GitHub Pages site remains disabled;
 - each language remains an independently readable canonical Markdown file;
 - the current π₀ pair has 57 ordered bilingual anchors, which must remain a
