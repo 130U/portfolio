@@ -1,4 +1,4 @@
-export const siteUrl = "https://130u.github.io";
+export const siteUrl = "https://www.theodoreoy.com";
 export const basePath = "/portfolio";
 
 export function publicUrl(path = "") {

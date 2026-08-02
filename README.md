@@ -9,7 +9,7 @@ source, and generated reading page.
 <!-- portfolio:index:start -->
 | ID | Date | Article / 文章 | Read |
 |---|---|---|---|
-| R-001 | 2026-08-02 | π₀：机器人怎样把“看懂任务”变成连续动作<br>π₀: How a Robot Turns Understanding into Continuous Action | [中文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English](research/2026-08-02-pi0-vla-flow/README.en.md) · [Web](https://130u.github.io/portfolio/pi0/) |
+| R-001 | 2026-08-02 | π₀：机器人怎样把“看懂任务”变成连续动作<br>π₀: How a Robot Turns Understanding into Continuous Action | [中文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English](research/2026-08-02-pi0-vla-flow/README.en.md) · [Web](https://www.theodoreoy.com/portfolio/pi0/) |
 <!-- portfolio:index:end -->
 
 ## Collections
