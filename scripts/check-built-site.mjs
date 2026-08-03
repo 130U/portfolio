@@ -35,6 +35,11 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   if (!html.includes('id="main-content"')) failures.push(`${file}: missing main-content landmark`);
   if (/<script[^>]+src=["']https?:\/\//i.test(html)) failures.push(`${file}: runtime script uses an external CDN`);
+  const initialLanguage = html.match(/<html\b[^>]*\bdata-language-mode=["']([^"']+)["']/i)?.[1];
+  if (initialLanguage !== "zh") failures.push(`${file}: initial language mode must be zh, received ${initialLanguage ?? "missing"}`);
+  const languageControls = [...html.matchAll(/\bdata-language-control=["']([^"']+)["']/g)].map((match) => match[1]);
+  if (languageControls.join(",") !== "zh,en") failures.push(`${file}: expected exactly the zh and en language controls`);
+  if (/\bdata-language-(?:mode|control)=["']both["']/i.test(html)) failures.push(`${file}: legacy bilingual comparison mode is present`);
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map((match) => match[1]);
   const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== index))];
   if (duplicateIds.length) failures.push(`${file}: duplicate DOM ids: ${duplicateIds.join(", ")}`);

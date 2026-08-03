@@ -30,11 +30,19 @@ const description = `${copy.en} / ${copy.zh} — Theodore Ouyang's bilingual wri
     </section>
     <section class="notes-section" aria-label={`${copy.en} archive`}>
       <div class="section-heading">
-        <h2>Archive · 归档</h2>
+        <h2>
+          <span data-content-lang="zh" lang="zh-CN">归档</span>
+          <span data-content-lang="en" lang="en">Archive</span>
+        </h2>
         <p>{String(posts.length).padStart(2, "0")}</p>
       </div>
       <div class="card-stack">
-        {posts.length ? posts.map((post) => <PostCard post={post} />) : <p class="empty-state">No published notes yet · 暂无已发布内容</p>}
+        {posts.length ? posts.map((post) => <PostCard post={post} />) : (
+          <div class="empty-state">
+            <p data-content-lang="zh" lang="zh-CN">暂无已发布内容。</p>
+            <p data-content-lang="en" lang="en">No published notes yet.</p>
+          </div>
+        )}
       </div>
     </section>
   </main>

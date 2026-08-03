@@ -36,8 +36,8 @@ const counts = Object.fromEntries(
       {
         Object.entries(collectionCopy).map(([key, copy]) => (
           <a href={collectionHref(key as keyof typeof collectionCopy)}>
-            <span lang="zh-CN">{copy.zh}</span>
-            <span>{copy.en}</span>
+            <span data-content-lang="zh" lang="zh-CN">{copy.zh}</span>
+            <span data-content-lang="en" lang="en">{copy.en}</span>
             <strong>{String(counts[key]).padStart(2, "0")}</strong>
           </a>
         ))
@@ -46,7 +46,10 @@ const counts = Object.fromEntries(
 
     <section class="notes-section" aria-labelledby="recent-notes-title">
       <div class="section-heading">
-        <h2 id="recent-notes-title">Published notes · 已发布笔记</h2>
+        <h2 id="recent-notes-title">
+          <span data-content-lang="zh" lang="zh-CN">已发布笔记</span>
+          <span data-content-lang="en" lang="en">Published notes</span>
+        </h2>
         <p aria-label={`${posts.length} published notes`}>{String(posts.length).padStart(2, "0")}</p>
       </div>
       <div class="card-stack">

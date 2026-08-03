@@ -1,6 +1,6 @@
-type LanguageMode = "zh" | "en" | "both";
+type LanguageMode = "zh" | "en";
 
-const modes: LanguageMode[] = ["zh", "en", "both"];
+const modes: LanguageMode[] = ["zh", "en"];
 const root = document.documentElement;
 
 function isMode(value: string | null | undefined): value is LanguageMode {
@@ -9,7 +9,7 @@ function isMode(value: string | null | undefined): value is LanguageMode {
 
 function currentMode(): LanguageMode {
   const value = root.dataset.languageMode;
-  return isMode(value) ? value : "both";
+  return isMode(value) ? value : "zh";
 }
 
 function captureReadingPosition() {
@@ -26,27 +26,31 @@ function captureReadingPosition() {
 
 function restoreReadingPosition(position: { id: string; top: number } | null) {
   if (!position) return;
-  requestAnimationFrame(() => {
-    const target = document.getElementById(position.id);
-    if (!target) return;
-    root.dataset.restoringScroll = "true";
-    const correct = () => window.scrollBy({ top: target.getBoundingClientRect().top - position.top, behavior: "auto" });
+  const target = document.getElementById(position.id);
+  if (!target) return;
+  root.dataset.restoringScroll = "true";
+  const correct = () => {
+    const delta = target.getBoundingClientRect().top - position.top;
+    const scroller = document.scrollingElement;
+    if (scroller) scroller.scrollTop += delta;
+    else window.scrollTo(0, window.scrollY + delta);
+  };
+  correct();
+  requestAnimationFrame(correct);
+  window.setTimeout(() => {
     correct();
-    window.setTimeout(() => {
-      correct();
-      delete root.dataset.restoringScroll;
-    }, 100);
-  });
+    delete root.dataset.restoringScroll;
+  }, 100);
 }
 
 function applyLanguage(mode: LanguageMode, persist = false) {
   const readingPosition = persist ? captureReadingPosition() : null;
   root.dataset.languageMode = mode;
-  root.lang = mode === "zh" ? "zh-CN" : mode === "en" ? "en" : "mul";
+  root.lang = mode === "zh" ? "zh-CN" : "en";
 
   document.querySelectorAll<HTMLElement>("[data-content-lang]").forEach((element) => {
     const language = element.dataset.contentLang;
-    element.hidden = mode !== "both" && language !== mode;
+    element.hidden = language !== mode;
   });
 
   document.querySelectorAll<HTMLButtonElement>("[data-language-control]").forEach((button) => {
@@ -59,7 +63,7 @@ function applyLanguage(mode: LanguageMode, persist = false) {
     } catch {}
 
     const url = new URL(window.location.href);
-    if (mode === "both") url.searchParams.delete("lang");
+    if (mode === "zh") url.searchParams.delete("lang");
     else url.searchParams.set("lang", mode);
     history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
   }

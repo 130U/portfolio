@@ -17,8 +17,8 @@ Accepted
 ## Context
 
 `130U/portfolio` is a long-lived writing archive whose Markdown files are the
-canonical sources. It needs a maintainable article index, bilingual Chinese and
-English reading modes, aligned comparison, mathematical notation, and a small
+canonical sources. It needs a maintainable article index, complete Chinese and
+English editions with exclusive language selection, mathematical notation, and a small
 client-side footprint. Publication uses an independent provider URL. The
 personal-site repository, its custom domain, and every derived route remain
 outside both the writable and deployment scope.
@@ -57,10 +57,12 @@ We will:
    worktrees and separately synced devices.
 2. Keep prose in plain Markdown by default. MDX is allowed only when an article
    genuinely requires an embedded component.
-3. Generate one stable `/<slug>/` route containing both languages as static
-   HTML. A small progressive-enhancement script provides Chinese, English, and
-   aligned bilingual modes while preserving a shareable `?lang=` parameter.
-   Without JavaScript, both complete documents remain readable.
+3. Generate one stable `/<slug>/` route containing both complete editions as
+   static HTML. A small progressive-enhancement script selects either Chinese
+   or English, preserves the equivalent semantic section during a switch, and
+   exposes a shareable `?lang=` parameter. The interface never presents an
+   aligned comparison mode; without JavaScript, the default Chinese edition
+   remains readable and both canonical Markdown files remain directly linked.
 4. Keep the existing bilingual audit as a build gate. Astro's schema validates
    metadata, but a repository check must separately enforce the 57 logical
    `data-pair-id` values, language-prefixed unique DOM IDs, and paired equation
@@ -106,9 +108,9 @@ We will:
   future articles without introducing a database or CMS.
 - Static output is provider-neutral and sends no framework runtime JavaScript by
   default; only explicit progressive-enhancement scripts ship client code.
-- Both locale documents are present in the initial static HTML, improving
-  accessibility and archival durability while a shareable query parameter
-  selects Chinese, English, or aligned comparison mode.
+- Both locale documents are present in the initial static HTML for archival
+  durability, while a shareable query parameter selects exactly one visible
+  language and the hidden edition is removed from the accessibility tree.
 - Build-time mathematics removes a runtime CDN dependency and avoids delaying
   article rendering on third-party JavaScript.
 

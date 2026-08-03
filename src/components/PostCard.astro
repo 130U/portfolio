@@ -14,8 +14,10 @@ const number = String(data.seriesNo).padStart(2, "0");
 <article class="note-card">
   <a class="note-card-link" href={articleHref(data.slug)}>
     <div class="note-card-meta">
-      <span>No. {number} · {collectionCopy[data.collection].en} · {data.topics.slice(0, 2).join(" · ")}</span>
-      <time datetime={data.publishedAt ?? undefined}>{formatDate(data.publishedAt)}</time>
+      <span data-content-lang="zh" lang="zh-CN">第 {number} 篇 · {collectionCopy[data.collection].zh}</span>
+      <span data-content-lang="en" lang="en">No. {number} · {collectionCopy[data.collection].en}</span>
+      <time data-content-lang="zh" lang="zh-CN" datetime={data.publishedAt ?? undefined}>{formatDate(data.publishedAt, "zh-CN")}</time>
+      <time data-content-lang="en" lang="en" datetime={data.publishedAt ?? undefined}>{formatDate(data.publishedAt)}</time>
     </div>
     <div class="note-card-body">
       <div class="note-card-copy">

@@ -12,6 +12,14 @@ function displayId(post) {
 function dateOnly(value) {
   return value ? value.slice(0, 10) : "—";
 }
+function primaryTitle(post) {
+  return post.data.sourceLanguage === "en"
+    ? post.data.languages.en.title
+    : post.data.languages["zh-CN"].title;
+}
+function collectionLabel(post) {
+  return post.data.collection[0].toUpperCase() + post.data.collection.slice(1);
+}
 
 function replaceGenerated(source, generated, file) {
   const start = source.indexOf(startMarker);
@@ -24,33 +32,35 @@ function replaceGenerated(source, generated, file) {
 
 function rootIndex(posts) {
   if (!posts.length) return "\n_No published writing yet._\n";
-  const rows = posts.map((post) => {
+  const entries = posts.flatMap((post) => {
     const zh = `${post.relativeDir}/${post.data.languages["zh-CN"].file}`;
     const en = `${post.relativeDir}/${post.data.languages.en.file}`;
-    return `| ${displayId(post)} | ${dateOnly(post.data.publishedAt)} | ${post.data.languages["zh-CN"].title}<br>${post.data.languages.en.title} | [中文](${zh}) · [English](${en}) · [Web](${webUrl(post)}) |`;
+    return [
+      `### [${displayId(post)} · ${primaryTitle(post)}](${post.relativeDir}/)`,
+      "",
+      `${dateOnly(post.data.publishedAt)} · ${collectionLabel(post)}`,
+      "",
+      `[中文全文](${zh}) · [English version](${en}) · [Read on web](${webUrl(post)})`,
+      "",
+    ];
   });
-  return [
-    "",
-    "| ID | Date | Article / 文章 | Read |",
-    "|---|---|---|---|",
-    ...rows,
-    "",
-  ].join("\n");
+  return ["", ...entries].join("\n");
 }
 
 function collectionIndex(posts, folder) {
   if (!posts.length) return "\n_No published writing in this collection yet._\n";
-  const rows = posts.map((post) => {
+  const entries = posts.flatMap((post) => {
     const articleFolder = post.relativeDir.slice(folder.length + 1);
-    return `| ${displayId(post)} | ${dateOnly(post.data.publishedAt)} | [${post.data.languages["zh-CN"].title}](${articleFolder}/${post.data.languages["zh-CN"].file})<br>[${post.data.languages.en.title}](${articleFolder}/${post.data.languages.en.file}) | ${post.data.topics.join(", ")} | [Web](${webUrl(post)}) |`;
+    return [
+      `### [${displayId(post)} · ${primaryTitle(post)}](${articleFolder}/)`,
+      "",
+      `${dateOnly(post.data.publishedAt)} · ${post.data.topics.join(" · ")}`,
+      "",
+      `[中文全文](${articleFolder}/${post.data.languages["zh-CN"].file}) · [English version](${articleFolder}/${post.data.languages.en.file}) · [Read on web](${webUrl(post)})`,
+      "",
+    ];
   });
-  return [
-    "",
-    "| ID | Date | 中文标题 / English title | Topics | Web |",
-    "|---|---|---|---|---|",
-    ...rows,
-    "",
-  ].join("\n");
+  return ["", ...entries].join("\n");
 }
 
 async function updateFile(path, generated, drift) {
