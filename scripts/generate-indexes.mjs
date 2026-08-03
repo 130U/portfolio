@@ -27,7 +27,9 @@ function replaceGenerated(source, generated, file) {
   if (start === -1 || end === -1 || end < start) {
     throw new Error(`${file} is missing a valid generated index boundary.`);
   }
-  return `${source.slice(0, start + startMarker.length)}\n${generated.trim()}\n${source.slice(end)}`;
+  const newline = source.includes("\r\n") ? "\r\n" : "\n";
+  const normalizedGenerated = generated.trim().replace(/\r?\n/g, newline);
+  return `${source.slice(0, start + startMarker.length)}${newline}${normalizedGenerated}${newline}${source.slice(end)}`;
 }
 
 function rootIndex(posts) {
