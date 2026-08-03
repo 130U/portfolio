@@ -1,0 +1,640 @@
+{
+  "project_id": "manifold-world-model-landscape",
+  "plan_version": "v2.0",
+  "phase": "final_delivery",
+  "status": "completed",
+  "last_completed_step": "final_pptx_v1_4_title_spacing_visual_qa_passed",
+  "open_blockers": [],
+  "next_action": "await_user_review_of_v1_4",
+  "approved_checkpoint": 2,
+  "approved_checkpoint_date": "2026-07-15",
+  "checkpoint_2_approved_date": "2026-07-15",
+  "checkpoint_2_status": "approved",
+  "approved_baseline": {
+    "checkpoint_2_recommendation_pack": "v1.0",
+    "checkpoint_2_control_patch": "v1.0a",
+    "relationship": "v1.0_as_amended_by_v1.0a_unique_effective_baseline"
+  },
+  "checkpoint_1_baseline": {
+    "checkpoint_1_approval_pack": "v1.1",
+    "checkpoint_1_rule_patch": "v1.1a",
+    "relationship": "combined_unique_effective_baseline"
+  },
+  "artifact_versions": {
+    "project_charter": "1.3_checkpoint_2_approved",
+    "qualification_gates": "1.1a_with_checkpoint_2_v1.0a_conditional_interpretation",
+    "input_manifest": "1.9_15_rows_through_storyboard_v1_0_red_team",
+    "ingestion_audit": "1.9_fifteen_inputs_through_storyboard_v1_0_red_team",
+    "manifold_anchor": "1.2_checkpoint_2_v1.0a_gate3_limit",
+    "manifold_auxiliary_assets": "1.1a",
+    "eligibility_register": "2.2_checkpoint_2_approval_propagation_correction",
+    "company_universe": "2.3_checkpoint_2_approval_propagation_correction",
+    "geography_audit": "2.2_checkpoint_2_approved",
+    "component_register": "2.1_checkpoint_2_approval_propagation_correction_15_rows",
+    "boundary_log": "1.1a",
+    "dr03_triage": "1.1a",
+    "source_registry": "3.2_content_lock_v1_1a_141_sources_odyssey_markdown_reopened",
+    "source_cards": "3.2_content_lock_v1_1a_141_cards_odyssey_default_semantics_confirmed",
+    "evidence_ledger": "3.4_content_lock_v1_1a_111_atomic_claims_odyssey_semantics_corrected",
+    "qualification_validation_isolation_queue": "1.1a_checkpoint_1_baseline",
+    "candidate_validation_pool": "superseded_0.2",
+    "checkpoint_1_approval_pack": "1.1_with_1.1a_control_patch",
+    "checkpoint_1_qa": "1.1_historical_baseline",
+    "checkpoint_1_rule_patch": "1.1a",
+    "checkpoint_1_qa_diff": "1.1a_pass",
+    "checkpoint_1_approval_record": "1.0",
+    "phase_2_validation_plan": "1.0_completed_historical_with_checkpoint_2_approval_note",
+    "phase_2_candidate_validation": "1.0a_checkpoint_2_approved_with_propagation_correction",
+    "checkpoint_2_recommendation_pack": "1.0_as_amended_by_v1.0a_approved_with_propagation_correction_no_version_bump",
+    "checkpoint_2_nine_object_decision_table": "1.0a_non_scoring_checkpoint_2_approved_with_propagation_correction",
+    "checkpoint_2_control_patch": "1.0a_approved_with_propagation_correction_no_version_bump",
+    "checkpoint_2_qa": "1.0_historical_snapshot",
+    "checkpoint_2_qa_diff": "1.0a_pass_with_approval_override_and_propagation_correction_note",
+    "checkpoint_2_red_team_input": "1.0_applied",
+    "checkpoint_2_approval_input": "1.0_applied",
+    "checkpoint_2_approval_propagation_correction_input": "1.0_applied",
+    "checkpoint_2_approval_record": "1.0_with_propagation_qa_trace_no_version_bump",
+    "shortlist_memo": "1.0_checkpoint_2_approved_with_propagation_correction",
+    "phase_3_dossier_protocol": "1.0",
+    "phase_3_dossiers": "1.0_five_completed_with_content_lock_v1_1a_odyssey_semantic_correction_no_rerun",
+    "dossier_query_audit": "1.2_58_queries_with_content_lock_v1_1a_odyssey_default_semantics",
+    "phase_3_completion_qa": "1.1_historical_with_content_lock_v1_1_addendum",
+    "competitive_matrix": "1.2_content_lock_v1_1a_odyssey_semantics_non_scoring_five_rows",
+    "monitoring_matrix": "1.4_seventeen_signals_with_content_lock_v1_1a_odyssey_semantics",
+    "watch_only_monitoring": "1.0_five_non_seat_triggers",
+    "cross_comparison": "1.3_content_lock_v1_1a_odyssey_semantics_propagated",
+    "phase_4_comparison_review_workbook": "1.4_content_lock_v1_1a_rebuilt_and_import_verified",
+    "phase_4_comparison_qa": "1.4_pass_with_content_lock_v1_1a_odyssey_semantics",
+    "red_team_report": "1.5_content_lock_v1_1a_approved_mechanical_closure",
+    "red_team_revision_log": "1.5_content_lock_v1_1a_all_findings_closed",
+    "deck_content_review": "1.1a_approved_frozen",
+    "slide_evidence_map_csv": "1.1a_approved_frozen_63_rows",
+    "slide_evidence_map_workbook": "1.1a_approved_frozen_63_rows",
+    "content_lock_control_patch": "1.1a_approved_mechanical_delivery_patch",
+    "content_lock_qa": "1.1a_approved_mechanical_recheck_pass",
+    "content_lock_frozen_manifest": "1.1a_approved_16_canonical_members",
+    "content_lock_frozen_attachment_zip": "1.1a_single_canonical_content_lock_v1_1a_zip",
+    "content_lock_frozen_attachment_companion": "1.1a_content_lock_v1_1a_zip_sha256",
+    "content_lock_approval_record": "1.1_approved_with_independent_mechanical_closure",
+    "content_lock_approval_mechanical_qa": "1.0_pass_16_members_four_frozen_files_141_111_141",
+    "storyboard": "1.1_user_red_team_p1_3_p2_5_closed",
+    "storyboard_qa": "1.1_pass_after_user_red_team_and_powerpoint_graybox_recheck_37_of_37",
+    "storyboard_font_preflight": "1.0_noto_sans_sc_powerpoint_render_pass",
+    "storyboard_graybox_preflight": "1.0_powerpoint_1280x720_p1_p2_p10_37_of_37_fit",
+    "final_deck_pptx": "1.4_title_spacing_revision_current_delivery_v1_0_through_v1_3_preserved",
+    "final_deck_powerpoint_qa": "1.4_pass_10_slides_10_renders_252_text_boxes_0_violations",
+    "final_deck_contact_sheet": "1.4_final_powerpoint_render_thumbnail_qa",
+    "final_deck_render_manifest": "1.4_current_delivery",
+    "final_deck_qa": "1.4_full_size_and_thumbnail_manual_visual_qa_pass",
+    "content_lock_v1_0_red_team_input": "1.0_applied",
+    "content_lock_v1_1_red_team_input": "1.0_applied",
+    "content_lock_v1_1a_red_team_input": "1.0_applied"
+  },
+  "counts": {
+    "dr02_original_validation_inputs": 9,
+    "dr02_boundary_inputs": 13,
+    "dr02_discard_inputs": 1,
+    "current_qualification_validation_isolation_queue": 10,
+    "phase_2_core_collection": 9,
+    "phase_2_adjacent": 0,
+    "phase_2_isolation": 1,
+    "checkpoint_2_recommended_objects": 5,
+    "checkpoint_2_recommended_startups": 4,
+    "checkpoint_2_recommended_big_tech_projects": 1,
+    "checkpoint_2_approved_final_five_objects": 5,
+    "checkpoint_2_approved_final_five_startups": 4,
+    "checkpoint_2_approved_final_five_big_tech_projects": 1,
+    "dr03_additional_discard": 2,
+    "geography_audit_objects": 10,
+    "eligibility_register_rows": 24,
+    "component_register_rows": 15,
+    "source_cards": 141,
+    "evidence_ledger_claims": 111,
+    "monitoring_signals": 17,
+    "watch_only_triggers": 5,
+    "dossier_query_audit_queries": 58,
+    "completed_dossiers": 5,
+    "checkpoint_2_non_scoring_decision_rows": 9,
+    "input_manifest_rows": 15,
+    "content_review_pages": 10,
+    "slide_evidence_map_rows": 63,
+    "final_deck_pages": 10,
+    "final_deck_powerpoint_renders": 10,
+    "final_deck_powerpoint_text_boxes": 252
+  },
+  "final_five": [
+    {
+      "object_id": "O-001",
+      "name": "World Labs",
+      "type": "startup",
+      "status": "approved_final_five"
+    },
+    {
+      "object_id": "O-002",
+      "name": "Odyssey",
+      "type": "startup",
+      "status": "approved_final_five"
+    },
+    {
+      "object_id": "O-003",
+      "name": "Runway",
+      "type": "startup",
+      "status": "approved_final_five"
+    },
+    {
+      "object_id": "O-004",
+      "name": "Decart",
+      "type": "startup",
+      "status": "approved_final_five"
+    },
+    {
+      "object_id": "O-005",
+      "name": "NVIDIA Cosmos 3",
+      "type": "big_tech_project",
+      "status": "approved_final_five"
+    }
+  ],
+  "input_manifest_version": "1.9",
+  "as_of_date": "2026-07-14",
+  "revision_basis_user_document_date": "2026-07-15",
+  "phase_2_started": true,
+  "phase_2_completed": true,
+  "checkpoint_2_submitted": true,
+  "checkpoint_2_control_patch_submitted": true,
+  "control_patch_red_team_completed": true,
+  "control_patch_red_team_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "checkpoint_2_approval_propagation_qa_completed": true,
+  "checkpoint_2_approval_propagation_qa_initial_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 4
+  },
+  "checkpoint_2_approval_propagation_corrections_applied": true,
+  "checkpoint_2_approval_propagation_qa_final_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "checkpoint_2_approval_propagation_qa_status": "pass",
+  "checkpoint_2_approval_propagation_affects_approval": false,
+  "checkpoint_2_approval_propagation_requires_version_bump": false,
+  "final_five_selected": true,
+  "phase_3_started": true,
+  "dossiers_started": true,
+  "dossiers_created": true,
+  "dossiers_completed": true,
+  "evidence_refresh_started": true,
+  "evidence_refresh_completed": true,
+  "phase_3_qa_completed": true,
+  "phase_3_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "cross_comparison_started": true,
+  "cross_comparison_completed": true,
+  "phase_4_qa_completed": true,
+  "phase_4_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "independent_red_team_started": true,
+  "independent_red_team_completed": true,
+  "independent_red_team_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "content_review_started": true,
+  "content_review_completed": true,
+  "content_lock_qa_completed": true,
+  "content_lock_red_team_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "content_lock_submitted": true,
+  "content_lock_v1_0_user_review_result": {
+    "status": "awaiting_revision",
+    "p0": 0,
+    "p1": 8,
+    "p2": 6
+  },
+  "content_lock_revision_started": true,
+  "content_lock_revision_completed": true,
+  "content_lock_v1_1_submitted": true,
+  "content_lock_v1_1_submission_status": "superseded_by_v1_1a",
+  "content_lock_v1_1_red_team_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "content_lock_v1_1_historical_submission_snapshot_sha256": {
+    "08_content/deck_content_review.md": "83B7258C2E508BAC4126FD0ABD16A75704CFC54B8F729C9766D9D46B49962038",
+    "08_content/slide_evidence_map.csv": "17279BDFFE06F07103F67A15B9C7318A30D52A5B6A7BB3F750B5D26E411AEFB0",
+    "08_content/slide_evidence_map.xlsx": "BA35070176715C1103ACDE2082C0294B0C1E70CC65DE86125E7F1E8B29BE942D",
+    "04_evidence/evidence_ledger.csv": "7A41610AA26BA6484AA14393675887911673FECF628CCECE1E447A88ACE9FA72"
+  },
+  "content_lock_approval_migration_pending": false,
+  "content_lock_approval_atomic_migration_contract": {
+    "apply_only_after": "explicit_user_approval_of_content_lock_v1_1a",
+    "single_transaction_set": {
+      "content_lock_approved": true,
+      "content_lock_approved_date": "2026-07-15",
+      "content_lock_approval_migration_pending": false,
+      "open_blockers": [],
+      "phase": "deck_production_ready",
+      "status": "running",
+      "last_completed_step": "content_lock_v1_1a_approved_and_fact_locked",
+      "next_action": "start_storyboard_from_content_locked_v1_1a_baseline_when_work_actually_begins",
+      "content_lock_approved_version": "v1.1a",
+      "content_lock_v1_1a_submission_status": "approved",
+      "content_locked_page_count": 10,
+      "deck_page_cap": "10_including_cover",
+      "fact_lock_started": true,
+      "fact_lock_completed": true,
+      "content_lock_change_requires_reapproval": true,
+      "content_lock_frozen_files_sha256": {
+        "08_content/deck_content_review.md": "7D794E1DEC6E9FC2FA3085892C6719B5778C7127CE424EB431543992659C4211",
+        "08_content/slide_evidence_map.csv": "06074FF97F4CA54CA82F0DCD912789CE8A858137EC2ECF13C96F7AA9C49B2F25",
+        "08_content/slide_evidence_map.xlsx": "50384D8780CE1B365957BC3FDF28E9DC5BF9E70B44A4228E2A55C237475B3443",
+        "04_evidence/evidence_ledger.csv": "A60F4BCAFF9B6A0EDD6FA32C4BD2D814477E8EB24BF3835D7D19F040245C02EA"
+      },
+      "locked_until_content_lock": [],
+      "post_content_lock_unlocked_scope": [
+        "final_page_content_layout",
+        "storyboard",
+        "company_project_pages",
+        "company_project_page_visual_layout",
+        "deck_visual_production",
+        "ppt",
+        "pdf"
+      ]
+    },
+    "same_transaction_frozen_hash_source": "content_lock_v1_1a_submission_snapshot_sha256",
+    "same_transaction_unlock": [
+      "fact_lock",
+      "final_page_content_layout",
+      "storyboard",
+      "company_project_pages",
+      "company_project_page_visual_layout",
+      "deck_visual_production",
+      "ppt",
+      "pdf"
+    ],
+    "must_remain_false_after_approval": {
+      "company_project_pages_started": false,
+      "storyboard_started": false,
+      "deck_production_started": false,
+      "ppt_created": false,
+      "pdf_created": false
+    },
+    "approval_does_not_start_downstream_work": true
+  },
+  "content_lock_v1_1_user_review_result": {
+    "status": "awaiting_revision",
+    "p0": 0,
+    "p1": 6,
+    "p2": 5
+  },
+  "content_lock_v1_1a_submission_status": "approved",
+  "content_lock_v1_1a_submitted": true,
+  "content_lock_v1_1a_qa_completed": true,
+  "content_lock_v1_1a_pre_user_review_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "content_lock_v1_1a_user_review_result": {
+    "status": "awaiting_revision",
+    "p0": 0,
+    "p1": 2,
+    "p2": 4
+  },
+  "content_lock_v1_1a_user_review_result_is_historical": true,
+  "content_lock_v1_1a_mechanical_correction_qa_completed": true,
+  "content_lock_v1_1a_mechanical_correction_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "content_lock_v1_1a_package_name": "content_lock_v1_1a.zip",
+  "content_lock_v1_1a_package_companion_name": "content_lock_v1_1a.zip.sha256",
+  "content_lock_v1_1a_package_member_count": 16,
+  "content_lock_v1_1a_approval_record": {
+    "status": "approved",
+    "approved_date": "2026-07-15",
+    "approval_basis": "explicit_user_approval_of_content_lock_v1_1a",
+    "approved_package": "content_lock_v1_1a.zip",
+    "approved_package_sha256": "FD333842A2EA94818DBD6FAE3DF3C3B615CE98B3F03EEC60B95748E0C0964C20",
+    "approved_page_count": 10,
+    "approval_migration_applied_atomically": true
+  },
+  "content_lock_v1_1a_final_approval_result": {
+    "status": "approved",
+    "approved_date": "2026-07-15",
+    "user_instruction": "批准 Content Lock v1.1a"
+  },
+  "content_lock_v1_1a_approval_mechanical_qa_completed": true,
+  "content_lock_v1_1a_approval_mechanical_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "package_bytes": 100817,
+    "package_sha256": "FD333842A2EA94818DBD6FAE3DF3C3B615CE98B3F03EEC60B95748E0C0964C20",
+    "unique_root_members": 16,
+    "sources": 141,
+    "claims": 111,
+    "source_cards": 141
+  },
+  "content_lock_v1_1a_submission_snapshot_sha256": {
+    "08_content/deck_content_review.md": "7D794E1DEC6E9FC2FA3085892C6719B5778C7127CE424EB431543992659C4211",
+    "08_content/slide_evidence_map.csv": "06074FF97F4CA54CA82F0DCD912789CE8A858137EC2ECF13C96F7AA9C49B2F25",
+    "08_content/slide_evidence_map.xlsx": "50384D8780CE1B365957BC3FDF28E9DC5BF9E70B44A4228E2A55C237475B3443",
+    "04_evidence/evidence_ledger.csv": "A60F4BCAFF9B6A0EDD6FA32C4BD2D814477E8EB24BF3835D7D19F040245C02EA"
+  },
+  "scoring_ranking_started": false,
+  "company_project_pages_started": true,
+  "company_project_pages_completed": true,
+  "storyboard_started": true,
+  "storyboard_completed": true,
+  "storyboard_qa_completed": true,
+  "storyboard_v1_0_user_review_result": {
+    "status": "awaiting_revision",
+    "p0": 0,
+    "p1": 3,
+    "p2": 5
+  },
+  "storyboard_revision_started": true,
+  "storyboard_revision_completed": true,
+  "storyboard_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "storyboard_v1_0_historical_files_sha256": {
+    "10_deck/storyboard_v1_0.md": "B6021C2F0B8FA2282AC918E635797A8ACD8B2B2F86553DBF7F202525B2983C06",
+    "10_deck/storyboard_qa_v1_0.md": "D6625585200834BB13D8A9012AAA83E236B28F309A87F29CDE1CA75770C5C1ED"
+  },
+  "storyboard_files_sha256": {
+    "10_deck/storyboard_v1_1.md": "E3F9976E313BDBF04F416E2DE212F1887DB1B7A32814B1B46831E214FD2C1509",
+    "10_deck/storyboard_qa.md": "18B4188870F4DC7B826DE2BE79A9F2918A40E48245098C2DB69C59C17F0D5350",
+    "10_deck/font_preflight.md": "8E7BA1B08CC9541E92A87B06228B219F72C601723B83CCA8E5B9147E12A444BC",
+    "10_deck/qa_assets/font_probe_result.json": "79621C967FDA0F8C21C9F20846968662289AB7FD8A8722A9C9B012E07B64D1D2",
+    "10_deck/qa_assets/font_probe_noto_sans_sc.png": "0F0FC6B116BF645CF13550A1F30DC3871B67601EC81BE9DA35565AF57B3435C4",
+    "10_deck/storyboard_graybox_preflight.md": "835DE8D3650AAFFADACBF43E076EAA81CC9D125FE5DD3E1AC4A9CDA9C5230EDF",
+    "10_deck/qa_assets/storyboard_graybox_result.json": "47B36D2B3A3ADECD1C229825D0BB3C761A808A685F1CE85C1B1E182BC5C03A7A",
+    "10_deck/qa_assets/graybox_p1.png": "195234DEAF7FB1AC3E2A12E99D1FE518BFC3D5F9E33BCAB3455EF41CBC8BA411",
+    "10_deck/qa_assets/graybox_p2.png": "385315C86457107DEB454BBD2FE86BE69F6959D7A55CBD50B1A154F52A95B087",
+    "10_deck/qa_assets/graybox_p10.png": "AE94780EFD39D91B8C47C68B53834A76CF69E68E8E788A119AA9257C9C1FDBFF"
+  },
+  "storyboard_font_preflight": {
+    "status": "pass",
+    "font_family": "Noto Sans SC",
+    "font_path": "C:\\Windows\\Fonts\\NotoSansSC-VF.ttf",
+    "font_bytes": 17773244,
+    "font_sha256": "763146584CF0710223441356B4395E279021B0806C196614377A7A0174AE074A",
+    "renderer": "Microsoft PowerPoint 16 COM export",
+    "missing_glyphs": 0,
+    "dejavu_fallback_detected": false
+  },
+  "storyboard_graybox_preflight": {
+    "status": "pass",
+    "renderer": "Microsoft PowerPoint 16 COM export",
+    "canvas": "1280x720",
+    "slides": [
+      "P1",
+      "P2",
+      "P10"
+    ],
+    "text_box_count": 37,
+    "failed_text_box_count": 0,
+    "slide_xml_uses_noto_sans_sc": true,
+    "slide_xml_contains_dejavu_sans": false,
+    "full_size_visual_inspection_completed": true
+  },
+  "fact_lock_started": true,
+  "fact_lock_completed": true,
+  "content_lock_approved": true,
+  "content_lock_approved_date": "2026-07-15",
+  "content_lock_approved_version": "v1.1a",
+  "content_locked_page_count": 10,
+  "deck_page_cap": "10_including_cover",
+  "content_lock_change_requires_reapproval": true,
+  "content_lock_frozen_files_sha256": {
+    "08_content/deck_content_review.md": "7D794E1DEC6E9FC2FA3085892C6719B5778C7127CE424EB431543992659C4211",
+    "08_content/slide_evidence_map.csv": "06074FF97F4CA54CA82F0DCD912789CE8A858137EC2ECF13C96F7AA9C49B2F25",
+    "08_content/slide_evidence_map.xlsx": "50384D8780CE1B365957BC3FDF28E9DC5BF9E70B44A4228E2A55C237475B3443",
+    "04_evidence/evidence_ledger.csv": "A60F4BCAFF9B6A0EDD6FA32C4BD2D814477E8EB24BF3835D7D19F040245C02EA"
+  },
+  "deck_production_started": true,
+  "deck_production_completed": true,
+  "ppt_started": true,
+  "ppt_qa_completed": true,
+  "pdf_started": false,
+  "pdf_qa_completed": false,
+  "final_delivery_completed": true,
+  "ppt_created": true,
+  "pdf_created": false,
+  "delivery_scope": "pptx_title_spacing_revision_v1_4",
+  "pdf_required_for_delivery": false,
+  "final_deck_pptx_v1_0": {
+    "path": "10_deck/manifold_world_model_landscape_v1_0.pptx",
+    "bytes": 57360,
+    "sha256": "9C2476537C247117AAF87B0FF9CED17C6920006EBC1CEE81F6CDD99A5B4A5B44",
+    "slide_count": 10,
+    "includes_cover_function": true
+  },
+  "final_deck_pptx": {
+    "path": "10_deck/manifold_world_model_landscape_v1_4.pptx",
+    "bytes": 62779,
+    "sha256": "B61FE7FBB66CD1B7F7C926CF254CF4F32ED6B7E5A94C1B488648A2FFABAB02E9",
+    "slide_count": 10,
+    "includes_cover_function": true,
+    "visual_redesign": "warm_low_saturation_editorial_with_single_line_closing_title_and_relaxed_title_spacing"
+  },
+  "final_deck_powerpoint_qa_v1_0": {
+    "status": "pass",
+    "renderer": "Microsoft PowerPoint 16 COM export",
+    "slide_count": 10,
+    "render_count": 10,
+    "text_box_count": 189,
+    "violation_count": 0,
+    "canvas": "960x540_pt_16_by_9",
+    "render_size": "1280x720",
+    "font_family": "Noto Sans SC",
+    "ooxml_uses_noto_sans_sc": true,
+    "ooxml_uses_dejavu_sans": false,
+    "content_lock_hashes_match": true,
+    "storyboard_hashes_match": true,
+    "title_exact_match": "10/10",
+    "p3_cell_exact_match": "24/24",
+    "permanent_prohibitions_pass": true
+  },
+  "final_deck_powerpoint_qa": {
+    "status": "pass",
+    "renderer": "Microsoft PowerPoint 16 COM export",
+    "slide_count": 10,
+    "render_count": 10,
+    "text_box_count": 252,
+    "violation_count": 0,
+    "canvas": "960x540_pt_16_by_9",
+    "render_size": "1280x720",
+    "font_family": "Noto Serif SC + Noto Sans SC",
+    "ooxml_uses_noto_sans_sc": true,
+    "ooxml_uses_noto_serif_sc": true,
+    "ooxml_uses_dejavu_sans": false,
+    "permanent_prohibitions_pass": true,
+    "manual_full_size_visual_qa": "10_of_10_pass",
+    "manual_thumbnail_visual_qa": "10_of_10_pass"
+  },
+  "final_deck_independent_red_team_result_v1_0": {
+    "content": {
+      "p0": 0,
+      "p1": 0,
+      "p2": 0
+    },
+    "layout": {
+      "p0": 0,
+      "p1": 0,
+      "p2": 0
+    },
+    "governance": {
+      "p0": 0,
+      "p1": 0,
+      "p2": 0
+    }
+  },
+  "final_deck_v1_0_files_sha256": {
+    "10_deck/manifold_world_model_landscape_v1_0.pptx": "9C2476537C247117AAF87B0FF9CED17C6920006EBC1CEE81F6CDD99A5B4A5B44",
+    "10_deck/qa_assets/final_deck_ppt_render/powerpoint_qa_result.json": "6BD4451E64FC3BA8999EB5C36A51C2CC2547004CE9626C04059FD993D5D4165E",
+    "10_deck/qa_assets/final_deck_ppt_render/powerpoint_qa.md": "7B13C53027CCC26C142AF064D3DE305A65F003FA890FCD81ADA80BD8DC138E61",
+    "10_deck/qa_assets/final_deck_contact_sheet.png": "74DBAC036D6FBF7CF9249B6A624104B4E1B33AC7BB193D6B7A7383719AFCC135",
+    "10_deck/final_deck_render_manifest.md": "5FFEC21636891CE703CE7AA0099F6F44FEC2BAF44F454FA4C8EAC1F0FA4F007C",
+    "10_deck/final_deck_qa.md": "776201BD2F79AA820AE75E21D8CB998A5FE07E5DD7E13D7570AE791C45F6CE01"
+  },
+  "final_deck_v1_1_files_sha256": {
+    "10_deck/manifold_world_model_landscape_v1_1.pptx": "FF3480C15CFDD2ABF81EB7826E36D1619EC528B0794FD2A6C8C9B1245900E588",
+    "10_deck/qa_assets/final_deck_v1_1_ppt_render/powerpoint_qa_result.json": "EE387E2ACE31D9833391771B151477A388AC12A423DAB744AAC95B8410D0E22A",
+    "10_deck/qa_assets/final_deck_v1_1_ppt_render/powerpoint_qa.md": "4ADF70120682C297B5003DF541A31BFABE200064E2236ED9E5B66F62ABE4E056",
+    "10_deck/qa_assets/final_deck_v1_1_contact_sheet.png": "510A5CD78AD0212029F9736CA33CCCE42A7DDE6E72EB45CE4C2ACECACE189E26",
+    "10_deck/final_deck_render_manifest_v1_1.md": "27894D85B0F0E43B24E6892FC8FC331B09AEA1BDBC72E91F794BC98F0D0E1910",
+    "10_deck/final_deck_qa_v1_1.md": "268799A6802E55D0C5484C4780D1D18D48FA0E9DF9909CB9189E62259D8C2D3C"
+  },
+  "final_deck_v1_2_files_sha256": {
+    "10_deck/manifold_world_model_landscape_v1_2.pptx": "915BFF73F72D93F525D18FA81E314C224181617436B4C8C2F17134A3315EF5FF",
+    "10_deck/qa_assets/final_deck_v1_2_ppt_render/powerpoint_qa_result.json": "BE0C4658F0ED80DF1E98D424E0EE00BF0D44054B379EC99E90847635C0FB94BE",
+    "10_deck/qa_assets/final_deck_v1_2_ppt_render/powerpoint_qa.md": "E3389BDD6911C6CA1AC4B889C2183653034561BF71A9C277BC022A49E141077A",
+    "10_deck/qa_assets/final_deck_v1_2_contact_sheet.png": "5997B03B887113681F0E91674508FF6F1509574F8592F5CDBB3FAF195A33A5FC",
+    "10_deck/final_deck_render_manifest_v1_2.md": "08FCDE836C8F474420DA249E15E0412A8EF5C47C1AABFF15A2673FD34E80998C",
+    "10_deck/final_deck_qa_v1_2.md": "03C7C2BE239DAE8978E84AA55EA5F4314218DD206BD862DBB6D33AA022EDC9DC"
+  },
+  "final_deck_v1_3_files_sha256": {
+    "10_deck/manifold_world_model_landscape_v1_3.pptx": "16D70510440E71F49435718363DD477122F13E65D44CAB347F50CC8A570FBA5E",
+    "10_deck/qa_assets/final_deck_v1_3_ppt_render/powerpoint_qa_result.json": "64314996656F8BEECDED8AA4E458414A576AA98A4DFF35600595C16D3EAF8817",
+    "10_deck/qa_assets/final_deck_v1_3_ppt_render/powerpoint_qa.md": "6061BEDD13A415F3684D4E17639B33820139BF27D187B88E89D419ECB67EEEA6",
+    "10_deck/qa_assets/final_deck_v1_3_contact_sheet.png": "85D8D9557EBB68233152F86E5A033CF9D79203043A7FF51030CEE7189F8D7BCE",
+    "10_deck/final_deck_render_manifest_v1_3.md": "5B8CAB533ADF951EB6CA9EA149E8F2A75A3DB753319890771C7EE3D99FEF3108",
+    "10_deck/final_deck_qa_v1_3.md": "DDB8933F26897EF38831A6FEB8A36B09F4D4C6037C9254276E91C1E47746151C"
+  },
+  "final_deck_files_sha256": {
+    "10_deck/manifold_world_model_landscape_v1_4.pptx": "B61FE7FBB66CD1B7F7C926CF254CF4F32ED6B7E5A94C1B488648A2FFABAB02E9",
+    "10_deck/qa_assets/final_deck_v1_4_ppt_render/powerpoint_qa_result.json": "B64F877CE7E8CDB6068395CB6CF98CB6C7FE626ADECFD1A2F933FDA76EF53AA6",
+    "10_deck/qa_assets/final_deck_v1_4_ppt_render/powerpoint_qa.md": "1F42287516133B9A0CE5A5E3E3AE4A91BA0DEAED1E0DE565CE1850A5E9ACBD79",
+    "10_deck/qa_assets/final_deck_v1_4_contact_sheet.png": "B43BCEC6719AD17A8E63132110157A08565C0AE8DCCD0193F67D4BC64C568614",
+    "10_deck/final_deck_render_manifest_v1_4.md": "D5D00594C8853B2BA0640D34ACB27E881B0456B299985EE844C4B34CC311C8A7",
+    "10_deck/final_deck_qa_v1_4.md": "90A64E972AED88F3AEBE317940656959C11DC27FA04C07C8749957AE3EF5D0AF"
+  },
+  "post_checkpoint_2_unlock_scope": [
+    "five_object_dossiers",
+    "technical_product_commercial_evidence_refresh",
+    "cross_comparison",
+    "independent_red_team"
+  ],
+  "permanently_prohibited": [
+    "scoring_ranking",
+    "deck_page_count_gt_10",
+    "mainland_china_object_as_research_node",
+    "manifold_as_competitor_node",
+    "out_of_scope_route_as_standalone_research_node",
+    "vla_route_as_research_pool_node_final_seat_or_dedicated_page",
+    "robot_foundation_model_route_as_research_pool_node_final_seat_or_dedicated_page",
+    "simulation_or_synthetic_data_platform_as_research_pool_node_final_seat_or_dedicated_page",
+    "pure_video_route_as_research_pool_node_final_seat_or_dedicated_page",
+    "pure_3d_route_as_research_pool_node_final_seat_or_dedicated_page",
+    "vertical_company_internal_world_model_component_as_research_pool_node_final_seat_or_dedicated_page"
+  ],
+  "locked_until_content_lock": [],
+  "post_content_lock_unlocked_scope": [
+    "final_page_content_layout",
+    "storyboard",
+    "company_project_pages",
+    "company_project_page_visual_layout",
+    "deck_visual_production",
+    "ppt",
+    "pdf"
+  ],
+  "deck_revision_started": true,
+  "deck_revision_completed": true,
+  "ppt_v1_1_created": true,
+  "ppt_v1_1_qa_completed": true,
+  "final_deck_v1_1_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0
+  },
+  "deck_revision_v1_2_started": true,
+  "deck_revision_v1_2_completed": true,
+  "ppt_v1_2_created": true,
+  "ppt_v1_2_qa_completed": true,
+  "final_deck_v1_2_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "powerpoint_mechanical_qa": "pass",
+    "manual_full_size_qa": "pass",
+    "manual_thumbnail_qa": "pass"
+  },
+  "deck_revision_v1_3_started": true,
+  "deck_revision_v1_3_completed": true,
+  "ppt_v1_3_created": true,
+  "ppt_v1_3_qa_completed": true,
+  "final_deck_v1_3_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "powerpoint_mechanical_qa": "pass",
+    "manual_full_size_qa": "10_of_10_pass",
+    "manual_thumbnail_qa": "10_of_10_pass"
+  },
+  "deck_revision_v1_4_started": true,
+  "deck_revision_v1_4_completed": true,
+  "ppt_v1_4_created": true,
+  "ppt_v1_4_qa_completed": true,
+  "final_deck_v1_4_qa_result": {
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "powerpoint_mechanical_qa": "pass",
+    "manual_full_size_qa": "10_of_10_pass",
+    "manual_thumbnail_qa": "10_of_10_pass",
+    "page_1_and_2_unchanged_render_hashes": true
+  },
+  "final_deck_v1_1_user_visual_review_result": {
+    "status": "awaiting_revision",
+    "focus": [
+      "page_1_safe_margins_and_module_breathing",
+      "page_2_hierarchy_and_spatial_reallocation",
+      "company_pages_dynamic_layout_and_padding",
+      "page_3_and_9_table_refinement",
+      "manual_full_size_and_thumbnail_visual_qa"
+    ],
+    "superseded_by": "final_deck_v1_2_manual_visual_relayout"
+  },
+  "updated_at": "2026-07-15T13:35:00Z"
+}

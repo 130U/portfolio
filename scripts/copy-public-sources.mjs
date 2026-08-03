@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readdir } from "node:fs/promises";
+import { copyFile, cp, mkdir, readdir } from "node:fs/promises";
 import { extname, join } from "node:path";
 import { exists, loadPosts, repoRoot, safeChildPath } from "./lib/content.mjs";
 
@@ -15,6 +15,8 @@ for (const post of posts) {
   const supplementalFiles = new Set([
     post.data.audit?.file,
     post.data.collection === "research" ? "SOURCES.yaml" : undefined,
+    "MIGRATION.md",
+    "MIGRATION_MANIFEST.sha256",
   ].filter(Boolean));
   for (const file of supplementalFiles) {
     const source = safeChildPath(post.sourceDir, file);
@@ -24,6 +26,11 @@ for (const post of posts) {
   for (const entry of entries) {
     if (!entry.isFile() || !publicAssetExtensions.has(extname(entry.name).toLowerCase())) continue;
     await copyFile(safeChildPath(post.sourceDir, entry.name), join(routeDir, entry.name));
+  }
+
+  const sourceSnapshot = safeChildPath(post.sourceDir, "source-snapshot");
+  if (await exists(sourceSnapshot)) {
+    await cp(sourceSnapshot, join(routeDir, "source-snapshot"), { recursive: true });
   }
 }
 

@@ -1,0 +1,6 @@
+Authoritative content: manifold-world-model-landscape/10_deck/storyboard_v1_1.md and 08_content/deck_content_review.md.
+Evidence mapping: 08_content/slide_evidence_map.csv (63 mappings across pages 1-10).
+Visual route: Codex Grid reference only; custom white-canvas, black-type, gray-rule, single-blue-accent layouts.
+No external images, company logos, stock assets, or additional researched facts are used.
+Locked font: Noto Sans SC, SHA256 763146584CF0710223441356B4395E279021B0806C196614377A7A0174AE074A.
+Research cutoff: 2026-07-14.

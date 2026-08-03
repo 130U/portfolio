@@ -1,0 +1,405 @@
+{"kind":"deck","id":"pr/7ptnbm","name":"Deck"}
+{"kind":"layout","layoutId":"1c9e1e95-2c48-4ab5-a69c-5b3b342c5157","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"389896e2-87ae-4aac-a2b2-a04813366aca","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/tdndno","slide":1,"title":"MANIFOLD · 非中国世界模型竞争格局","textShapes":13}
+{"kind":"textbox","id":"sh/xgnepwne","slide":1,"name":"p1-report","text":"MANIFOLD · 非中国世界模型竞争格局","textPreview":"MANIFOLD · 非中国世界模型竞争格局","textChars":22,"textLines":1,"bbox":[64,30,1216,690]}
+{"kind":"textbox","id":"sh/adwveh43","slide":1,"name":"p1-date","text":"五类重点路径 · 12–24 个月","textPreview":"五类重点路径 · 12–24 个月","textChars":17,"textLines":1,"bbox":[920,30,360,690]}
+{"kind":"shape","id":"sh/be5wnm5o","slide":1,"name":"p1-top-rule","bbox":[64,68,1120,1]}
+{"kind":"textbox","id":"sh/obedc7mx","slide":1,"name":"p1-answer-tag","text":"EXECUTIVE ANSWER","textPreview":"EXECUTIVE ANSWER","textChars":16,"textLines":1,"bbox":[64,98,1216,622]}
+{"kind":"textbox","id":"sh/pcnulcni","slide":1,"name":"p1-title","text":"海外世界模型已经从模型演示\n走向三种交付方式","textPreview":"海外世界模型已经从模型演示 | 走向三种交付方式","textChars":22,"textLines":2,"bbox":[64,132,1216,588]}
+{"kind":"textbox","id":"sh/2pcvah4r","slide":1,"name":"p1-answer","text":"公开计价接口、申请制入口和可下载 / 自托管组件已经出现；\n但还没有公开证据证明任何一家进入客户确认的付费生产阶段。","textPreview":"公开计价接口、申请制入口和可下载 / 自托管组件已经出现； | 但还没有公开证据证明任何一家进入客户确认的付费生产阶段。","textChars":58,"textLines":2,"bbox":[64,316,1216,404]}
+{"kind":"shape","id":"sh/nalcjm5c","slide":1,"name":"p1-band-0","bbox":[64,458,356,170]}
+{"kind":"shape","id":"sh/87ydobm1","slide":1,"name":"p1-band-mark-0","bbox":[64,458,54,4]}
+{"kind":"textbox","id":"sh/987exg3m","slide":1,"name":"p1-band-head-0","text":"三种路径\n已经可见","textPreview":"三种路径 | 已经可见","textChars":9,"textLines":2,"bbox":[92,482,1188,238]}
+{"kind":"textbox","id":"sh/h8nql0vm","slide":1,"name":"p1-band-body-0","text":"按秒调用、申请访问、\n自托管已经出现；\n交付物不再只是模型演示。","textPreview":"按秒调用、申请访问、 | 自托管已经出现； | 交付物不再只是模型演示。","textChars":32,"textLines":3,"bbox":[92,548,1188,172]}
+{"kind":"shape","id":"sh/w7e9svu1","slide":1,"name":"p1-band-1","bbox":[444,458,356,170]}
+{"kind":"shape","id":"sh/v6l8jqdg","slide":1,"name":"p1-band-mark-1","bbox":[444,458,54,4]}
+{"kind":"textbox","id":"sh/u5c7qlcv","slide":1,"name":"p1-band-head-1","text":"真正要比较的\n是交付链","textPreview":"真正要比较的 | 是交付链","textChars":11,"textLines":2,"bbox":[472,482,808,238]}
+{"kind":"textbox","id":"sh/943qhgvq","slide":1,"name":"p1-band-body-1","text":"接口、运行时、部署方式\n与权利边界共同决定：\n能力能否真正落地。","textPreview":"接口、运行时、部署方式 | 与权利边界共同决定： | 能力能否真正落地。","textChars":32,"textLines":3,"bbox":[472,548,808,172]}
+{"kind":"shape","id":"sh/83upobu5","slide":1,"name":"p1-band-2","bbox":[824,458,356,170]}
+{"kind":"shape","id":"sh/n2l8f6dk","slide":1,"name":"p1-band-mark-2","bbox":[824,458,54,4]}
+{"kind":"textbox","id":"sh/m1c7m1cz","slide":1,"name":"p1-band-head-2","text":"公开证据仍\n停在早期","textPreview":"公开证据仍 | 停在早期","textChars":10,"textLines":2,"bbox":[852,482,428,238]}
+{"kind":"textbox","id":"sh/t07qtkbu","slide":1,"name":"p1-band-body-2","text":"现有案例多为供应商\n或伙伴自报；客户第一方\n生产采用仍未出现。","textPreview":"现有案例多为供应商 | 或伙伴自报；客户第一方 | 生产采用仍未出现。","textChars":31,"textLines":3,"bbox":[852,548,428,172]}
+{"kind":"shape","id":"sh/szy90fu9","slide":1,"name":"p1-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/cj6twj2l","slide":1,"name":"p1-footer-source","text":"公开来源：官方产品、API、价格、条款、公司/伙伴自报及独立体验","textPreview":"公开来源：官方产品、API、价格、条款、公司/伙伴自报及独立体验","textChars":32,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/d4fa5oj6","slide":1,"name":"p1-footer-page","text":"截至 2026-07-14  ·  01","textPreview":"截至 2026-07-14  ·  01","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/tdndno","slide":1,"text":""}
+{"kind":"slide","id":"sl/cn5swy","slide":2,"title":"STRATEGIC LANDSCAPE","textShapes":44}
+{"kind":"textbox","id":"sh/1cnex4ze","slide":2,"name":"p2-eyebrow","text":"STRATEGIC LANDSCAPE","textPreview":"STRATEGIC LANDSCAPE","textChars":19,"textLines":1,"bbox":[64,26,1216,694]}
+{"kind":"textbox","id":"sh/epcv2p0n","slide":2,"name":"p2-title","text":"海外玩家分成三类世界形态，落点取决于任务与获得方式","textPreview":"海外玩家分成三类世界形态，落点取决于任务与获得方式","textChars":25,"textLines":1,"bbox":[64,50,1216,670]}
+{"kind":"textbox","id":"sh/fqlwvuh8","slide":2,"name":"p2-subtitle","text":"公司名单在第一行，获得方式或关键限制在第二行；粗体色线为固定五席，○为观察对象。","textPreview":"公司名单在第一行，获得方式或关键限制在第二行；粗体色线为固定五席，○为观察对象。","textChars":40,"textLines":1,"bbox":[64,108,1216,612]}
+{"kind":"shape","id":"sh/snud0fix","slide":2,"name":"p2-col-bg-0","bbox":[64,158,230,446]}
+{"kind":"shape","id":"sh/to3utkz2","slide":2,"name":"p2-col-accent-0","bbox":[64,158,230,5]}
+{"kind":"textbox","id":"sh/6lcvyp0r","slide":2,"name":"p2-col-head-0","text":"主要任务 /\n交付位置","textPreview":"主要任务 / | 交付位置","textChars":11,"textLines":2,"bbox":[82,172,1198,548]}
+{"kind":"shape","id":"sh/rmlcrahc","slide":2,"name":"p2-col-bg-1","bbox":[294,158,288,446]}
+{"kind":"shape","id":"sh/cjedcjy1","slide":2,"name":"p2-col-accent-1","bbox":[294,158,288,5]}
+{"kind":"textbox","id":"sh/xk7e5ozm","slide":2,"name":"p2-col-head-1","text":"持久空间世界","textPreview":"持久空间世界","textChars":6,"textLines":1,"bbox":[312,172,968,548]}
+{"kind":"shape","id":"sh/5ony9gra","slide":2,"name":"p2-col-bg-2","bbox":[582,158,326,446]}
+{"kind":"shape","id":"sh/4nuh0bqp","slide":2,"name":"p2-col-accent-2","bbox":[582,158,326,5]}
+{"kind":"textbox","id":"sh/3mlg7694","slide":2,"name":"p2-col-head-2","text":"实时交互世界流","textPreview":"实时交互世界流","textChars":7,"textLines":1,"bbox":[600,172,680,548]}
+{"kind":"shape","id":"sh/i1czy18j","slide":2,"name":"p2-col-bg-3","bbox":[908,158,308,446]}
+{"kind":"shape","id":"sh/h03y5wry","slide":2,"name":"p2-col-accent-3","bbox":[908,158,308,5]}
+{"kind":"textbox","id":"sh/gzuhwbqd","slide":2,"name":"p2-col-head-3","text":"动作条件物理智能组件","textPreview":"动作条件物理智能组件","textChars":10,"textLines":1,"bbox":[926,172,354,548]}
+{"kind":"textbox","id":"sh/vylg369s","slide":2,"name":"p2-row-num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[82,238,1198,482]}
+{"kind":"textbox","id":"sh/uxczu18n","slide":2,"name":"p2-row-label-0","text":"内容与探索","textPreview":"内容与探索","textChars":5,"textLines":1,"bbox":[126,236,1154,484]}
+{"kind":"textbox","id":"sh/1w7ih0r2","slide":2,"name":"p2-row-num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[82,402,1198,318]}
+{"kind":"textbox","id":"sh/0vyh8vqx","slide":2,"name":"p2-row-label-1","text":"开发者世界 /\n仿真基础设施","textPreview":"开发者世界 / | 仿真基础设施","textChars":14,"textLines":2,"bbox":[126,400,1154,320]}
+{"kind":"textbox","id":"sh/kb6t0325","slide":2,"name":"p2-row-num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[82,534,1198,186]}
+{"kind":"textbox","id":"sh/lczat83q","slide":2,"name":"p2-row-label-2","text":"机器人规划\n与控制","textPreview":"机器人规划 | 与控制","textChars":9,"textLines":2,"bbox":[126,532,1154,188]}
+{"kind":"shape","id":"sh/y9obytkz","slide":2,"name":"p2-world-labs-mark","bbox":[312,284,18,3]}
+{"kind":"textbox","id":"sh/jaxsrylk","slide":2,"name":"p2-world-labs-name","text":"World Labs","textPreview":"World Labs","textChars":10,"textLines":1,"bbox":[340,274,940,446]}
+{"kind":"textbox","id":"sh/w769wj29","slide":2,"name":"p2-world-labs-detail","text":"公开计价接口","textPreview":"公开计价接口","textChars":6,"textLines":1,"bbox":[340,304,940,416]}
+{"kind":"shape","id":"sh/x8fapo3e","slide":2,"name":"p2-runway-mark","bbox":[600,236,18,3]}
+{"kind":"textbox","id":"sh/a5orutk3","slide":2,"name":"p2-runway-name","text":"Runway","textPreview":"Runway","textChars":6,"textLines":1,"bbox":[628,226,652,494]}
+{"kind":"textbox","id":"sh/b6xsnylo","slide":2,"name":"p2-runway-detail","text":"申请制入口；Robotics 单列","textPreview":"申请制入口；Robotics 单列","textChars":17,"textLines":1,"bbox":[628,256,652,464]}
+{"kind":"textbox","id":"sh/ojm9sj2x","slide":2,"name":"p2-genie-circle","text":"○","textPreview":"○","textChars":1,"textLines":1,"bbox":[600,278,680,442]}
+{"kind":"textbox","id":"sh/p4valo3i","slide":2,"name":"p2-genie-name","text":"Genie 3","textPreview":"Genie 3","textChars":7,"textLines":1,"bbox":[628,278,652,442]}
+{"kind":"textbox","id":"sh/redsbe54","slide":2,"name":"p2-genie-detail","text":"封闭原型","textPreview":"封闭原型","textChars":4,"textLines":1,"bbox":[628,306,652,414]}
+{"kind":"textbox","id":"sh/qdkb294z","slide":2,"name":"p2-overworld-circle","text":"○","textPreview":"○","textChars":1,"textLines":1,"bbox":[600,330,680,390]}
+{"kind":"textbox","id":"sh/dgvudona","slide":2,"name":"p2-overworld-name","text":"Overworld（地域条件）","textPreview":"Overworld（地域条件）","textChars":15,"textLines":1,"bbox":[628,330,652,390]}
+{"kind":"textbox","id":"sh/sfmt4jmp","slide":2,"name":"p2-overworld-detail","text":"开放权重","textPreview":"开放权重","textChars":4,"textLines":1,"bbox":[628,358,652,362]}
+{"kind":"textbox","id":"sh/f2dcfe5g","slide":2,"name":"p2-empty-r1-c4","text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[932,278,348,442]}
+{"kind":"textbox","id":"sh/eh4b6t4v","slide":2,"name":"p2-empty-r2-c2","text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[318,438,962,282]}
+{"kind":"shape","id":"sh/14vuhonm","slide":2,"name":"p2-odyssey-mark","bbox":[600,402,18,3]}
+{"kind":"textbox","id":"sh/03mt8jm1","slide":2,"name":"p2-odyssey-name","text":"Odyssey","textPreview":"Odyssey","textChars":7,"textLines":1,"bbox":[628,392,652,328]}
+{"kind":"textbox","id":"sh/n6xcjy5c","slide":2,"name":"p2-odyssey-detail","text":"文档入口；账户未独立确认","textPreview":"文档入口；账户未独立确认","textChars":12,"textLines":1,"bbox":[628,422,652,298]}
+{"kind":"shape","id":"sh/25obat47","slide":2,"name":"p2-decart-mark","bbox":[600,466,18,3]}
+{"kind":"textbox","id":"sh/m9wv6xc3","slide":2,"name":"p2-decart-name","text":"Decart","textPreview":"Decart","textChars":6,"textLines":1,"bbox":[628,456,652,264]}
+{"kind":"textbox","id":"sh/7a5wf2do","slide":2,"name":"p2-decart-detail","text":"公开计价接口","textPreview":"公开计价接口","textChars":6,"textLines":1,"bbox":[628,486,652,234]}
+{"kind":"shape","id":"sh/8bed87u9","slide":2,"name":"p2-cosmos-mark","bbox":[926,402,18,3]}
+{"kind":"textbox","id":"sh/9cnehcvu","slide":2,"name":"p2-cosmos-name","text":"NVIDIA Cosmos 3","textPreview":"NVIDIA Cosmos 3","textChars":15,"textLines":1,"bbox":[954,392,326,328]}
+{"kind":"textbox","id":"sh/udwvahcf","slide":2,"name":"p2-cosmos-detail","text":"可下载 / 自托管","textPreview":"可下载 / 自托管","textChars":9,"textLines":1,"bbox":[954,422,326,298]}
+{"kind":"textbox","id":"sh/ve5wjmdk","slide":2,"name":"p2-mira-circle","text":"○","textPreview":"○","textChars":1,"textLines":1,"bbox":[926,456,354,264]}
+{"kind":"textbox","id":"sh/wfedcru5","slide":2,"name":"p2-mira-name","text":"MIRA","textPreview":"MIRA","textChars":4,"textLines":1,"bbox":[954,456,326,264]}
+{"kind":"textbox","id":"sh/hgnelcvq","slide":2,"name":"p2-mira-detail","text":"外部入口未核","textPreview":"外部入口未核","textChars":6,"textLines":1,"bbox":[954,484,326,236]}
+{"kind":"textbox","id":"sh/ahsvydcv","slide":2,"name":"p2-empty-r3-c2","text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[318,548,962,172]}
+{"kind":"textbox","id":"sh/bilc7idg","slide":2,"name":"p2-empty-r3-c3","text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[606,548,674,172]}
+{"kind":"textbox","id":"sh/tcrydgfy","slide":2,"name":"p2-meta-circle","text":"○","textPreview":"○","textChars":1,"textLines":1,"bbox":[926,532,354,188]}
+{"kind":"textbox","id":"sh/sbih4bed","slide":2,"name":"p2-meta-name","text":"Meta V-JEPA","textPreview":"Meta V-JEPA","textChars":11,"textLines":1,"bbox":[954,532,326,188]}
+{"kind":"textbox","id":"sh/ra9gbqxs","slide":2,"name":"p2-meta-detail","text":"checkpoint 可下载；许可待核","textPreview":"checkpoint 可下载；许可待核","textChars":19,"textLines":1,"bbox":[954,560,326,160]}
+{"kind":"shape","id":"sh/690z2lwn","slide":2,"name":"p2-v-0","bbox":[294,158,1,446]}
+{"kind":"shape","id":"sh/10byh0fa","slide":2,"name":"p2-v-1","bbox":[582,158,1,446]}
+{"kind":"shape","id":"sh/gzih8vep","slide":2,"name":"p2-v-2","bbox":[908,158,1,446]}
+{"kind":"shape","id":"sh/fe9gfqx4","slide":2,"name":"p2-h-0","bbox":[64,220,1152,1]}
+{"kind":"shape","id":"sh/ed0z6lwj","slide":2,"name":"p2-h-1","bbox":[64,384,1152,1]}
+{"kind":"shape","id":"sh/h47y5wfq","slide":2,"name":"p2-h-2","bbox":[64,516,1152,1]}
+{"kind":"shape","id":"sh/w3yxwre5","slide":2,"name":"p2-table-bottom","bbox":[64,604,1152,1]}
+{"kind":"shape","id":"sh/8zmp8vqd","slide":2,"name":"p2-ami-bg","bbox":[64,612,1152,34]}
+{"kind":"shape","id":"sh/90vq10ry","slide":2,"name":"p2-ami-accent","bbox":[64,612,5,34]}
+{"kind":"textbox","id":"sh/mxk76l87","slide":2,"name":"p2-ami-name","text":"早期信号 · AMI Labs","textPreview":"早期信号 · AMI Labs","textChars":15,"textLines":1,"bbox":[82,618,1198,102]}
+{"kind":"textbox","id":"sh/7yt8zq9s","slide":2,"name":"p2-ami-detail","text":"暂不归入三类世界形态；自有技术资产与外部入口待核","textPreview":"暂不归入三类世界形态；自有技术资产与外部入口待核","textChars":24,"textLines":1,"bbox":[382,618,898,102]}
+{"kind":"textbox","id":"sh/w3mpcfqp","slide":2,"name":"p2-scope","text":"5/4/1；中国大陆公司与类别外路线不作节点；Manifold 只作公开锚点。","textPreview":"5/4/1；中国大陆公司与类别外路线不作节点；Manifold 只作公开锚点。","textChars":39,"textLines":1,"bbox":[64,650,1216,70]}
+{"kind":"shape","id":"sh/h4vq5kru","slide":2,"name":"p2-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/u147a58j","slide":2,"name":"p2-footer-source","text":"来源：官方项目、产品、代码仓库、开发者资料及公司/地域资料","textPreview":"来源：官方项目、产品、代码仓库、开发者资料及公司/地域资料","textChars":29,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/v2d83a94","slide":2,"name":"p2-footer-page","text":"截至 2026-07-14  ·  02","textPreview":"截至 2026-07-14  ·  02","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/cn5swy","slide":2,"text":""}
+{"kind":"slide","id":"sl/i4j0yy","slide":3,"title":"FIVE PATHS · NO RANKING","textShapes":35}
+{"kind":"textbox","id":"sh/58vq1kbm","slide":3,"name":"p3-eyebrow","text":"FIVE PATHS · NO RANKING","textPreview":"FIVE PATHS · NO RANKING","textChars":23,"textLines":1,"bbox":[64,26,1216,694]}
+{"kind":"textbox","id":"sh/i5k765cv","slide":3,"name":"p3-title","text":"五席走五条路，差异在产品形态和证据成熟度","textPreview":"五席走五条路，差异在产品形态和证据成熟度","textChars":20,"textLines":1,"bbox":[64,50,1216,670]}
+{"kind":"textbox","id":"sh/j6d8zatg","slide":3,"name":"p3-subtitle","text":"固定五席体现路线互补，不构成能力、公司或商业成熟度排名。","textPreview":"固定五席体现路线互补，不构成能力、公司或商业成熟度排名。","textChars":28,"textLines":1,"bbox":[64,107,1216,613]}
+{"kind":"shape","id":"sh/w32p4fup","slide":3,"name":"p3-header-bg","bbox":[64,134,1152,52]}
+{"kind":"shape","id":"sh/h4bqx0va","slide":3,"name":"p3-header-accent-0","bbox":[76,143,32,3]}
+{"kind":"textbox","id":"sh/u1k725cz","slide":3,"name":"p3-header-0","text":"比较维度","textPreview":"比较维度","textChars":4,"textLines":1,"bbox":[76,154,1204,566]}
+{"kind":"shape","id":"sh/v2t8vadk","slide":3,"name":"p3-header-accent-1","bbox":[214,143,32,3]}
+{"kind":"textbox","id":"sh/8z2p0vut","slide":3,"name":"p3-header-1","text":"World Labs","textPreview":"World Labs","textChars":10,"textLines":1,"bbox":[214,154,1066,566]}
+{"kind":"shape","id":"sh/90bqt0ve","slide":3,"name":"p3-header-accent-2","bbox":[416.8,143,32,3]}
+{"kind":"textbox","id":"sh/x4vu5oba","slide":3,"name":"p3-header-2","text":"Odyssey","textPreview":"Odyssey","textChars":7,"textLines":1,"bbox":[416.8,154,863.2,566]}
+{"kind":"shape","id":"sh/c3mtwjap","slide":3,"name":"p3-header-accent-3","bbox":[619.6,143,32,3]}
+{"kind":"textbox","id":"sh/bidc3et4","slide":3,"name":"p3-header-3","text":"Runway","textPreview":"Runway","textChars":6,"textLines":1,"bbox":[619.6,154,660.4,566]}
+{"kind":"shape","id":"sh/ah4bu9sj","slide":3,"name":"p3-header-accent-4","bbox":[822.4,143,32,3]}
+{"kind":"textbox","id":"sh/pgva14by","slide":3,"name":"p3-header-4","text":"Decart","textPreview":"Decart","textChars":6,"textLines":1,"bbox":[822.4,154,457.6,566]}
+{"kind":"shape","id":"sh/ofmtszad","slide":3,"name":"p3-header-accent-5","bbox":[1025.2,143,32,3]}
+{"kind":"textbox","id":"sh/nedszuts","slide":3,"name":"p3-header-5","text":"NVIDIA Cosmos 3","textPreview":"NVIDIA Cosmos 3","textChars":15,"textLines":1,"bbox":[1025.2,154,254.8,566]}
+{"kind":"shape","id":"sh/2dkbq9sn","slide":3,"name":"p3-row-bg-0","bbox":[64,186,1152,118]}
+{"kind":"textbox","id":"sh/1cbax4b2","slide":3,"name":"p3-rowhead-0","text":"技术证据","textPreview":"技术证据","textChars":4,"textLines":1,"bbox":[76,200,1204,520]}
+{"kind":"textbox","id":"sh/0b2tozah","slide":3,"name":"p3-cell-0-0","text":"位姿条件导航与\n空间记忆；动态物体\n仍待证","textPreview":"位姿条件导航与 | 空间记忆；动态物体 | 仍待证","textChars":21,"textLines":3,"bbox":[214,200,1066,520]}
+{"kind":"textbox","id":"sh/s7ql036p","slide":3,"name":"p3-cell-0-1","text":"历史帧和动作条件\n未来；长时稳定性\n未独立验证","textPreview":"历史帧和动作条件 | 未来；长时稳定性 | 未独立验证","textChars":23,"textLines":3,"bbox":[416.8,200,863.2,520]}
+{"kind":"textbox","id":"sh/d8z2tonu","slide":3,"name":"p3-cell-0-2","text":"Worlds 支持导航\n条件未来；Robotics\n证据单列","textPreview":"Worlds 支持导航 | 条件未来；Robotics | 证据单列","textChars":30,"textLines":3,"bbox":[619.6,200,660.4,520]}
+{"kind":"textbox","id":"sh/q583ytoj","slide":3,"name":"p3-cell-0-3","text":"油门/转向驱动\n三向后续视图；\n动作域较窄","textPreview":"油门/转向驱动 | 三向后续视图； | 动作域较窄","textChars":21,"textLines":3,"bbox":[822.4,200,457.6,520]}
+{"kind":"textbox","id":"sh/r6hkry54","slide":3,"name":"p3-cell-0-4","text":"动作条件前向预测；\n漂移、几何和碰撞\n仍有限","textPreview":"动作条件前向预测； | 漂移、几何和碰撞 | 仍有限","textChars":22,"textLines":3,"bbox":[1025.2,200,254.8,520]}
+{"kind":"shape","id":"sh/4361wj6d","slide":3,"name":"p3-row-bg-1","bbox":[64,304,1152,140]}
+{"kind":"textbox","id":"sh/54f2pony","slide":3,"name":"p3-rowhead-1","text":"外部\n可获得性","textPreview":"外部 | 可获得性","textChars":7,"textLines":2,"bbox":[76,318,1204,402]}
+{"kind":"textbox","id":"sh/i1oju9o7","slide":3,"name":"p3-cell-1-0","text":"公开计价的\n专有世界接口","textPreview":"公开计价的 | 专有世界接口","textChars":12,"textLines":2,"bbox":[214,318,1066,402]}
+{"kind":"textbox","id":"sh/32xkne5s","slide":3,"name":"p3-cell-1-1","text":"厂商文档化\n原型接口；实际账户\n未确认","textPreview":"厂商文档化 | 原型接口；实际账户 | 未确认","textChars":19,"textLines":3,"bbox":[416.8,318,863.2,402]}
+{"kind":"textbox","id":"sh/ozal8nmh","slide":3,"name":"p3-cell-1-2","text":"Worlds 申请制；\nRobotics 需洽谈","textPreview":"Worlds 申请制； | Robotics 需洽谈","textChars":24,"textLines":2,"bbox":[619.6,318,660.4,402]}
+{"kind":"textbox","id":"sh/p0j218n2","slide":3,"name":"p3-cell-1-3","text":"公开账户、按秒\n计费的预览接口","textPreview":"公开账户、按秒 | 计费的预览接口","textChars":15,"textLines":2,"bbox":[822.4,318,457.6,402]}
+{"kind":"textbox","id":"sh/julo7mpk","slide":3,"name":"p3-cell-1-4","text":"模型材料可下载\n并可自托管；\nGenerator NIM 1.0.0\n只含文生/图生视频","textPreview":"模型材料可下载 | 并可自托管； | Generator NIM 1.0.0 | 只含文生/图生视频","textChars":44,"textLines":4,"bbox":[1025.2,318,254.8,402]}
+{"kind":"shape","id":"sh/ytcnyhoz","slide":3,"name":"p3-row-bg-2","bbox":[64,444,1152,132]}
+{"kind":"textbox","id":"sh/lwn69c7a","slide":3,"name":"p3-rowhead-2","text":"商业采用\n上限","textPreview":"商业采用 | 上限","textChars":7,"textLines":2,"bbox":[76,458,1204,262]}
+{"kind":"textbox","id":"sh/kvu5076p","slide":3,"name":"p3-cell-2-0","text":"供应商托管原型；\n无客户第一方\n生产证据","textPreview":"供应商托管原型； | 无客户第一方 | 生产证据","textChars":20,"textLines":3,"bbox":[214,458,1066,262]}
+{"kind":"textbox","id":"sh/7y5obmpg","slide":3,"name":"p3-cell-2-1","text":"合同框架与\n自报云合作；\n无具名采用证据","textPreview":"合同框架与 | 自报云合作； | 无具名采用证据","textChars":20,"textLines":3,"bbox":[416.8,458,863.2,262]}
+{"kind":"textbox","id":"sh/6xwn2hov","slide":3,"name":"p3-cell-2-2","text":"公司自报合作；\n无伙伴侧\n部署证据","textPreview":"公司自报合作； | 无伙伴侧 | 部署证据","textChars":17,"textLines":3,"bbox":[619.6,458,660.4,262]}
+{"kind":"textbox","id":"sh/tkn6dw7m","slide":3,"name":"p3-cell-2-3","text":"有价格与独立体验；\n无付费客户或\n生产证据","textPreview":"有价格与独立体验； | 无付费客户或 | 生产证据","textChars":21,"textLines":3,"bbox":[822.4,458,457.6,262]}
+{"kind":"textbox","id":"sh/8ze54r61","slide":3,"name":"p3-cell-2-4","text":"伙伴自报早期测试 /\n内部部署；无客户\n第一方付费生产证据","textPreview":"伙伴自报早期测试 / | 内部部署；无客户 | 第一方付费生产证据","textChars":29,"textLines":3,"bbox":[1025.2,458,254.8,262]}
+{"kind":"shape","id":"sh/n214z2pc","slide":3,"name":"p3-row-bg-3","bbox":[64,576,1152,86]}
+{"kind":"textbox","id":"sh/21snqx8r","slide":3,"name":"p3-rowhead-3","text":"对 Manifold\n的意义","textPreview":"对 Manifold | 的意义","textChars":14,"textLines":2,"bbox":[76,590,1204,130]}
+{"kind":"textbox","id":"sh/e5wn6xgn","slide":3,"name":"p3-cell-3-0","text":"空间世界接口可能\n绕行生成与交付","textPreview":"空间世界接口可能 | 绕行生成与交付","textChars":16,"textLines":2,"bbox":[214,590,1066,130]}
+{"kind":"textbox","id":"sh/f65of2x8","slide":3,"name":"p3-cell-3-1","text":"若接口稳定，可成为\n实时世界流基础设施","textPreview":"若接口稳定，可成为 | 实时世界流基础设施","textChars":19,"textLines":2,"bbox":[416.8,590,863.2,130]}
+{"kind":"textbox","id":"sh/g7e587yd","slide":3,"name":"p3-cell-3-2","text":"内容平台向可探索\n世界和机器人应用延伸","textPreview":"内容平台向可探索 | 世界和机器人应用延伸","textChars":19,"textLines":2,"bbox":[619.6,590,660.4,130]}
+{"kind":"textbox","id":"sh/18n6hcfy","slide":3,"name":"p3-cell-3-3","text":"可计费驾驶接口把\n竞争推向具体任务","textPreview":"可计费驾驶接口把 | 竞争推向具体任务","textChars":17,"textLines":2,"bbox":[822.4,590,457.6,130]}
+{"kind":"textbox","id":"sh/29gnaxgj","slide":3,"name":"p3-cell-3-4","text":"自托管组件可绕行\n供应商，也可成为底层","textPreview":"自托管组件可绕行 | 供应商，也可成为底层","textChars":19,"textLines":2,"bbox":[1025.2,590,254.8,130]}
+{"kind":"shape","id":"sh/3apoj2x4","slide":3,"name":"p3-h-0","bbox":[64,186,1152,1]}
+{"kind":"shape","id":"sh/oby5c7yp","slide":3,"name":"p3-h-1","bbox":[64,304,1152,1]}
+{"kind":"shape","id":"sh/pc76lcfa","slide":3,"name":"p3-h-2","bbox":[64,444,1152,1]}
+{"kind":"shape","id":"sh/adgnehwv","slide":3,"name":"p3-h-3","bbox":[64,576,1152,1]}
+{"kind":"shape","id":"sh/beponmx0","slide":3,"name":"p3-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/l8bqdgzi","slide":3,"name":"p3-footer-source","text":"来源：官方技术、产品、接入、价格和条款资料；公司/伙伴自报及独立体验","textPreview":"来源：官方技术、产品、接入、价格和条款资料；公司/伙伴自报及独立体验","textChars":34,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/k7i94bix","slide":3,"name":"p3-footer-page","text":"截至 2026-07-14  ·  03","textPreview":"截至 2026-07-14  ·  03","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/i4j0yy","slide":3,"text":""}
+{"kind":"slide","id":"sl/5lakas","slide":4,"title":"创业公司 1/4 · WORLD LABS","textShapes":23}
+{"kind":"textbox","id":"sh/dsfat4b2","slide":4,"name":"p4-identity","text":"创业公司 1/4 · WORLD LABS","textPreview":"创业公司 1/4 · WORLD LABS","textChars":21,"textLines":1,"bbox":[64,28,1216,692]}
+{"kind":"textbox","id":"sh/qporypcb","slide":4,"name":"p4-title","text":"World API 已开放计价；\n动态交互和客户采用仍待证","textPreview":"World API 已开放计价； | 动态交互和客户采用仍待证","textChars":29,"textLines":2,"bbox":[64,66,1216,654]}
+{"kind":"shape","id":"sh/rqxs7utw","slide":4,"name":"p4-route-line","bbox":[64,196,44,3]}
+{"kind":"textbox","id":"sh/4nm9wzul","slide":4,"name":"p4-route","text":"持久空间世界 · 公开计价接口","textPreview":"持久空间世界 · 公开计价接口","textChars":15,"textLines":1,"bbox":[120,180,1160,540]}
+{"kind":"shape","id":"sh/5ofq54bq","slide":4,"name":"p4-established-bg","bbox":[64,220,716,230]}
+{"kind":"shape","id":"sh/il4rupcf","slide":4,"name":"p4-established-rule","bbox":[96,246,38,3]}
+{"kind":"textbox","id":"sh/3md83ut0","slide":4,"name":"p4-established-label","text":"已成立","textPreview":"已成立","textChars":3,"textLines":1,"bbox":[96,256,1184,464]}
+{"kind":"shape","id":"sh/ojq98jap","slide":4,"name":"p4-component-divider","bbox":[414,304,1,118]}
+{"kind":"textbox","id":"sh/pkza1oba","slide":4,"name":"p4-rtfm-name","text":"RTFM","textPreview":"RTFM","textChars":4,"textLines":1,"bbox":[96,308,1184,412]}
+{"kind":"textbox","id":"sh/p0nu54j6","slide":4,"name":"p4-rtfm-body","text":"位姿条件未来视图\n与空间记忆已经公开；\n动态物体仍待证。","textPreview":"位姿条件未来视图 | 与空间记忆已经公开； | 动态物体仍待证。","textChars":28,"textLines":3,"bbox":[96,350,1184,370]}
+{"kind":"textbox","id":"sh/4zutcjil","slide":4,"name":"p4-api-name","text":"Marble / World API","textPreview":"Marble / World API","textChars":18,"textLines":1,"bbox":[446,308,834,412]}
+{"kind":"textbox","id":"sh/3ylc3e10","slide":4,"name":"p4-api-body","text":"已有公开计价；\n与 RTFM 分立，\n两条路线需单独判断。","textPreview":"已有公开计价； | 与 RTFM 分立， | 两条路线需单独判断。","textChars":29,"textLines":3,"bbox":[446,350,834,370]}
+{"kind":"shape","id":"sh/2xcba90v","slide":4,"name":"p4-not-bg","bbox":[804,220,380,230]}
+{"kind":"shape","id":"sh/hw3u14ja","slide":4,"name":"p4-not-rule","bbox":[836,246,38,3]}
+{"kind":"textbox","id":"sh/gvut8zip","slide":4,"name":"p4-not-label","text":"未成立","textPreview":"未成立","textChars":3,"textLines":1,"bbox":[836,256,444,464]}
+{"kind":"textbox","id":"sh/falczu14","slide":4,"name":"p4-not-list-dot-0","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[836,296,444,424]}
+{"kind":"textbox","id":"sh/u9cb6p0j","slide":4,"name":"p4-not-list-text-0","text":"持久动态物体","textPreview":"持久动态物体","textChars":6,"textLines":1,"bbox":[860,296,420,424]}
+{"kind":"textbox","id":"sh/1s7udoje","slide":4,"name":"p4-not-list-dot-1","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[836,334,444,386]}
+{"kind":"textbox","id":"sh/0rytk3it","slide":4,"name":"p4-not-list-text-1","text":"独立系统复现","textPreview":"独立系统复现","textChars":6,"textLines":1,"bbox":[860,334,420,386]}
+{"kind":"textbox","id":"sh/kb6dg7q5","slide":4,"name":"p4-not-list-dot-2","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[836,372,444,348]}
+{"kind":"textbox","id":"sh/lcfe9c7q","slide":4,"name":"p4-not-list-text-2","text":"客户第一方付费生产采用","textPreview":"客户第一方付费生产采用","textChars":11,"textLines":1,"bbox":[860,372,420,348]}
+{"kind":"textbox","id":"sh/y94vex8z","slide":4,"name":"p4-not-list-dot-3","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[836,410,444,310]}
+{"kind":"textbox","id":"sh/zadw72pk","slide":4,"name":"p4-not-list-text-3","text":"服务与内容权仍有采购摩擦","textPreview":"服务与内容权仍有采购摩擦","textChars":12,"textLines":1,"bbox":[860,410,420,310]}
+{"kind":"shape","id":"sh/c7mdcnqt","slide":4,"name":"p4-meaning-bg","bbox":[64,474,716,176]}
+{"kind":"shape","id":"sh/x8ve5s7e","slide":4,"name":"p4-meaning-rule","bbox":[96,500,38,3]}
+{"kind":"textbox","id":"sh/a54vax83","slide":4,"name":"p4-meaning-label","text":"对 Manifold 的意义","textPreview":"对 Manifold 的意义","textChars":14,"textLines":1,"bbox":[96,510,1184,210]}
+{"kind":"textbox","id":"sh/b6dw3ipo","slide":4,"name":"p4-meaning-body","text":"空间世界接口可能绕行专有生成与交付；\n但仍不能确认双方已争夺相同客户或预算。","textPreview":"空间世界接口可能绕行专有生成与交付； | 但仍不能确认双方已争夺相同客户或预算。","textChars":38,"textLines":2,"bbox":[96,552,1184,168]}
+{"kind":"shape","id":"sh/o32d8nqx","slide":4,"name":"p4-trigger-bg","bbox":[804,474,380,176]}
+{"kind":"shape","id":"sh/p4ve1s7i","slide":4,"name":"p4-trigger-rule","bbox":[836,500,38,3]}
+{"kind":"textbox","id":"sh/retwrit4","slide":4,"name":"p4-trigger-label","text":"关键触发器","textPreview":"关键触发器","textChars":5,"textLines":1,"bbox":[836,510,444,210]}
+{"kind":"textbox","id":"sh/qdkfidsj","slide":4,"name":"p4-trigger-body","text":"RTFM 获得独立复现，\n或 World API 形成版本化服务。","textPreview":"RTFM 获得独立复现， | 或 World API 形成版本化服务。","textChars":33,"textLines":2,"bbox":[836,552,444,168]}
+{"kind":"shape","id":"sh/d0betsba","slide":4,"name":"p4-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/sf2xknap","slide":4,"name":"p4-footer-source","text":"RTFM 与 World API 分立｜来源：官方研究/项目页、API、价格、条款及厂商案例","textPreview":"RTFM 与 World API 分立｜来源：官方研究/项目页、API、价格、条款及厂商案例","textChars":46,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/f2twvitg","slide":4,"name":"p4-footer-page","text":"截至 2026-07-14  ·  04","textPreview":"截至 2026-07-14  ·  04","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/5lakas","slide":4,"text":""}
+{"kind":"slide","id":"sl/dsmacm","slide":5,"title":"创业公司 2/4 · ODYSSEY","textShapes":21}
+{"kind":"textbox","id":"sh/bi9wj210","slide":5,"name":"p5-identity","text":"创业公司 2/4 · ODYSSEY","textPreview":"创业公司 2/4 · ODYSSEY","textChars":18,"textLines":1,"bbox":[64,28,1216,692]}
+{"kind":"textbox","id":"sh/cjixc7il","slide":5,"name":"p5-title","text":"实时世界流已写进开发者接口；\n账户、稳定性和服务等级仍待证","textPreview":"实时世界流已写进开发者接口； | 账户、稳定性和服务等级仍待证","textChars":29,"textLines":2,"bbox":[64,66,1216,654]}
+{"kind":"shape","id":"sh/xkrelsj6","slide":5,"name":"p5-route-line","bbox":[64,196,44,3]}
+{"kind":"textbox","id":"sh/yl0fex0b","slide":5,"name":"p5-route","text":"实时世界流 · 文档化接口","textPreview":"实时世界流 · 文档化接口","textChars":13,"textLines":1,"bbox":[120,180,1160,540]}
+{"kind":"shape","id":"sh/z69wn21w","slide":5,"name":"p5-left-bg","bbox":[64,220,670,430]}
+{"kind":"shape","id":"sh/k7ixg7ih","slide":5,"name":"p5-established-rule","bbox":[96,246,38,3]}
+{"kind":"textbox","id":"sh/l8repcj2","slide":5,"name":"p5-established-label","text":"已成立","textPreview":"已成立","textChars":3,"textLines":1,"bbox":[96,256,1184,464]}
+{"kind":"textbox","id":"sh/m9kfih0n","slide":5,"name":"p5-established-body","text":"Odyssey-2 Pro 根据历史状态与用户动作生成后续画面。\n厂商文档给出密钥、JavaScript / Python 接入和连接规则。","textPreview":"Odyssey-2 Pro 根据历史状态与用户动作生成后续画面。 | 厂商文档给出密钥、JavaScript / Python 接入和连接规则。","textChars":70,"textLines":2,"bbox":[96,296,1184,424]}
+{"kind":"shape","id":"sh/7atwbm18","slide":5,"name":"p5-left-rule","bbox":[96,388,582,1]}
+{"kind":"shape","id":"sh/jq9cz2pw","slide":5,"name":"p5-meaning-rule","bbox":[96,412,38,3]}
+{"kind":"textbox","id":"sh/yp0vqx8r","slide":5,"name":"p5-meaning-label","text":"对 Manifold 的意义","textPreview":"对 Manifold 的意义","textChars":14,"textLines":1,"bbox":[96,422,1184,298]}
+{"kind":"textbox","id":"sh/lsre1c72","slide":5,"name":"p5-meaning-body","text":"若账户、可靠性和单位经济性闭合，\n它可能成为实时世界流基础设施；\n目前只能作条件性判断。","textPreview":"若账户、可靠性和单位经济性闭合， | 它可能成为实时世界流基础设施； | 目前只能作条件性判断。","textChars":44,"textLines":3,"bbox":[96,462,1184,258]}
+{"kind":"shape","id":"sh/krids7qh","slide":5,"name":"p5-trigger-top","bbox":[96,558,56,4]}
+{"kind":"textbox","id":"sh/bmpcvip0","slide":5,"name":"p5-trigger-label","text":"关键触发器","textPreview":"关键触发器","textChars":5,"textLines":1,"bbox":[96,576,1184,144]}
+{"kind":"textbox","id":"sh/algvmx8f","slide":5,"name":"p5-trigger-body","text":"独立账户在公开价格和服务等级下\n完成长时稳定调用。","textPreview":"独立账户在公开价格和服务等级下 | 完成长时稳定调用。","textChars":25,"textLines":2,"bbox":[96,608,1184,112]}
+{"kind":"shape","id":"sh/xoruxs76","slide":5,"name":"p5-limits-bg","bbox":[758,220,426,430]}
+{"kind":"textbox","id":"sh/wnydonql","slide":5,"name":"p5-limits-title","text":"仍未闭合的服务条件","textPreview":"仍未闭合的服务条件","textChars":9,"textLines":1,"bbox":[790,248,490,472]}
+{"kind":"textbox","id":"sh/vitw7mp4","slide":5,"name":"p5-limit-big-0","text":"账户","textPreview":"账户","textChars":2,"textLines":1,"bbox":[790,306,490,414]}
+{"kind":"textbox","id":"sh/uhkvyh8j","slide":5,"name":"p5-limit-small-0","text":"实际账户与持续调用未独立确认","textPreview":"实际账户与持续调用未独立确认","textChars":14,"textLines":1,"bbox":[916,306,364,414]}
+{"kind":"shape","id":"sh/qd4fqlsr","slide":5,"name":"p5-limit-rule-1","bbox":[790,362,348,1]}
+{"kind":"textbox","id":"sh/rexgzq9c","slide":5,"name":"p5-limit-big-1","text":"150 秒","textPreview":"150 秒","textChars":5,"textLines":1,"bbox":[790,374,490,346]}
+{"kind":"textbox","id":"sh/sf6hsvax","slide":5,"name":"p5-limit-small-1","text":"当前默认单流上限","textPreview":"当前默认单流上限","textChars":8,"textLines":1,"bbox":[916,374,364,346]}
+{"kind":"shape","id":"sh/dgfy10ri","slide":5,"name":"p5-limit-rule-2","bbox":[790,430,348,1]}
+{"kind":"textbox","id":"sh/ehozu5s3","slide":5,"name":"p5-limit-big-2","text":"60 分钟","textPreview":"60 分钟","textChars":5,"textLines":1,"bbox":[790,442,490,278]}
+{"kind":"textbox","id":"sh/fixg3q9o","slide":5,"name":"p5-limit-small-2","text":"当前默认单连接上限","textPreview":"当前默认单连接上限","textChars":9,"textLines":1,"bbox":[916,442,364,278]}
+{"kind":"shape","id":"sh/0j6hwva9","slide":5,"name":"p5-limit-rule-3","bbox":[790,498,348,1]}
+{"kind":"textbox","id":"sh/1kfy50ru","slide":5,"name":"p5-limit-big-3","text":"15 分钟","textPreview":"15 分钟","textChars":5,"textLines":1,"bbox":[790,510,490,210]}
+{"kind":"textbox","id":"sh/ulkfi1sz","slide":5,"name":"p5-limit-small-3","text":"无活动流自动断开","textPreview":"无活动流自动断开","textChars":8,"textLines":1,"bbox":[916,510,364,210]}
+{"kind":"textbox","id":"sh/vmtgr694","slide":5,"name":"p5-limit-note","text":"这些运营限制均不构成服务等级保证。","textPreview":"这些运营限制均不构成服务等级保证。","textChars":17,"textLines":1,"bbox":[790,592,490,128]}
+{"kind":"shape","id":"sh/x0jix4b2","slide":5,"name":"p5-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/wfa1ozuh","slide":5,"name":"p5-footer-source","text":"来源：官方开发者文档、运营限制与条款；公司自报云合作","textPreview":"来源：官方开发者文档、运营限制与条款；公司自报云合作","textChars":26,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/be10vutw","slide":5,"name":"p5-footer-page","text":"截至 2026-07-14  ·  05","textPreview":"截至 2026-07-14  ·  05","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/dsmacm","slide":5,"text":""}
+{"kind":"slide","id":"sl/5lh84w","slide":6,"title":"创业公司 3/4 · RUNWAY","textShapes":17}
+{"kind":"textbox","id":"sh/mhw7q1gr","slide":6,"name":"p6-identity","text":"创业公司 3/4 · RUNWAY","textPreview":"创业公司 3/4 · RUNWAY","textChars":17,"textLines":1,"bbox":[64,28,1216,692]}
+{"kind":"textbox","id":"sh/94nq1gzi","slide":6,"name":"p6-title","text":"Runway 同时押注 Worlds 与 Robotics；\n两条路线都还处在早期","textPreview":"Runway 同时押注 Worlds 与 Robotics； | 两条路线都还处在早期","textChars":41,"textLines":2,"bbox":[64,66,1216,654]}
+{"kind":"shape","id":"sh/o3epsbyx","slide":6,"name":"p6-route-line","bbox":[64,196,44,3]}
+{"kind":"textbox","id":"sh/v65836h8","slide":6,"name":"p6-route","text":"内容平台外延 · 申请制入口","textPreview":"内容平台外延 · 申请制入口","textChars":14,"textLines":1,"bbox":[120,180,1160,540]}
+{"kind":"shape","id":"sh/a5w7ulgn","slide":6,"name":"p6-worlds-bg","bbox":[64,220,540,184]}
+{"kind":"textbox","id":"sh/x87q5gfe","slide":6,"name":"p6-worlds-kicker","text":"已成立 · 路线 A","textPreview":"已成立 · 路线 A","textChars":10,"textLines":1,"bbox":[96,246,1184,474]}
+{"kind":"textbox","id":"sh/w7epwbyt","slide":6,"name":"p6-worlds-name","text":"Worlds","textPreview":"Worlds","textChars":6,"textLines":1,"bbox":[96,280,1184,440]}
+{"kind":"textbox","id":"sh/jap87qxk","slide":6,"name":"p6-worlds-access","text":"公开申请制 early access；\n实际访问未独立确认。","textPreview":"公开申请制 early access； | 实际访问未独立确认。","textChars":30,"textLines":2,"bbox":[96,324,1184,396]}
+{"kind":"shape","id":"sh/i9g7ylgz","slide":6,"name":"p6-robotics-bg","bbox":[628,220,556,184]}
+{"kind":"textbox","id":"sh/g7md07e9","slide":6,"name":"p6-robotics-kicker","text":"已成立 · 路线 B","textPreview":"已成立 · 路线 B","textChars":10,"textLines":1,"bbox":[660,246,620,474]}
+{"kind":"textbox","id":"sh/h8vu9cvu","slide":6,"name":"p6-robotics-name","text":"Robotics","textPreview":"Robotics","textChars":8,"textLines":1,"bbox":[660,280,620,440]}
+{"kind":"textbox","id":"sh/ul4byxw3","slide":6,"name":"p6-robotics-access","text":"动作条件展开与 Python SDK；\n云端、定制和本地部署均需洽谈。","textPreview":"动作条件展开与 Python SDK； | 云端、定制和本地部署均需洽谈。","textChars":35,"textLines":2,"bbox":[660,324,620,396]}
+{"kind":"shape","id":"sh/f6dc72do","slide":6,"name":"p6-gap-bg","bbox":[64,426,1120,96]}
+{"kind":"textbox","id":"sh/4b6d4re5","slide":6,"name":"p6-gap-title","text":"共同缺口","textPreview":"共同缺口","textChars":4,"textLines":1,"bbox":[96,448,1184,272]}
+{"kind":"textbox","id":"sh/pcfudcvq","slide":6,"name":"p6-gap-body","text":"两条路线都缺公开价格、服务等级和独立复现；\n合作证据仍停在 Runway 单方说明。","textPreview":"两条路线都缺公开价格、服务等级和独立复现； | 合作证据仍停在 Runway 单方说明。","textChars":42,"textLines":2,"bbox":[276,446,1004,274]}
+{"kind":"shape","id":"sh/29ov2hwf","slide":6,"name":"p6-meaning-bg","bbox":[64,546,716,104]}
+{"kind":"textbox","id":"sh/3axcbmd0","slide":6,"name":"p6-meaning-title","text":"对 Manifold 的意义","textPreview":"对 Manifold 的意义","textChars":14,"textLines":1,"bbox":[96,566,1184,154]}
+{"kind":"textbox","id":"sh/cf6d8reh","slide":6,"name":"p6-meaning-body","text":"内容平台可能延伸到可探索世界；\n机器人路线不能借证给 Worlds。","textPreview":"内容平台可能延伸到可探索世界； | 机器人路线不能借证给 Worlds。","textChars":34,"textLines":2,"bbox":[96,598,1184,122]}
+{"kind":"shape","id":"sh/dgzuhwv2","slide":6,"name":"p6-trigger-bg","bbox":[804,546,380,104]}
+{"kind":"textbox","id":"sh/lwvulwn6","slide":6,"name":"p6-trigger-title","text":"关键触发器","textPreview":"关键触发器","textChars":5,"textLines":1,"bbox":[836,566,444,154]}
+{"kind":"textbox","id":"sh/0vmtsr6l","slide":6,"name":"p6-trigger-body","text":"任一组件获得独立调用，\n并获得伙伴侧生产确认。","textPreview":"任一组件获得独立调用， | 并获得伙伴侧生产确认。","textChars":23,"textLines":2,"bbox":[836,598,444,122]}
+{"kind":"shape","id":"sh/zutcjm50","slide":6,"name":"p6-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/ytkbqhof","slide":6,"name":"p6-footer-source","text":"Worlds ≠ Robotics｜来源：官方产品、申请入口、SDK/部署资料及公司自报","textPreview":"Worlds ≠ Robotics｜来源：官方产品、申请入口、SDK/部署资料及公司自报","textChars":44,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/90vupwn2","slide":6,"name":"p6-footer-page","text":"截至 2026-07-14  ·  06","textPreview":"截至 2026-07-14  ·  06","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/5lh84w","slide":6,"text":""}
+{"kind":"slide","id":"sl/hbhh1k","slide":7,"title":"创业公司 4/4 · DECART","textShapes":18}
+{"kind":"textbox","id":"sh/wnq98jih","slide":7,"name":"p7-identity","text":"创业公司 4/4 · DECART","textPreview":"创业公司 4/4 · DECART","textChars":17,"textLines":1,"bbox":[64,28,1216,692]}
+{"kind":"textbox","id":"sh/vmh8zehw","slide":7,"name":"p7-title","text":"驾驶场景已经按秒计费；\n企业可靠性仍待证","textPreview":"驾驶场景已经按秒计费； | 企业可靠性仍待证","textChars":20,"textLines":2,"bbox":[64,66,1216,654]}
+{"kind":"shape","id":"sh/ul8r690b","slide":7,"name":"p7-route-line","bbox":[64,196,44,3]}
+{"kind":"textbox","id":"sh/9kzqx4z6","slide":7,"name":"p7-route","text":"具体驾驶任务 · 公开计价接口","textPreview":"具体驾驶任务 · 公开计价接口","textChars":15,"textLines":1,"bbox":[120,180,1160,540]}
+{"kind":"shape","id":"sh/8jq94zil","slide":7,"name":"p7-price-bg","bbox":[64,220,330,430]}
+{"kind":"textbox","id":"sh/7ih8vuh0","slide":7,"name":"p7-price-kicker","text":"价格锚点","textPreview":"价格锚点","textChars":4,"textLines":1,"bbox":[96,248,1184,472]}
+{"kind":"textbox","id":"sh/mxor2p0f","slide":7,"name":"p7-price","text":"0.02","textPreview":"0.02","textChars":4,"textLines":1,"bbox":[96,286,1184,434]}
+{"kind":"textbox","id":"sh/lwfqtkzu","slide":7,"name":"p7-price-unit","text":"美元 / 秒","textPreview":"美元 / 秒","textChars":6,"textLines":1,"bbox":[96,358,1184,362]}
+{"kind":"shape","id":"sh/kv690zi9","slide":7,"name":"p7-price-rule","bbox":[96,416,246,1]}
+{"kind":"textbox","id":"sh/uh0j2dov","slide":7,"name":"p7-flow","text":"油门 / 转向\n↓\n有状态会话\n↓\n前 / 左 / 右后续视图","textPreview":"油门 / 转向 | ↓ | 有状态会话 | ↓ | 前 / 左 / 右后续视图","textChars":31,"textLines":5,"bbox":[96,442,1184,278]}
+{"kind":"textbox","id":"sh/vi9kvy5g","slide":7,"name":"p7-scope","text":"具体驾驶任务，\n不外推为通用世界能力。","textPreview":"具体驾驶任务， | 不外推为通用世界能力。","textChars":19,"textLines":2,"bbox":[96,590,1184,130]}
+{"kind":"shape","id":"sh/gji143ml","slide":7,"name":"p7-established-bg","bbox":[418,220,766,112]}
+{"kind":"textbox","id":"sh/hkr2x8n6","slide":7,"name":"p7-established-title","text":"已成立","textPreview":"已成立","textChars":3,"textLines":1,"bbox":[450,246,830,474]}
+{"kind":"textbox","id":"sh/6t0jytoj","slide":7,"name":"p7-established-body","text":"公开账户按 0.02 美元 / 秒计费；有状态会话接收油门和转向动作，\n生成前、左、右后续视图。","textPreview":"公开账户按 0.02 美元 / 秒计费；有状态会话接收油门和转向动作， | 生成前、左、右后续视图。","textChars":48,"textLines":2,"bbox":[608,242,672,478]}
+{"kind":"shape","id":"sh/7e90ry54","slide":7,"name":"p7-not-bg","bbox":[418,354,766,154]}
+{"kind":"textbox","id":"sh/8fi1036p","slide":7,"name":"p7-not-title","text":"未成立","textPreview":"未成立","textChars":3,"textLines":1,"bbox":[450,380,830,340]}
+{"kind":"textbox","id":"sh/tgr2t8na","slide":7,"name":"p7-not-body","text":"预览服务可撤销，且无连续性保证；输入 / 输出可用于训练改进。\n独立体验仍报告路线记忆、控制、漂移和碰撞问题；未见付费客户或生产部署。","textPreview":"预览服务可撤销，且无连续性保证；输入 / 输出可用于训练改进。 | 独立体验仍报告路线记忆、控制、漂移和碰撞问题；未见付费客户或生产部署。","textChars":67,"textLines":2,"bbox":[608,376,672,344]}
+{"kind":"shape","id":"sh/ypgjuton","slide":7,"name":"p7-meaning-bg","bbox":[418,530,470,120]}
+{"kind":"textbox","id":"sh/jqp0ne58","slide":7,"name":"p7-meaning-title","text":"对 Manifold 的意义","textPreview":"对 Manifold 的意义","textChars":14,"textLines":1,"bbox":[450,550,830,170]}
+{"kind":"textbox","id":"sh/nu5gvul0","slide":7,"name":"p7-meaning-body","text":"竞争已进入可计量的驾驶任务；\n不能外推为通用能力或企业级采用。","textPreview":"竞争已进入可计量的驾驶任务； | 不能外推为通用能力或企业级采用。","textChars":31,"textLines":2,"bbox":[450,586,830,134]}
+{"kind":"shape","id":"sh/mtcz2p4f","slide":7,"name":"p7-trigger-bg","bbox":[912,530,272,120]}
+{"kind":"textbox","id":"sh/9wnyxk3q","slide":7,"name":"p7-trigger-title","text":"关键触发器","textPreview":"关键触发器","textChars":5,"textLines":1,"bbox":[944,550,336,170]}
+{"kind":"textbox","id":"sh/oveh4fml","slide":7,"name":"p7-trigger-body","text":"预览接口正式商用，\n并闭合服务等级、\n数据和责任边界。","textPreview":"预览接口正式商用， | 并闭合服务等级、 | 数据和责任边界。","textChars":27,"textLines":3,"bbox":[944,582,336,138]}
+{"kind":"shape","id":"sh/by5gzulw","slide":7,"name":"p7-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/axwz6p4b","slide":7,"name":"p7-footer-source","text":"来源：官方产品/API、价格、条款及独立产品体验","textPreview":"来源：官方产品/API、价格、条款及独立产品体验","textChars":24,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/xkny1432","slide":7,"name":"p7-footer-page","text":"截至 2026-07-14  ·  07","textPreview":"截至 2026-07-14  ·  07","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/hbhh1k","slide":7,"text":""}
+{"kind":"slide","id":"sl/blmi59","slide":8,"title":"大厂项目 1/1 · NVIDIA COSMOS 3","textShapes":28}
+{"kind":"textbox","id":"sh/cfipor6p","slide":8,"name":"p8-identity","text":"大厂项目 1/1 · NVIDIA COSMOS 3","textPreview":"大厂项目 1/1 · NVIDIA COSMOS 3","textChars":26,"textLines":1,"bbox":[64,28,1216,692]}
+{"kind":"textbox","id":"sh/re9ovmp4","slide":8,"name":"p8-title","text":"Cosmos 3 已形成自托管路径；\n动作产品仍未闭合","textPreview":"Cosmos 3 已形成自托管路径； | 动作产品仍未闭合","textChars":27,"textLines":2,"bbox":[64,66,1216,654]}
+{"kind":"shape","id":"sh/qt07mhoj","slide":8,"name":"p8-route-line","bbox":[64,196,44,3]}
+{"kind":"textbox","id":"sh/psr6tc7y","slide":8,"name":"p8-route","text":"动作条件物理智能组件 · 可下载 / 自托管","textPreview":"动作条件物理智能组件 · 可下载 / 自托管","textChars":22,"textLines":1,"bbox":[120,180,1160,540]}
+{"kind":"shape","id":"sh/4ry5k76t","slide":8,"name":"p8-stack-bg","bbox":[64,220,700,282]}
+{"kind":"textbox","id":"sh/3qpor2p8","slide":8,"name":"p8-established-label","text":"已成立 · 三层证据必须分开看","textPreview":"已成立 · 三层证据必须分开看","textChars":15,"textLines":1,"bbox":[96,248,1184,472]}
+{"kind":"textbox","id":"sh/2pgnihon","slide":8,"name":"p8-stack-num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[96,292,1184,428]}
+{"kind":"textbox","id":"sh/9ob65g7i","slide":8,"name":"p8-stack-head-0","text":"动作条件前向动力学","textPreview":"动作条件前向动力学","textChars":9,"textLines":1,"bbox":[150,292,1130,428]}
+{"kind":"textbox","id":"sh/8n2pwb6x","slide":8,"name":"p8-stack-body-0","text":"已有可运行材料","textPreview":"已有可运行材料","textChars":7,"textLines":1,"bbox":[480,292,800,428]}
+{"kind":"shape","id":"sh/ip0faxcv","slide":8,"name":"p8-stack-rule-0","bbox":[150,344,566,1]}
+{"kind":"textbox","id":"sh/jqtg32tg","slide":8,"name":"p8-stack-num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[96,360,1184,360]}
+{"kind":"textbox","id":"sh/kr2xcnul","slide":8,"name":"p8-stack-head-1","text":"自托管路径","textPreview":"自托管路径","textChars":5,"textLines":1,"bbox":[150,360,1130,360]}
+{"kind":"textbox","id":"sh/5sby5sb6","slide":8,"name":"p8-stack-body-1","text":"模型材料与代码可在本地运行","textPreview":"模型材料与代码可在本地运行","textChars":13,"textLines":1,"bbox":[480,360,800,360]}
+{"kind":"shape","id":"sh/a10f6dcj","slide":8,"name":"p8-stack-rule-1","bbox":[150,412,566,1]}
+{"kind":"textbox","id":"sh/v29gzit4","slide":8,"name":"p8-stack-num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[96,428,1184,292]}
+{"kind":"textbox","id":"sh/w3ix8nup","slide":8,"name":"p8-stack-head-2","text":"Cosmos3-Generator\nRelease 1.0.0","textPreview":"Cosmos3-Generator | Release 1.0.0","textChars":31,"textLines":2,"bbox":[150,428,1130,292]}
+{"kind":"textbox","id":"sh/x4ry1sba","slide":8,"name":"p8-stack-body-2","text":"初始 GA；只含文生 / 图生视频；\n未列动作模式","textPreview":"初始 GA；只含文生 / 图生视频； | 未列动作模式","textChars":25,"textLines":2,"bbox":[480,428,800,292]}
+{"kind":"shape","id":"sh/ux4fihc3","slide":8,"name":"p8-not-bg","bbox":[788,220,396,282]}
+{"kind":"shape","id":"sh/fydgbmto","slide":8,"name":"p8-not-rule","bbox":[820,248,38,3]}
+{"kind":"textbox","id":"sh/rql4na5o","slide":8,"name":"p8-not-label","text":"未成立","textPreview":"未成立","textChars":3,"textLines":1,"bbox":[820,258,460,462]}
+{"kind":"textbox","id":"sh/qpc3e5o3","slide":8,"name":"p8-not-list-dot-0","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[820,304,460,416]}
+{"kind":"textbox","id":"sh/ds3mpknu","slide":8,"name":"p8-not-list-text-0","text":"稳定动作运行时或动作 NIM","textPreview":"稳定动作运行时或动作 NIM","textChars":14,"textLines":1,"bbox":[844,304,436,416]}
+{"kind":"textbox","id":"sh/srulgf69","slide":8,"name":"p8-not-list-dot-1","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[820,346,460,374]}
+{"kind":"textbox","id":"sh/zu54ru5k","slide":8,"name":"p8-not-list-text-1","text":"第三方依赖的完整许可链","textPreview":"第三方依赖的完整许可链","textChars":11,"textLines":1,"bbox":[844,346,436,374]}
+{"kind":"textbox","id":"sh/etw3ipof","slide":8,"name":"p8-not-list-dot-2","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[820,388,460,332]}
+{"kind":"textbox","id":"sh/1wnmtknq","slide":8,"name":"p8-not-list-text-2","text":"硬件范围与总体拥有成本","textPreview":"硬件范围与总体拥有成本","textChars":11,"textLines":1,"bbox":[844,388,436,332]}
+{"kind":"textbox","id":"sh/0velkf65","slide":8,"name":"p8-not-list-dot-3","text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[820,430,460,290]}
+{"kind":"textbox","id":"sh/ny54vu5w","slide":8,"name":"p8-not-list-text-3","text":"独立复现与客户第一方采用","textPreview":"独立复现与客户第一方采用","textChars":12,"textLines":1,"bbox":[844,430,436,290]}
+{"kind":"shape","id":"sh/mxw3mpob","slide":8,"name":"p8-meaning-bg","bbox":[64,526,716,124]}
+{"kind":"textbox","id":"sh/knylcz29","slide":8,"name":"p8-meaning-title","text":"对 Manifold 的意义","textPreview":"对 Manifold 的意义","textChars":14,"textLines":1,"bbox":[96,548,1184,172]}
+{"kind":"textbox","id":"sh/lo72l43u","slide":8,"name":"p8-meaning-body","text":"自托管组件可能绕行专有供应商，也可能成为部署与验证底层；\n实际关系取决于 Manifold 的交付单元。","textPreview":"自托管组件可能绕行专有供应商，也可能成为部署与验证底层； | 实际关系取决于 Manifold 的交付单元。","textChars":52,"textLines":2,"bbox":[96,586,1184,134]}
+{"kind":"shape","id":"sh/ylg3apkj","slide":8,"name":"p8-trigger-bg","bbox":[804,526,380,124]}
+{"kind":"textbox","id":"sh/jmpkjul4","slide":8,"name":"p8-trigger-title","text":"关键触发器","textPreview":"关键触发器","textChars":5,"textLines":1,"bbox":[836,548,444,172]}
+{"kind":"textbox","id":"sh/wzel8z2d","slide":8,"name":"p8-trigger-body","text":"稳定动作运行时或动作 NIM 正式发布，\n并获得独立复现。","textPreview":"稳定动作运行时或动作 NIM 正式发布， | 并获得独立复现。","textChars":29,"textLines":2,"bbox":[836,586,444,134]}
+{"kind":"shape","id":"sh/x072h43y","slide":8,"name":"p8-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/axw36pk7","slide":8,"name":"p8-footer-source","text":"Generator NIM ≠ action runtime｜来源：官方研究、模型、自托管文档、Release Notes、许可及伙伴自报","textPreview":"Generator NIM ≠ action runtime｜来源：官方研究、模型、自托管文档、Release Notes、许可及伙伴自报","textChars":69,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/by5kfuls","slide":8,"name":"p8-footer-page","text":"截至 2026-07-14  ·  08","textPreview":"截至 2026-07-14  ·  08","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/blmi59","slide":8,"text":""}
+{"kind":"slide","id":"sl/ipo1hm","slide":9,"title":"WATCHLIST · FACT-TRIGGERED","textShapes":23}
+{"kind":"textbox","id":"sh/47mh8j29","slide":9,"name":"p9-eyebrow","text":"WATCHLIST · FACT-TRIGGERED","textPreview":"WATCHLIST · FACT-TRIGGERED","textChars":26,"textLines":1,"bbox":[64,26,1216,694]}
+{"kind":"textbox","id":"sh/j6dgzelo","slide":9,"name":"p9-title","text":"四个观察对象和一个早期信号，只在证据变化时重审","textPreview":"四个观察对象和一个早期信号，只在证据变化时重审","textChars":23,"textLines":1,"bbox":[64,50,1216,670]}
+{"kind":"textbox","id":"sh/i54z69k3","slide":9,"name":"p9-subtitle","text":"触发条件只启动事实重审，不自动改变固定五席或 4+1 结构。","textPreview":"触发条件只启动事实重审，不自动改变固定五席或 4+1 结构。","textChars":30,"textLines":1,"bbox":[64,107,1216,613]}
+{"kind":"shape","id":"sh/h4vyx43y","slide":9,"name":"p9-header-bg","bbox":[64,138,1152,48]}
+{"kind":"textbox","id":"sh/w3mh4z2d","slide":9,"name":"p9-header-0","text":"对象","textPreview":"对象","textChars":2,"textLines":1,"bbox":[80,150,1200,570]}
+{"kind":"textbox","id":"sh/v2tgvuls","slide":9,"name":"p9-header-1","text":"当前关注点","textPreview":"当前关注点","textChars":5,"textLines":1,"bbox":[332,150,948,570]}
+{"kind":"textbox","id":"sh/u1kz29k7","slide":9,"name":"p9-header-2","text":"重审所需证据","textPreview":"重审所需证据","textChars":6,"textLines":1,"bbox":[770,150,510,570]}
+{"kind":"shape","id":"sh/90byt43m","slide":9,"name":"p9-row-bg-0","bbox":[64,186,1152,96]}
+{"kind":"shape","id":"sh/8z2h0z21","slide":9,"name":"p9-name-bg-0","bbox":[64,186,252,96]}
+{"kind":"textbox","id":"sh/2lwje18b","slide":9,"name":"p9-cell-0-0","text":"Genie 3 /\nProject Genie","textPreview":"Genie 3 / | Project Genie","textChars":23,"textLines":2,"bbox":[80,202,1200,518]}
+{"kind":"textbox","id":"sh/nm5k76pw","slide":9,"name":"p9-cell-0-1","text":"封闭模型与消费者原型；\n企业/开发者路径和外部采用未证","textPreview":"封闭模型与消费者原型； | 企业/开发者路径和外部采用未证","textChars":27,"textLines":2,"bbox":[332,202,948,518]}
+{"kind":"shape","id":"sh/one1gbqh","slide":9,"name":"p9-trigger-mark-0","bbox":[770,204,22,3]}
+{"kind":"textbox","id":"sh/pon29g72","slide":9,"name":"p9-cell-0-2","text":"企业/开发者接口、SDK 或权重；\n具名外部集成","textPreview":"企业/开发者接口、SDK 或权重； | 具名外部集成","textChars":24,"textLines":2,"bbox":[802,202,478,518]}
+{"kind":"shape","id":"sh/ehcja18f","slide":9,"name":"p9-row-rule-0","bbox":[64,282,1152,1]}
+{"kind":"shape","id":"sh/filk3mp0","slide":9,"name":"p9-row-bg-1","bbox":[64,282,1152,96]}
+{"kind":"shape","id":"sh/0je1crql","slide":9,"name":"p9-name-bg-1","bbox":[64,282,252,96]}
+{"kind":"textbox","id":"sh/1kn25w76","slide":9,"name":"p9-cell-1-0","text":"General Intuition /\nMIRA","textPreview":"General Intuition / | MIRA","textChars":24,"textLines":2,"bbox":[80,298,1200,422]}
+{"kind":"textbox","id":"sh/6tcj6h8j","slide":9,"name":"p9-cell-1-1","text":"证据集中在 Rocket League 虚拟物理域；\n商业接口归属和采用未证","textPreview":"证据集中在 Rocket League 虚拟物理域； | 商业接口归属和采用未证","textChars":38,"textLines":2,"bbox":[332,298,948,422]}
+{"kind":"shape","id":"sh/rul0zm9o","slide":9,"name":"p9-trigger-mark-1","bbox":[770,300,22,3]}
+{"kind":"textbox","id":"sh/vyhg7ipg","slide":9,"name":"p9-cell-1-2","text":"第一方证据确认实际交付组件；\n跨域独立验证、具名客户","textPreview":"第一方证据确认实际交付组件； | 跨域独立验证、具名客户","textChars":26,"textLines":2,"bbox":[802,298,478,422]}
+{"kind":"shape","id":"sh/ux8zedob","slide":9,"name":"p9-row-rule-1","bbox":[64,378,1152,1]}
+{"kind":"shape","id":"sh/h0jy9snm","slide":9,"name":"p9-row-bg-2","bbox":[64,378,1152,96]}
+{"kind":"shape","id":"sh/wzqhgn61","slide":9,"name":"p9-name-bg-2","bbox":[64,378,252,96]}
+{"kind":"textbox","id":"sh/jm1gb25s","slide":9,"name":"p9-cell-2-0","text":"Meta V-JEPA","textPreview":"Meta V-JEPA","textChars":11,"textLines":1,"bbox":[80,394,1200,326]}
+{"kind":"textbox","id":"sh/i1szixo7","slide":9,"name":"p9-cell-2-1","text":"仅 2-AC 提供动作条件路径；\n窄域、许可与修正复现未闭合","textPreview":"仅 2-AC 提供动作条件路径； | 窄域、许可与修正复现未闭合","textChars":30,"textLines":2,"bbox":[332,394,948,326]}
+{"kind":"shape","id":"sh/5ojydsny","slide":9,"name":"p9-trigger-mark-2","bbox":[770,396,22,3]}
+{"kind":"textbox","id":"sh/4nahkn6d","slide":9,"name":"p9-cell-2-2","text":"跨动作域复现、许可闭合、\n产品或客户入口","textPreview":"跨动作域复现、许可闭合、 | 产品或客户入口","textChars":20,"textLines":2,"bbox":[802,394,478,326]}
+{"kind":"shape","id":"sh/z6xgzyp8","slide":9,"name":"p9-row-rule-2","bbox":[64,474,1152,1]}
+{"kind":"shape","id":"sh/y5of6to3","slide":9,"name":"p9-row-bg-3","bbox":[64,474,1152,96]}
+{"kind":"shape","id":"sh/obmd0zml","slide":9,"name":"p9-name-bg-3","bbox":[64,474,252,96]}
+{"kind":"textbox","id":"sh/pcve94n6","slide":9,"name":"p9-cell-3-0","text":"Overworld\n（地域条件）","textPreview":"Overworld | （地域条件）","textChars":16,"textLines":2,"bbox":[80,490,1200,230]}
+{"kind":"textbox","id":"sh/294vyp4v","slide":9,"name":"p9-cell-3-1","text":"开放权重和本地运行有平台价值；\n法律主体、长时一致性和采用未证","textPreview":"开放权重和本地运行有平台价值； | 法律主体、长时一致性和采用未证","textChars":31,"textLines":2,"bbox":[332,490,948,230]}
+{"kind":"shape","id":"sh/nadw7u50","slide":9,"name":"p9-trigger-mark-3","bbox":[770,492,22,3]}
+{"kind":"textbox","id":"sh/072dwfmp","slide":9,"name":"p9-cell-3-2","text":"法律实体闭合、长时交互独立验证、\n具名采用","textPreview":"法律实体闭合、长时交互独立验证、 | 具名采用","textChars":21,"textLines":2,"bbox":[802,490,478,230]}
+{"kind":"shape","id":"sh/18be5kna","slide":9,"name":"p9-row-rule-3","bbox":[64,570,1152,1]}
+{"kind":"shape","id":"sh/e5kvup4j","slide":9,"name":"p9-row-bg-4","bbox":[64,570,1152,96]}
+{"kind":"shape","id":"sh/f6tw3u54","slide":9,"name":"p9-name-bg-4","bbox":[64,570,252,96]}
+{"kind":"textbox","id":"sh/k36x8jmt","slide":9,"name":"p9-cell-4-0","text":"AMI Labs\n（早期信号）","textPreview":"AMI Labs | （早期信号）","textChars":15,"textLines":2,"bbox":[80,586,1200,134]}
+{"kind":"textbox","id":"sh/l4feho3e","slide":9,"name":"p9-cell-4-1","text":"非中国地域已闭合，但无可验证的自有模型、\n论文、演示、权重、接口或评测","textPreview":"非中国地域已闭合，但无可验证的自有模型、 | 论文、演示、权重、接口或评测","textChars":35,"textLines":2,"bbox":[332,586,948,134]}
+{"kind":"shape","id":"sh/xwn2dczu","slide":9,"name":"p9-trigger-mark-4","bbox":[770,588,22,3]}
+{"kind":"textbox","id":"sh/wbe1kry9","slide":9,"name":"p9-cell-4-2","text":"可审计的自有技术资产\n与外部入口","textPreview":"可审计的自有技术资产 | 与外部入口","textChars":16,"textLines":2,"bbox":[802,586,478,134]}
+{"kind":"shape","id":"sh/va5kbmho","slide":9,"name":"p9-row-rule-4","bbox":[64,666,1152,1]}
+{"kind":"shape","id":"sh/a9wjihg3","slide":9,"name":"p9-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/5072hwzq","slide":9,"name":"p9-footer-source","text":"来源：官方研究、产品、代码仓库、公司及地域资料","textPreview":"来源：官方研究、产品、代码仓库、公司及地域资料","textChars":23,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/kzy1ory5","slide":9,"name":"p9-footer-page","text":"截至 2026-07-14  ·  09","textPreview":"截至 2026-07-14  ·  09","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/ipo1hm","slide":9,"text":""}
+{"kind":"slide","id":"sl/xajq0n","slide":10,"title":"MANIFOLD · NOW / LATER","textShapes":30}
+{"kind":"textbox","id":"sh/61cfm1w7","slide":10,"name":"p10-eyebrow","text":"MANIFOLD · NOW / LATER","textPreview":"MANIFOLD · NOW / LATER","textChars":22,"textLines":1,"bbox":[64,26,1216,694]}
+{"kind":"textbox","id":"sh/tonehwfi","slide":10,"name":"p10-title","text":"Manifold 先完成三项底座建设，再用五类证据触发重审","textPreview":"Manifold 先完成三项底座建设，再用五类证据触发重审","textChars":29,"textLines":1,"bbox":[64,56,1216,664]}
+{"kind":"textbox","id":"sh/snuxored","slide":10,"name":"p10-subtitle","text":"上半页是现在要做的事；下半页只保留未来触发重审的证据。","textPreview":"上半页是现在要做的事；下半页只保留未来触发重审的证据。","textChars":27,"textLines":1,"bbox":[64,116,1216,604]}
+{"kind":"shape","id":"sh/jylwbmxg","slide":10,"name":"p10-actions-bg","bbox":[64,182,1152,240]}
+{"kind":"textbox","id":"sh/ixcvihwv","slide":10,"name":"p10-action-num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[88,204,1192,516]}
+{"kind":"textbox","id":"sh/503edwfm","slide":10,"name":"p10-action-title-0","text":"定义标准交付单元","textPreview":"定义标准交付单元","textChars":8,"textLines":1,"bbox":[88,262,1192,458]}
+{"kind":"textbox","id":"sh/kzuxkre1","slide":10,"name":"p10-action-body-0","text":"明确模型、接口、部署服务\n和联合项目分别交付什么；\n哪些层自有，哪些层集成或采购。","textPreview":"明确模型、接口、部署服务 | 和联合项目分别交付什么； | 哪些层自有，哪些层集成或采购。","textChars":41,"textLines":3,"bbox":[88,314,1192,406]}
+{"kind":"shape","id":"sh/vu1w7mxk","slide":10,"name":"p10-action-v-0","bbox":[432,204,1,198]}
+{"kind":"textbox","id":"sh/atsvehwz","slide":10,"name":"p10-action-num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[464,204,816,516]}
+{"kind":"textbox","id":"sh/cb61kruh","slide":10,"name":"p10-action-title-1","text":"建立共同验证资产","textPreview":"建立共同验证资产","textChars":8,"textLines":1,"bbox":[464,262,816,458]}
+{"kind":"textbox","id":"sh/dcfitwb2","slide":10,"name":"p10-action-body-1","text":"把动作忠实度、持久状态、\n几何 / 碰撞、失败率、延迟和 TCO\n固化成验证协议，并保留负面结果。","textPreview":"把动作忠实度、持久状态、 | 几何 / 碰撞、失败率、延迟和 TCO | 固化成验证协议，并保留负面结果。","textChars":49,"textLines":3,"bbox":[464,314,816,406]}
+{"kind":"shape","id":"sh/q9ojihcb","slide":10,"name":"p10-action-v-1","bbox":[808,204,1,198]}
+{"kind":"textbox","id":"sh/rax0rmtw","slide":10,"name":"p10-action-num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[840,204,440,516]}
+{"kind":"textbox","id":"sh/47m1g7u5","slide":10,"name":"p10-action-title-2","text":"锁定关键权利边界","textPreview":"锁定关键权利边界","textChars":8,"textLines":1,"bbox":[840,262,440,458]}
+{"kind":"textbox","id":"sh/p8vipcbq","slide":10,"name":"p10-action-body-2","text":"合同先写清输入 / 输出数据权、\n模型改进权、部署范围\n和再分发规则。","textPreview":"合同先写清输入 / 输出数据权、 | 模型改进权、部署范围 | 和再分发规则。","textChars":35,"textLines":3,"bbox":[840,314,440,406]}
+{"kind":"textbox","id":"sh/254jehcf","slide":10,"name":"p10-trigger-kicker","text":"未来出现什么证据时重审","textPreview":"未来出现什么证据时重审","textChars":11,"textLines":1,"bbox":[64,448,1216,272]}
+{"kind":"shape","id":"sh/36d0n2t0","slide":10,"name":"p10-trigger-heading-rule","bbox":[356,463,860,1]}
+{"kind":"shape","id":"sh/83q1sbup","slide":10,"name":"p10-triggers-bg","bbox":[64,486,1152,164]}
+{"kind":"shape","id":"sh/94z21gba","slide":10,"name":"p10-trigger-mark-0","bbox":[80,502,28,3]}
+{"kind":"textbox","id":"sh/xobapcz2","slide":10,"name":"p10-trigger-title-0","text":"稳定接口","textPreview":"稳定接口","textChars":4,"textLines":1,"bbox":[80,516,1200,204]}
+{"kind":"textbox","id":"sh/wn29w7ih","slide":10,"name":"p10-trigger-event-0","text":"持续调用；\n价格与服务等级公开","textPreview":"持续调用； | 价格与服务等级公开","textChars":15,"textLines":2,"bbox":[80,550,1200,170]}
+{"kind":"textbox","id":"sh/vmtsn2hw","slide":10,"name":"p10-trigger-use-0","text":"重审产品 / 平台\n替代关系","textPreview":"重审产品 / 平台 | 替代关系","textChars":14,"textLines":2,"bbox":[80,606,1200,114]}
+{"kind":"shape","id":"sh/alkrux0b","slide":10,"name":"p10-trigger-v-0","bbox":[289.6,502,1,132]}
+{"kind":"shape","id":"sh/9kbalsz6","slide":10,"name":"p10-trigger-mark-1","bbox":[313.6,502,28,3]}
+{"kind":"textbox","id":"sh/oj29s7il","slide":10,"name":"p10-trigger-title-1","text":"独立复现","textPreview":"独立复现","textChars":4,"textLines":1,"bbox":[313.6,516,966.4,204]}
+{"kind":"textbox","id":"sh/nitsj2h0","slide":10,"name":"p10-trigger-event-1","text":"同一或可比协议下\n复现关键结果","textPreview":"同一或可比协议下 | 复现关键结果","textChars":15,"textLines":2,"bbox":[313.6,550,966.4,170]}
+{"kind":"textbox","id":"sh/mh0rqx0f","slide":10,"name":"p10-trigger-use-1","text":"重审技术证据\n成熟度","textPreview":"重审技术证据 | 成熟度","textChars":10,"textLines":2,"bbox":[313.6,606,966.4,114]}
+{"kind":"shape","id":"sh/1grahszu","slide":10,"name":"p10-trigger-v-1","bbox":[523.2,502,1,132]}
+{"kind":"shape","id":"sh/0fi9oni9","slide":10,"name":"p10-trigger-mark-2","bbox":[547.2,502,28,3]}
+{"kind":"textbox","id":"sh/qlg7itg7","slide":10,"name":"p10-trigger-title-2","text":"正式商用闭合","textPreview":"正式商用闭合","textChars":6,"textLines":1,"bbox":[547.2,516,732.8,204]}
+{"kind":"textbox","id":"sh/rmporyxs","slide":10,"name":"p10-trigger-event-2","text":"许可、服务等级和\n责任边界闭合","textPreview":"许可、服务等级和 | 责任边界闭合","textChars":15,"textLines":2,"bbox":[547.2,550,732.8,170]}
+{"kind":"textbox","id":"sh/cnypk3yd","slide":10,"name":"p10-trigger-use-2","text":"重审采购与\n部署可行性","textPreview":"重审采购与 | 部署可行性","textChars":11,"textLines":2,"bbox":[547.2,606,732.8,114]}
+{"kind":"shape","id":"sh/do76t8fy","slide":10,"name":"p10-trigger-v-2","bbox":[756.8,502,1,132]}
+{"kind":"shape","id":"sh/2xw7e9gb","slide":10,"name":"p10-trigger-mark-3","bbox":[780.8,502,28,3]}
+{"kind":"textbox","id":"sh/3y5onexg","slide":10,"name":"p10-trigger-title-3","text":"客户第一方采用","textPreview":"客户第一方采用","textChars":7,"textLines":1,"bbox":[780.8,516,499.2,204]}
+{"kind":"textbox","id":"sh/4zypgjy1","slide":10,"name":"p10-trigger-event-3","text":"具名客户确认\n付费生产部署或续约","textPreview":"具名客户确认 | 付费生产部署或续约","textChars":16,"textLines":2,"bbox":[780.8,550,499.2,170]}
+{"kind":"textbox","id":"sh/p076pofm","slide":10,"name":"p10-trigger-use-3","text":"重审商业采用\n与竞争关系","textPreview":"重审商业采用 | 与竞争关系","textChars":12,"textLines":2,"bbox":[780.8,606,499.2,114]}
+{"kind":"shape","id":"sh/utw7a9gz","slide":10,"name":"p10-trigger-v-3","bbox":[990.4,502,1,132]}
+{"kind":"shape","id":"sh/fu5ojexk","slide":10,"name":"p10-trigger-mark-4","bbox":[1014.4,502,28,3]}
+{"kind":"textbox","id":"sh/7mp4va1g","slide":10,"name":"p10-trigger-title-4","text":"稳定动作产品","textPreview":"稳定动作产品","textChars":6,"textLines":1,"bbox":[1014.4,516,265.6,204]}
+{"kind":"textbox","id":"sh/6lg3m5kv","slide":10,"name":"p10-trigger-event-4","text":"动作运行时 / NIM\n正式发布并获验证","textPreview":"动作运行时 / NIM | 正式发布并获验证","textChars":20,"textLines":2,"bbox":[1014.4,550,265.6,170]}
+{"kind":"textbox","id":"sh/t87mxkj6","slide":10,"name":"p10-trigger-use-4","text":"重审自托管\n绕行风险","textPreview":"重审自托管 | 绕行风险","textChars":10,"textLines":2,"bbox":[1014.4,606,265.6,114]}
+{"kind":"shape","id":"sh/8nylofil","slide":10,"name":"p10-footer-rule","bbox":[64,676,1096,1]}
+{"kind":"textbox","id":"sh/ji5kra14","slide":10,"name":"p10-footer-source","text":"跨页综合：官方条款、开发者和技术资料；公司/伙伴自报及独立体验","textPreview":"跨页综合：官方条款、开发者和技术资料；公司/伙伴自报及独立体验","textChars":31,"textLines":1,"bbox":[64,684,1216,36]}
+{"kind":"textbox","id":"sh/yhw3i5kj","slide":10,"name":"p10-footer-page","text":"截至 2026-07-14  ·  10","textPreview":"截至 2026-07-14  ·  10","textChars":20,"textLines":1,"bbox":[900,684,380,36]}
+{"kind":"notes","id":"nt/xajq0n","slide":10,"text":""}

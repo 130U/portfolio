@@ -1,0 +1,41 @@
+- id: manifold-worldscape
+  type: official-project-page
+  title: "Manifold WorldScape"
+  url: "https://manifoldai.cn/blogs/WorldScape.html"
+  accessed_at: "2026-07-14"
+  primary: true
+
+- id: world-labs-about
+  type: official-company-page
+  title: "World Labs"
+  url: "https://www.worldlabs.ai/about"
+  accessed_at: "2026-07-14"
+  primary: true
+
+- id: odyssey-world-models
+  type: official-project-page
+  title: "The GPT-2 Moment for World Models"
+  url: "https://odyssey.ml/the-gpt-2-moment-for-world-models"
+  accessed_at: "2026-07-14"
+  primary: true
+
+- id: runway-gwm-1
+  type: official-research-page
+  title: "Introducing Runway GWM-1"
+  url: "https://runwayml.com/research/introducing-runway-gwm-1"
+  accessed_at: "2026-07-14"
+  primary: true
+
+- id: decart-oasis
+  type: official-product-page
+  title: "Decart Oasis"
+  url: "https://decart.ai/oasis"
+  accessed_at: "2026-07-14"
+  primary: true
+
+- id: nvidia-cosmos-3
+  type: official-research-page
+  title: "NVIDIA Cosmos 3"
+  url: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
+  accessed_at: "2026-07-14"
+  primary: true
