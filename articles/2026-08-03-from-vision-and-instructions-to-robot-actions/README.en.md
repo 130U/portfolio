@@ -5,8 +5,6 @@ lang: en
 
 # From Vision and Instructions to Robot Actions: Two Emerging Paths
 
-> First published on [theodoreoy.com](https://www.theodoreoy.com/personal-posts/from-vision-and-instructions-to-robot-actions/) on July 29, 2026. This is the bilingual portfolio edition.
-
 <a id="en-quick-take" data-pair-id="quick-take"></a>
 ## One-minute takeaway
 

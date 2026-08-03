@@ -5,8 +5,6 @@
 
 ## 1. 交付边界 / Delivery boundary
 
-- 唯一被修改的远程目标是 `130U/portfolio`；参考仓库 `130U/130U.github.io` 仅作只读设计观察。
-- The only writable target is `130U/portfolio`. `130U/130U.github.io` was used as a read-only design reference.
 - 中文与英文 Markdown 是 canonical sources；HTML/CSS/JavaScript 是派生阅读界面。
 - The Chinese and English Markdown files are canonical. HTML, CSS, and JavaScript are derived presentation layers.
 

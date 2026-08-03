@@ -5,8 +5,6 @@ lang: zh-CN
 
 # 从视觉与指令到机器人动作：两条正在形成的路径
 
-> 本文最初于 2026 年 7 月 29 日发布在 [theodoreoy.com](https://www.theodoreoy.com/personal-posts/from-vision-and-instructions-to-robot-actions/)。这里是作品集中的双语版本。
-
 <a id="zh-quick-take" data-pair-id="quick-take"></a>
 ## 一分钟结论
 
