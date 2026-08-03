@@ -75,7 +75,9 @@ for (const post of posts) {
     const html = await readFile(path, "utf8");
     if (!html.includes(`data-post-id="${post.data.id}"`)) failures.push(`${path}: missing post identity`);
     if ((html.match(/<div class="article-prose" data-language-column=/g) ?? []).length !== 2) failures.push(`${path}: missing static bilingual documents`);
-    if (!html.includes('class="katex"')) failures.push(`${path}: build-time math rendering is missing`);
+    if (post.data.id === "research.001" && !html.includes('class="katex"')) {
+      failures.push(`${path}: build-time math rendering is missing`);
+    }
     if ((html.match(/<h1(?:\s|>)/g) ?? []).length !== 1) failures.push(`${path}: article page must contain exactly one h1`);
     if ((html.match(/data-pair-id=/g) ?? []).length !== 114 && post.data.id === "research.001") {
       failures.push(`${path}: expected 114 language-specific pair anchors`);

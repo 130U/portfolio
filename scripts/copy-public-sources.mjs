@@ -1,9 +1,10 @@
-import { copyFile, mkdir } from "node:fs/promises";
-import { join } from "node:path";
+import { copyFile, mkdir, readdir } from "node:fs/promises";
+import { extname, join } from "node:path";
 import { exists, loadPosts, repoRoot, safeChildPath } from "./lib/content.mjs";
 
 const outputDir = join(repoRoot, "_site");
 const posts = (await loadPosts({ includeDrafts: false })).filter((post) => post.data.status === "published");
+const publicAssetExtensions = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"]);
 
 for (const post of posts) {
   const routeDir = join(outputDir, post.data.slug);
@@ -19,6 +20,11 @@ for (const post of posts) {
     const source = safeChildPath(post.sourceDir, file);
     if (await exists(source)) await copyFile(source, join(routeDir, file));
   }
+  const entries = await readdir(post.sourceDir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (!entry.isFile() || !publicAssetExtensions.has(extname(entry.name).toLowerCase())) continue;
+    await copyFile(safeChildPath(post.sourceDir, entry.name), join(routeDir, entry.name));
+  }
 }
 
-console.log(`Copied canonical Markdown sources for ${posts.length} published post(s).`);
+console.log(`Copied canonical Markdown sources and local media for ${posts.length} published post(s).`);
