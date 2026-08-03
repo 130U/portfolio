@@ -8,15 +8,22 @@ const home = import.meta.env.BASE_URL;
   <a class="wordmark" href={home} aria-label="Research Notes, home">Research Notes</a>
 
   <nav class="site-nav" aria-label="Primary / 主导航">
-    <a href={collectionHref("article")}>Articles</a>
-    <a href={collectionHref("research")}>Research</a>
-    <a href={collectionHref("reflection")}>Reflections</a>
+    <a href={collectionHref("article")}>
+      <span data-content-lang="zh" lang="zh-CN">文章</span>
+      <span data-content-lang="en" lang="en">Articles</span>
+    </a>
+    <a href={collectionHref("research")}>
+      <span data-content-lang="zh" lang="zh-CN">研究</span>
+      <span data-content-lang="en" lang="en">Research</span>
+    </a>
+    <a href={collectionHref("reflection")}>
+      <span data-content-lang="zh" lang="zh-CN">思考</span>
+      <span data-content-lang="en" lang="en">Reflections</span>
+    </a>
   </nav>
 
   <div class="language-control" role="group" aria-label="Reading language / 阅读语言">
-    <span class="language-control-label" aria-hidden="true">Language</span>
     <button type="button" data-language-control="zh" aria-pressed="false">中文</button>
     <button type="button" data-language-control="en" aria-pressed="false">English</button>
-    <button type="button" data-language-control="both" aria-pressed="true">中英对照</button>
   </div>
 </header>

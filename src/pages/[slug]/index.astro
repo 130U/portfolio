@@ -72,8 +72,14 @@ const isDeskResearch = data.topics.includes("Competitive Intelligence");
 >
   <main id="main-content" data-post-id={data.id}>
     <section class="article-hero">
-      <a class="back-link" href={collectionHref(data.collection)}>← {copy.en} / {copy.zh}</a>
-      <p class="eyebrow">{String(data.seriesNo).padStart(2, "0")} · {data.topics.join(" · ")}</p>
+      <a class="back-link" href={collectionHref(data.collection)}>
+        <span data-content-lang="zh" lang="zh-CN">← 返回{copy.zh}</span>
+        <span data-content-lang="en" lang="en">← Back to {copy.en}</span>
+      </a>
+      <p class="eyebrow">
+        <span data-content-lang="zh" lang="zh-CN">{copy.zh} · 第 {String(data.seriesNo).padStart(2, "0")} 篇</span>
+        <span data-content-lang="en" lang="en">{copy.en} · No. {String(data.seriesNo).padStart(2, "0")}</span>
+      </p>
       <h1>
         <span data-content-lang="zh" lang="zh-CN">{data.languages["zh-CN"].title}</span>
         <span data-content-lang="en" lang="en">{data.languages.en.title}</span>
@@ -84,15 +90,33 @@ const isDeskResearch = data.topics.includes("Competitive Intelligence");
       </div>
       <div class="article-meta">
         <div class="article-facts" aria-label="Publication details / 发布信息">
-          <span>{formatDate(data.publishedAt)} / {formatDate(data.publishedAt, "zh-CN")}</span>
-          <span>Updated {formatDate(data.updatedAt)}</span>
-          <span>{data.readingMinutes} min</span>
-          <span>{data.audit?.status === "passed" ? "Audited · 已审计" : "Review · 审阅中"}</span>
-          {data.audit?.reviewedAt && <span>Reviewed {formatDate(data.audit.reviewedAt)}</span>}
+          <div data-content-lang="zh" lang="zh-CN">
+            <span>{formatDate(data.publishedAt, "zh-CN")}</span>
+            <span>更新于 {formatDate(data.updatedAt, "zh-CN")}</span>
+            <span>约 {data.readingMinutes} 分钟</span>
+            <span>{data.audit?.status === "passed" ? "已审计" : "审阅中"}</span>
+            {data.audit?.reviewedAt && <span>核验于 {formatDate(data.audit.reviewedAt, "zh-CN")}</span>}
+          </div>
+          <div data-content-lang="en" lang="en">
+            <span>{formatDate(data.publishedAt)}</span>
+            <span>Updated {formatDate(data.updatedAt)}</span>
+            <span>{data.readingMinutes} min read</span>
+            <span>{data.audit?.status === "passed" ? "Audited" : "In review"}</span>
+            {data.audit?.reviewedAt && <span>Reviewed {formatDate(data.audit.reviewedAt)}</span>}
+          </div>
         </div>
-        <nav class="article-resources" aria-label="Article resources / 文章资料">
+        <nav class="article-resources" data-content-lang="zh" lang="zh-CN" aria-label="文章资料">
           {data.paper && <a href={data.paper.url}>arXiv {data.paper.arxivId}</a>}
           <a href={`${publicSourceBase}${data.languages["zh-CN"].file}`}>中文源稿</a>
+          <a href={`${publicSourceBase}${data.languages.en.file}`}>英文源稿</a>
+          {data.collection === "research" && <a href={`${publicSourceBase}SOURCES.yaml`}>来源清单</a>}
+          {hasSourceSnapshot && <a href={`${publicSourceBase}source-snapshot/README.md`}>研究档案</a>}
+          {hasMigration && <a href={`${publicSourceBase}MIGRATION.md`}>迁移记录</a>}
+          {data.audit && <a href={`${publicSourceBase}${data.audit.file}`}>审计记录</a>}
+        </nav>
+        <nav class="article-resources" data-content-lang="en" lang="en" aria-label="Article resources">
+          {data.paper && <a href={data.paper.url}>arXiv {data.paper.arxivId}</a>}
+          <a href={`${publicSourceBase}${data.languages["zh-CN"].file}`}>Chinese source</a>
           <a href={`${publicSourceBase}${data.languages.en.file}`}>English source</a>
           {data.collection === "research" && <a href={`${publicSourceBase}SOURCES.yaml`}>Sources</a>}
           {hasSourceSnapshot && <a href={`${publicSourceBase}source-snapshot/README.md`}>Research archive</a>}
@@ -106,8 +130,10 @@ const isDeskResearch = data.topics.includes("Competitive Intelligence");
       <aside class="article-rail" aria-label="Table of contents / 文章目录">
         <details class="article-outline" open data-article-outline>
           <summary class="rail-summary">
-            <span>Contents · 目录</span>
-            <span class="rail-summary-hint">Open / Close · 展开 / 收起</span>
+            <span data-content-lang="zh" lang="zh-CN">目录</span>
+            <span data-content-lang="en" lang="en">Contents</span>
+            <span class="rail-summary-hint" data-content-lang="zh" lang="zh-CN">展开 / 收起</span>
+            <span class="rail-summary-hint" data-content-lang="en" lang="en">Open / Close</span>
           </summary>
           <div class="article-outline-body">
             <nav class="article-toc">
@@ -122,24 +148,49 @@ const isDeskResearch = data.topics.includes("Competitive Intelligence");
                 ))}
               </ol>
             </nav>
-            {isDeskResearch ? (
-              <div class="evidence-legend">
-                <p><span class="legend-dot legend-paper"></span>Source fact · 原始事实</p>
-                <p><span class="legend-dot legend-claim"></span>Company report · 公司自报</p>
-                <p><span class="legend-dot legend-code"></span>Partner first-party · 伙伴第一方</p>
-                <p><span class="legend-dot legend-explanation"></span>Independent counter-evidence · 独立反证</p>
-                <p><span class="legend-dot legend-interpretation"></span>Conditional analysis · 条件性分析</p>
-                <p><span class="legend-dot legend-unverified"></span>Unresolved · 未决</p>
-              </div>
-            ) : (
-              <div class="evidence-legend">
-                <p><span class="legend-dot legend-paper"></span>Paper evidence · 论文事实</p>
-                <p><span class="legend-dot legend-claim"></span>Author claim · 作者声明</p>
-                <p><span class="legend-dot legend-code"></span>Code snapshot · 代码快照</p>
-                <p><span class="legend-dot legend-explanation"></span>Explanation · 通俗解释</p>
-                <p><span class="legend-dot legend-interpretation"></span>Interpretation · 我的思考</p>
-              </div>
-            )}
+            <details class="evidence-model">
+              <summary>
+                <span data-content-lang="zh" lang="zh-CN">证据口径</span>
+                <span data-content-lang="en" lang="en">Evidence model</span>
+              </summary>
+              {isDeskResearch ? (
+                <div class="evidence-legend">
+                <div data-content-lang="zh" lang="zh-CN">
+                  <p><span class="legend-dot legend-paper"></span>原始事实</p>
+                  <p><span class="legend-dot legend-claim"></span>公司自报</p>
+                  <p><span class="legend-dot legend-code"></span>伙伴第一方</p>
+                  <p><span class="legend-dot legend-explanation"></span>独立反证</p>
+                  <p><span class="legend-dot legend-interpretation"></span>条件性分析</p>
+                  <p><span class="legend-dot legend-unverified"></span>未决</p>
+                </div>
+                <div data-content-lang="en" lang="en">
+                  <p><span class="legend-dot legend-paper"></span>Source fact</p>
+                  <p><span class="legend-dot legend-claim"></span>Company report</p>
+                  <p><span class="legend-dot legend-code"></span>Partner first-party</p>
+                  <p><span class="legend-dot legend-explanation"></span>Independent counter-evidence</p>
+                  <p><span class="legend-dot legend-interpretation"></span>Conditional analysis</p>
+                  <p><span class="legend-dot legend-unverified"></span>Unresolved</p>
+                </div>
+                </div>
+              ) : (
+                <div class="evidence-legend">
+                <div data-content-lang="zh" lang="zh-CN">
+                  <p><span class="legend-dot legend-paper"></span>论文事实</p>
+                  <p><span class="legend-dot legend-claim"></span>作者声明</p>
+                  <p><span class="legend-dot legend-code"></span>代码快照</p>
+                  <p><span class="legend-dot legend-explanation"></span>通俗解释</p>
+                  <p><span class="legend-dot legend-interpretation"></span>我的思考</p>
+                </div>
+                <div data-content-lang="en" lang="en">
+                  <p><span class="legend-dot legend-paper"></span>Paper evidence</p>
+                  <p><span class="legend-dot legend-claim"></span>Author claim</p>
+                  <p><span class="legend-dot legend-code"></span>Code snapshot</p>
+                  <p><span class="legend-dot legend-explanation"></span>Explanation</p>
+                  <p><span class="legend-dot legend-interpretation"></span>Interpretation</p>
+                </div>
+                </div>
+              )}
+            </details>
           </div>
         </details>
       </aside>

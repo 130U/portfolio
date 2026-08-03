@@ -48,13 +48,13 @@ const structuredData = article
 ---
 
 <!doctype html>
-<html lang="mul" data-language-mode="both">
+<html lang="zh-CN" data-language-mode="zh">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#f7f9fc" />
+    <meta name="theme-color" content="#ffffff" />
     {canonical && <link rel="canonical" href={canonical} />}
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="alternate" type="application/rss+xml" title="Theodore Ouyang — Portfolio" href={`${base}rss.xml`} />
@@ -70,24 +70,28 @@ const structuredData = article
         try {
           const requested = new URLSearchParams(location.search).get("lang");
           const saved = localStorage.getItem("portfolio-language");
-          const mode = ["zh", "en", "both"].includes(requested ?? "")
+          const mode = ["zh", "en"].includes(requested ?? "")
             ? requested
-            : ["zh", "en", "both"].includes(saved ?? "")
+            : ["zh", "en"].includes(saved ?? "")
               ? saved
-              : "both";
+              : "zh";
           document.documentElement.dataset.languageMode = mode;
-          document.documentElement.lang = mode === "zh" ? "zh-CN" : mode === "en" ? "en" : "mul";
+          document.documentElement.lang = mode === "zh" ? "zh-CN" : "en";
         } catch {}
       })();
     </script>
     {structuredData && <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
   </head>
   <body class:list={{ "article-page": article }}>
-    <a class="skip-link" href="#main-content">Skip to content / 跳到正文</a>
+    <a class="skip-link" href="#main-content">
+      <span data-content-lang="zh" lang="zh-CN">跳到正文</span>
+      <span data-content-lang="en" lang="en">Skip to content</span>
+    </a>
     <SiteHeader />
     <slot />
     <footer class="site-footer">
-      <p>Essays, research notes, and reflections.</p>
+      <p data-content-lang="zh" lang="zh-CN">文章、研究与思考。</p>
+      <p data-content-lang="en" lang="en">Essays, research, and reflections.</p>
       <p>© {new Date().getUTCFullYear()} Theodore Ouyang</p>
     </footer>
     <script>

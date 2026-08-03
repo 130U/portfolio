@@ -1,9 +1,11 @@
 # Reflections
 
-Shorter observations, personal notes, and evolving ideas, published through the
-same manifest and review workflow as the longer collections.
+Shorter observations and evolving ideas, kept in the same folder-first archive
+and review workflow as the longer work.
 
-## Published / 已发布
+[Open reflections on the web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/reflections/)
+
+## Published work
 
 <!-- portfolio:index:start -->
 _No published writing in this collection yet._

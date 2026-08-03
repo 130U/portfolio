@@ -1,15 +1,19 @@
-# π₀ bilingual reading note
+# π₀：机器人怎样把“看懂任务”变成连续动作
 
-This folder contains the canonical, section-aligned sources for the π₀ deep reading.
+Deep reading · 2026-08-02 · Chinese / English
 
-- [中文全文](README.zh-CN.md)
-- [English full text](README.en.md)
-- [Content and interface audit / 内容与界面审计](AUDIT.md)
+[中文完整版](README.zh-CN.md) · [Full English version](README.en.md) ·
+[阅读网站](https://research-notes-130u.jiligualapiqiu.chatgpt.site/pi0/)
+
+## Research package
+
 - [Structured source registry](SOURCES.yaml)
-- [Generated bilingual reader](https://research-notes-130u.jiligualapiqiu.chatgpt.site/pi0/)
+- [Content and interface audit](AUDIT.md)
+- [Publication manifest](post.json)
 
-The two language files use the same 57 ordered section anchors. Equations,
-evidence qualifiers, numerical claims, and source links are audited as a pair.
-Substantive edits should be made in both files before rebuilding the site. The
-page shell, homepage card, README indexes, RSS, and sitemap are generated from
-[`post.json`](post.json); they are not maintained as separate prose copies.
+## Integrity
+
+The two complete editions share the same 57 ordered semantic anchors.
+Equations, evidence qualifiers, numerical claims, and source links are audited
+as a pair, while the public reader presents only one language at a time.
+Substantive edits should be made in both source files before rebuilding.

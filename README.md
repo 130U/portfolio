@@ -1,74 +1,74 @@
-# Theodore Ouyang — Portfolio
+# Research Notes
 
-A public, bilingual archive of essays, research notes, and reflections. Each
-published entry is listed below with direct links to its Chinese source, English
-source, and generated reading page.
+Evidence-led writing on artificial intelligence, robotics, and technical
+strategy by Theodore Ouyang. Every work is preserved as a complete Chinese
+edition and a complete English edition; the reading site shows one language at
+a time.
 
-## Published writing / 已整理文章
+[中文阅读](https://research-notes-130u.jiligualapiqiu.chatgpt.site/) ·
+[Read in English](https://research-notes-130u.jiligualapiqiu.chatgpt.site/?lang=en) ·
+[Research](research/) · [Articles](articles/) · [Reflections](reflections/)
+
+## Work
 
 <!-- portfolio:index:start -->
-| ID | Date | Article / 文章 | Read |
-|---|---|---|---|
-| R-001 | 2026-08-02 | π₀：机器人怎样把“看懂任务”变成连续动作<br>π₀: How a Robot Turns Understanding into Continuous Action | [中文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English](research/2026-08-02-pi0-vla-flow/README.en.md) · [Web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/pi0/) |
-| A-001 | 2026-07-29 | 从视觉与指令到机器人动作：两条正在形成的路径<br>From Vision and Instructions to Robot Actions: Two Emerging Paths | [中文](articles/2026-08-03-from-vision-and-instructions-to-robot-actions/README.zh-CN.md) · [English](articles/2026-08-03-from-vision-and-instructions-to-robot-actions/README.en.md) · [Web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/from-vision-and-instructions-to-robot-actions/) |
-| R-002 | 2026-07-14 | Manifold 海外世界模型竞争格局<br>Manifold and the Overseas World-Model Landscape | [中文](research/2026-08-03-manifold-world-model-landscape/README.zh-CN.md) · [English](research/2026-08-03-manifold-world-model-landscape/README.en.md) · [Web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/manifold-world-model-landscape/) |
+### [R-001 · π₀：机器人怎样把“看懂任务”变成连续动作](research/2026-08-02-pi0-vla-flow/)
+
+2026-08-02 · Research
+
+[中文全文](research/2026-08-02-pi0-vla-flow/README.zh-CN.md) · [English version](research/2026-08-02-pi0-vla-flow/README.en.md) · [Read on web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/pi0/)
+
+### [A-001 · From Vision and Instructions to Robot Actions: Two Emerging Paths](articles/2026-08-03-from-vision-and-instructions-to-robot-actions/)
+
+2026-07-29 · Article
+
+[中文全文](articles/2026-08-03-from-vision-and-instructions-to-robot-actions/README.zh-CN.md) · [English version](articles/2026-08-03-from-vision-and-instructions-to-robot-actions/README.en.md) · [Read on web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/from-vision-and-instructions-to-robot-actions/)
+
+### [R-002 · Manifold 海外世界模型竞争格局](research/2026-08-03-manifold-world-model-landscape/)
+
+2026-07-14 · Research
+
+[中文全文](research/2026-08-03-manifold-world-model-landscape/README.zh-CN.md) · [English version](research/2026-08-03-manifold-world-model-landscape/README.en.md) · [Read on web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/manifold-world-model-landscape/)
 <!-- portfolio:index:end -->
 
-## Collections
+## Repository
 
-- [Articles](articles/) — polished long-form writing.
-- [Research](research/) — evidence-led research notes and working papers.
-- [Reflections](reflections/) — shorter observations and evolving ideas.
+Each work lives in its own folder. The report, sources, audit trail, figures,
+and any preserved research archive travel together instead of being scattered
+across the repository.
 
-## Publishing model
-
-Every piece lives in its own folder with one validated `post.json` manifest and
-canonical Markdown for each language. Astro scans those sources at build time
-to generate the homepage, collection archives, article pages, RSS, sitemap, and
-structured metadata. The browser receives complete static HTML; JavaScript only
-enhances language switching and paired-section layout.
-
-```powershell
-npm.cmd ci
-npm.cmd run content:index
-npm.cmd run check
-npm.cmd run build
+```text
+portfolio/
+├─ research/
+│  └─ YYYY-MM-DD-project/
+│     ├─ README.zh-CN.md
+│     ├─ README.en.md
+│     ├─ post.json
+│     ├─ SOURCES.yaml
+│     └─ source-snapshot/      # when a project includes a full archive
+├─ articles/
+├─ reflections/
+└─ src/                        # shared reading interface
 ```
 
-Create a new draft with:
+## Research and provenance
 
-```powershell
-npm.cmd run content:new -- --collection research --slug short-slug --title-zh "中文标题" --title-en "English title"
-```
+Markdown inside each project folder is the canonical editable source. A
+`post.json` manifest drives the website and indexes; `SOURCES.yaml`, `AUDIT.md`,
+`MIGRATION.md`, and `source-snapshot/` preserve the available evidence and
+provenance for projects that need them. Generated HTML under `_site/` is
+disposable.
 
-The scaffold serializes ID allocation and advances `content-sequence.json`, so
-stable collection numbers are never reused; gaps are valid and can record a
-failed or abandoned allocation. The counter is flushed and atomically replaced
-before the draft directory is published. Do not hand-edit it downward or delete
-a published manifest to recycle its ID. CI remains the authoritative guard
-against conflicts created in separate worktrees or on separately synced devices.
+## Maintenance
 
-The operational rules are documented in [Publishing Standard](PUBLISHING_STANDARD.md)
-and the framework decision in [ADR-001](ARCHITECTURE.md).
+The repository uses a version-locked Astro static build. Operational details
+live in the [Publishing Standard](PUBLISHING_STANDARD.md); architectural
+decisions live in [ADR-001](ARCHITECTURE.md).
 
-GitHub Actions validates every push to `main`, but this repository's GitHub
-Pages site must remain disabled. Production is published to an independent
-provider URL from the exact validated `main` commit, so it cannot inherit or
-redirect through the personal website's custom domain.
-
-## Source-of-truth rule
-
-The Markdown files in this repository are the canonical editable sources.
-Generated HTML under `_site/` is disposable. If a separate website adapts an
-article, substantive edits begin here so copies do not drift. Original media
-belongs under the article folder; published routes and section anchors are
-treated as stable public interfaces.
-
-The personal-site repository, its domain, and all of its public routes are
-outside this build's writable and deployment scope. This repository must not
-publish through any of them.
+GitHub Actions validates the archive, but GitHub Pages remains disabled. The
+public reading site is hosted independently from the validated repository.
 
 ## Rights
 
-No license has been added. Unless a file says otherwise, reuse permission is not
-granted.
+No blanket license is granted. Unless a file says otherwise, reuse permission
+is not implied; third-party materials remain subject to their original rights.
