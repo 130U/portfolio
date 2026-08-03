@@ -1,0 +1,26 @@
+{
+    "status":  "pass",
+    "renderer":  "Microsoft PowerPoint 16 COM export",
+    "font_family":  "Noto Sans SC",
+    "font_path":  "C:\\Windows\\Fonts\\NotoSansSC-VF.ttf",
+    "font_bytes":  17773244,
+    "font_sha256":  "763146584CF0710223441356B4395E279021B0806C196614377A7A0174AE074A",
+    "embedded_license":  "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
+    "sample":  "海外世界模型｜接口、运行时、部署链｜12–24 个月｜0.02 美元/秒",
+    "missing_glyphs":  [
+
+                       ],
+    "resolved_fonts":  {
+                           "title_name":  "Noto Sans SC",
+                           "title_name_far_east":  "Noto Sans SC",
+                           "subtitle_name":  "Noto Sans SC",
+                           "subtitle_name_far_east":  "Noto Sans SC",
+                           "body_name":  "Noto Sans SC",
+                           "body_name_far_east":  "Noto Sans SC"
+                       },
+    "slide_xml_uses_noto_sans_sc":  true,
+    "exported_png":  "<LOCAL_WORKSPACE>\\manifold-world-model-landscape\\10_deck\\qa_assets\\font_probe_noto_sans_sc.png",
+    "exported_png_bytes":  16729,
+    "exported_png_sha256":  "0F0FC6B116BF645CF13550A1F30DC3871B67601EC81BE9DA35565AF57B3435C4",
+    "fallback_prohibited":  "DejaVu Sans"
+}

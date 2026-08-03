@@ -1,0 +1,29 @@
+{
+  "project_thread_id": "019f6142-4cf7-7143-bc2e-08891d99033b",
+  "project_start_utc": "2026-07-14T15:32:47.887Z",
+  "last_project_activity_utc": "2026-07-15T13:11:56.248Z",
+  "final_state_update_utc": "2026-07-15T13:35:00Z",
+  "wall_clock_hours_to_final_state": 22.04,
+  "spawn_requests": 33,
+  "agents_started": 30,
+  "full_history_forks": 32,
+  "limited_history_forks": 1,
+  "followup_tasks": 90,
+  "agent_messages": 54,
+  "agent_waits": 146,
+  "agent_interrupts": 2,
+  "exec_calls": 1612,
+  "wait_calls": 149,
+  "web_search_completions": 102,
+  "patch_events": 461,
+  "context_compactions": 22,
+  "token_accounting": {
+    "input_tokens": 305997705,
+    "cached_input_tokens": 294432256,
+    "output_tokens": 1273633,
+    "reasoning_output_tokens": 294398,
+    "total_processed_tokens": 307271338,
+    "note": "Platform cumulative accounting across repeated context; not unique authored text."
+  }
+}
+

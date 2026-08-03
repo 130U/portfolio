@@ -1,0 +1,78 @@
+site_name: Manifold 海外世界模型竞争格局
+site_description: 可复现、可追溯的世界模型竞争研究仓库
+repo_url: https://github.com/Madarame87/manifold-world-model-research
+repo_name: Madarame87/manifold-world-model-research
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: brown
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - 首页: index.md
+  - 项目概览:
+      - 背景与研究问题: overview/background.md
+      - 范围与硬约束: overview/scope.md
+      - 最终结论: overview/final-conclusions.md
+  - Storyline:
+      - 研究故事线: storyline/storyline.md
+      - 完整工作流: storyline/workflow.md
+      - 思维导图: storyline/mind-map.md
+      - 依赖关系图: storyline/dependency-graph.md
+  - 方法与证据:
+      - 研究方法: methodology/research-method.md
+      - 证据模型: methodology/evidence-model.md
+      - 准入门与范围清洗: methodology/qualification-gates.md
+      - 验证与红队: methodology/validation-red-team.md
+  - Research Log:
+      - 时间线: research-log/timeline.md
+      - 决策理由: research-log/decision-rationale.md
+      - 检查点记录: research-log/checkpoints.md
+  - Agent 系统:
+      - Agent 登记: agents/agent-register.md
+      - 编排方式: agents/orchestration.md
+      - 输入输出与汇总: agents/agent-io.md
+  - 研究结果:
+      - 候选漏斗: results/candidate-funnel.md
+      - 固定五席: results/final-five.md
+      - 五份对象 Dossier:
+          - 01 World Labs: dossiers/01 - World Labs.md
+          - 02 Odyssey: dossiers/02 - Odyssey.md
+          - 03 Runway: dossiers/03 - Runway.md
+          - 04 Decart: dossiers/04 - Decart.md
+          - 05 NVIDIA Cosmos 3: dossiers/05 - NVIDIA Cosmos 3.md
+      - 观察对象: results/watchlist.md
+      - 对 Manifold 的行动: results/strategic-actions.md
+  - 可复现性:
+      - 仓库地图: reproducibility/repository-map.md
+      - 公开发布审计: reproducibility/public-release-audit.md
+      - 复现指南: reproducibility/reproduction-guide.md
+      - 审计发现: reproducibility/audit-findings.md
+      - 已知限制: reproducibility/known-limitations.md

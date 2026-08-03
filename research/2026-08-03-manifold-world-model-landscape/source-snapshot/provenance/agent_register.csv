@@ -1,0 +1,34 @@
+task_name,phase,spawned_at_utc,started_at_utc,agent_thread_id,actual_started,role
+dr01_anchor_audit,checkpoint_1,2026-07-14T15:34:36.453Z,2026-07-14T15:34:46.721Z,019f6144-08da-73f1-8c19-63cbe6a218f6,true,Manifold anchor and DR-01 audit
+dr02_universe_audit,checkpoint_1,2026-07-14T15:34:53.810Z,2026-07-14T15:35:04.064Z,019f6144-4ca9-7fc0-bbfe-b10e13415a73,true,Discovery pool geography and scope audit
+dr03_bigtech_audit,checkpoint_1,2026-07-14T15:35:10.735Z,2026-07-14T15:35:20.987Z,019f6144-8ecf-7bc2-aae2-18ae4466f7c8,true,Big-tech project extraction and boundary routing
+cp1_adversarial_review,checkpoint_1,2026-07-14T16:06:07.201Z,2026-07-14T16:06:18.182Z,019f6160-e51a-7690-a90c-7bfe36018dbf,true,Checkpoint-1 adversarial review
+overworld_source_recovery,checkpoint_1,2026-07-14T17:07:40.894Z,2026-07-14T17:07:51.778Z,019f6199-4153-7293-b1fd-93ac607dcf8d,true,Overworld source and geography recovery
+vjepa21_refresh,checkpoint_1,2026-07-14T17:07:56.158Z,2026-07-14T17:08:07.063Z,019f6199-7d11-7a63-a5e4-4b8f4ee3924b,true,V-JEPA 2.1 version refresh
+manifold_aux_assets,checkpoint_1,2026-07-14T17:08:13.164Z,2026-07-14T17:08:24.034Z,019f6199-bf6e-7ad0-a5dd-b1e7169c4886,true,Manifold auxiliary asset registry
+cp1_v11_adversarial_review,checkpoint_1,2026-07-14T17:29:00.729Z,2026-07-14T17:29:11.813Z,019f61ac-c963-72f0-9140-e8266e87521b,true,Checkpoint-1 v1.1 review
+v11a_rule_propagation_audit,checkpoint_1,2026-07-14T18:03:24.960Z,2026-07-14T18:03:35.835Z,019f61cc-480e-7391-9ab7-ccab233a4a86,true,Rule and state propagation audit
+v11a_source_precision,checkpoint_1,2026-07-14T18:03:40.031Z,2026-07-14T18:03:50.905Z,019f61cc-82fa-7302-b7fb-3be60dd3f92f,true,Source and wording precision audit
+v11a_adversarial_review,checkpoint_1,2026-07-14T18:20:52.503Z,2026-07-14T18:21:03.407Z,019f61dc-4410-7f22-8ab0-33ae6cee3114,true,Final checkpoint-1 adversarial review
+phase2_startups_a,phase_2,2026-07-14T18:34:59.237Z,2026-07-14T18:35:10.185Z,019f61e9-2faf-7731-b3cc-2d5bf02a48fd,true,Startup candidate validation group A
+phase2_startups_b,phase_2,2026-07-14T18:35:16.176Z,2026-07-14T18:35:27.106Z,019f61e9-71d9-7a60-b0c5-0700d315cf35,true,Startup candidate validation group B
+phase2_bigtech,phase_2,2026-07-14T18:35:32.908Z,,,false,Big-tech candidate validation planned but not started
+cp2_fast_governance_audit,checkpoint_2,2026-07-14T19:00:11.252Z,2026-07-14T19:00:22.261Z,019f6200-421b-7843-bf5e-ae105624a4b2,true,Checkpoint-2 governance audit
+rt_technical_sources,phase_5_red_team,2026-07-14T21:55:40.688Z,2026-07-14T21:55:52.054Z,019f62a0-ed73-7392-874c-366ed45d8573,true,Technical source and version red team
+rt_commercial_access,phase_5_red_team,2026-07-14T21:55:56.796Z,2026-07-14T21:56:08.013Z,019f62a1-2c62-7001-833e-718d25f9ae9c,true,Commercial access license and adoption red team
+rt_scope_narrative,phase_5_red_team,2026-07-14T21:56:13.119Z,,,false,Scope and narrative red team planned but not started
+cl11_nim_source_fix,content_lock,2026-07-14T23:32:32.440Z,2026-07-14T23:32:43.941Z,019f62f9-9c85-77a1-90f7-06acb11a0a67,true,Cosmos NIM source and version correction
+cl11_ceo_architecture,content_lock,2026-07-14T23:32:49.292Z,2026-07-14T23:33:00.818Z,019f62f9-de05-7523-a2e3-56bde445c7ee,true,CEO-visible content architecture
+cl11_mapping_governance,content_lock,2026-07-14T23:33:05.671Z,2026-07-14T23:33:17.200Z,019f62fa-1e1c-7a13-a2b1-3e2f3e21991d,true,Evidence map workbook and governance
+cl11a_final_content_audit,content_lock,2026-07-15T00:38:25.247Z,2026-07-15T00:38:36.784Z,019f6335-ed01-7370-b842-e352291bd00b,true,Final content audit
+cl11a_final_evidence_audit,content_lock,2026-07-15T00:38:46.529Z,2026-07-15T00:38:57.959Z,019f6336-4006-75f2-a5b0-5c04ebffddde,true,Final evidence audit
+cl11a_final_governance_audit,content_lock,2026-07-15T00:39:01.658Z,2026-07-15T00:39:13.443Z,019f6336-7c02-7e80-817d-742b72d1604c,true,Final governance audit
+cl11a2_identity_audit,content_lock,2026-07-15T01:14:20.377Z,2026-07-15T01:14:32.068Z,019f6356-cff8-7022-8bbb-28512f4a8cc3,true,Frozen file identity audit
+cl11a2_content_diff_audit,content_lock,2026-07-15T01:14:37.868Z,2026-07-15T01:14:49.327Z,019f6357-1382-77a2-86b8-db67d706f347,true,Narrow content diff audit
+cl11a2_package_governance_audit,content_lock,2026-07-15T01:14:55.192Z,,,false,Package governance audit planned but not started
+approval_chain_audit,storyboard,2026-07-15T02:37:55.994Z,2026-07-15T02:38:07.616Z,019f63a3-5658-7603-a09f-5bbb478bec02,true,Approval chain audit
+font_repro_audit,storyboard,2026-07-15T02:38:24.437Z,2026-07-15T02:38:37.124Z,019f63a3-c56f-7cd3-92f2-eb58af5ad79b,true,Chinese font reproducibility audit
+storyboard_redline,storyboard,2026-07-15T02:38:42.473Z,2026-07-15T02:38:53.463Z,019f63a4-0b35-72f0-bbfc-b9e8f1c33aa9,true,Storyboard redline review
+storyboard_v11_content_redteam,storyboard,2026-07-15T02:53:32.434Z,2026-07-15T02:53:44.013Z,019f63b1-a1cc-7de3-8be0-eb9bf6be9c04,true,Storyboard content red team
+storyboard_v11_layout_redteam,storyboard,2026-07-15T02:53:47.459Z,2026-07-15T02:53:58.941Z,019f63b1-dc49-7313-8243-3ae23201a8d4,true,Storyboard layout red team
+storyboard_v11_governance_redteam,storyboard,2026-07-15T02:54:02.053Z,2026-07-15T02:54:13.663Z,019f63b2-156a-70b1-bd44-9253fdebda43,true,Storyboard governance red team

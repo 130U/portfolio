@@ -622,6 +622,7 @@ html[data-language-mode="both"] .article-toc [data-content-lang="en"] {
 .legend-code { background: var(--color-evidence-code); }
 .legend-explanation { background: var(--color-evidence-explanation); }
 .legend-interpretation { background: var(--color-evidence-interpretation); }
+.legend-unverified { background: var(--color-evidence-unverified); }
 
 .paired-reader {
   min-width: 0;
