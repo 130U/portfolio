@@ -32,6 +32,12 @@ const number = String(data.seriesNo).padStart(2, "0");
           <p>{data.languages.en.summary}</p>
         </div>
       </div>
+      <footer class="note-card-signals">
+        {data.audit?.status === "passed" && (
+          <span class="status-chip"><span aria-hidden="true"></span><span data-content-lang="zh" lang="zh-CN">审计通过</span><span data-content-lang="en" lang="en">Audit passed</span></span>
+        )}
+        {data.topics.slice(0, 3).map((topic) => <span class="topic-chip">{topic}</span>)}
+      </footer>
     </div>
   </a>
 </article>
