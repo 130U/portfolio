@@ -2,21 +2,26 @@
 import { collectionHref } from "../lib/site";
 
 const home = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+const isCollection = (path: string) => pathname.includes(`/${path}/`);
 ---
 
 <header class="site-header">
-  <a class="wordmark" href={home} aria-label="Research Notes, home">Research Notes</a>
+  <a class="wordmark" href={home} aria-label="Theodore Ouyang Research Notes, home">
+    <span class="wordmark-mark" aria-hidden="true"></span>
+    <span class="wordmark-copy"><strong>Theodore Ouyang</strong><small>Research Notes</small></span>
+  </a>
 
   <nav class="site-nav" aria-label="Primary / 主导航">
-    <a href={collectionHref("article")}>
-      <span data-content-lang="zh" lang="zh-CN">文章</span>
-      <span data-content-lang="en" lang="en">Articles</span>
-    </a>
-    <a href={collectionHref("research")}>
+    <a href={collectionHref("research")} aria-current={isCollection("research") ? "page" : undefined}>
       <span data-content-lang="zh" lang="zh-CN">研究</span>
       <span data-content-lang="en" lang="en">Research</span>
     </a>
-    <a href={collectionHref("reflection")}>
+    <a href={collectionHref("article")} aria-current={isCollection("articles") ? "page" : undefined}>
+      <span data-content-lang="zh" lang="zh-CN">文章</span>
+      <span data-content-lang="en" lang="en">Articles</span>
+    </a>
+    <a href={collectionHref("reflection")} aria-current={isCollection("reflections") ? "page" : undefined}>
       <span data-content-lang="zh" lang="zh-CN">思考</span>
       <span data-content-lang="en" lang="en">Reflections</span>
     </a>
