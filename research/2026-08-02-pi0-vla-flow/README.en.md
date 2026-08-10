@@ -30,17 +30,17 @@ This note uses five content labels:
 
 The shortest architectural description is:
 
-$$
+```math
 \pi_0
 =
 \underbrace{\text{VLM semantic backbone}}_{\text{encodes what is observed and what the task requires}}
 +
 \underbrace{\text{continuous Flow action expert}}_{\text{determines how the robot should move next}}
-$$
+```
 
 Flow Matching, however, is only the action-generation mechanism. The full π₀ recipe also includes:
 
-$$
+```math
 \boxed{
 \pi_0
 =
@@ -54,7 +54,7 @@ $$
 +
 \text{receding-horizon execution}
 }
-$$
+```
 
 **Evidence from the paper:**
 
@@ -140,9 +140,9 @@ observe the real scene
 
 The observation at physical time $t$ can be written as:
 
-$$
+```math
 o_t=[I_t^1,\ldots,I_t^n,\ell_t,q_t]
-$$
+```
 
 where:
 
@@ -155,26 +155,26 @@ $q_t$ is neither the model’s internal state nor an “action state.” It desc
 <a id="en-inputs-outputs-vector" data-pair-id="inputs-outputs-vector"></a>
 ### 3.2 Single-step action vector
 
-$$
+```math
 a_t\in\mathbb R^d
-$$
+```
 
 $a_t$ is the continuous control vector for one physical time step. The single-step action dimension $d$ can differ across robots.
 
 <a id="en-inputs-outputs-chunk" data-pair-id="inputs-outputs-chunk"></a>
 ### 3.3 Action chunk
 
-$$
+```math
 A_t=[a_t,a_{t+1},\ldots,a_{t+H-1}]
 \in\mathbb R^{H\times d}
-$$
+```
 
 π₀ uses $H=50$. When flattened:
 
-$$
-\operatorname{vec}(A_t)\in\mathbb R^D,
+```math
+\mathrm{vec}(A_t)\in\mathbb R^D,
 \qquad D=Hd
-$$
+```
 
 Four easily confused concepts must remain distinct:
 
@@ -190,11 +190,11 @@ An action slot in π₀ carries a continuous vector. It is not a discrete token 
 <a id="en-inputs-outputs-distribution" data-pair-id="inputs-outputs-distribution"></a>
 ### 3.4 What the model actually learns
 
-$$
+```math
 \boxed{
 p_{\mathrm{data}}(A_t\mid o_t)
 }
-$$
+```
 
 In plain language: given the current images, language goal, and robot pose, generate a plausible sequence of future actions. The output is a future action sequence, not a future image or future world state.
 
@@ -241,44 +241,44 @@ Robot actions are inherently continuous and require coordination across joints a
 
 Gaussian noise is a simple distribution from which samples are easy to draw:
 
-$$
+```math
 \epsilon\sim\mathcal N(0,I)
-$$
+```
 
 $\epsilon$ has the same shape as the action chunk $A_t$. This noise is neither a physical disturbance injected into the robot nor ordinary regularization noise. It is the generative model’s base distribution.
 
 The model learns to transport samples from:
 
-$$
+```math
 \text{a simple Gaussian distribution}
 \longrightarrow
 \text{the action distribution conditioned on the observation}
-$$
+```
 
 <a id="en-flow-matching-path" data-pair-id="flow-matching-path"></a>
 ### 5.2 Construct the training path
 
 First sample a Flow time:
 
-$$
+```math
 \tau\in[0,1]
-$$
+```
 
 Then linearly interpolate between noise and a demonstrated action chunk:
 
-$$
+```math
 \boxed{
 A_t^\tau=(1-\tau)\epsilon+\tau A_t
 }
-$$
+```
 
 The endpoints are:
 
-$$
+```math
 A_t^0=\epsilon,
 \qquad
 A_t^1=A_t
-$$
+```
 
 At $\tau=0$, the sample is pure noise. At $\tau=1$, it is the demonstrated action chunk. Intermediate values are partially noised action candidates. This straight line exists in generation space; it does not mean that the robot’s end effector follows a straight line in physical space.
 
@@ -287,23 +287,23 @@ At $\tau=0$, the sample is pure noise. At $\tau=1$, it is the demonstrated actio
 
 Rewrite the interpolation as:
 
-$$
+```math
 A_t^\tau=\epsilon+\tau(A_t-\epsilon)
-$$
+```
 
 Differentiating with respect to $\tau$ gives:
 
-$$
+```math
 \boxed{
 \frac{dA_t^\tau}{d\tau}=A_t-\epsilon
 }
-$$
+```
 
 For each sampled pair $(\epsilon,A_t)$, the target velocity is therefore:
 
-$$
+```math
 u=A_t-\epsilon
-$$
+```
 
 In plain language, the target tells the model which direction and magnitude should be used to update the unfinished action candidate.
 
@@ -312,13 +312,13 @@ In plain language, the target tells the model which direction and magnitude shou
 
 The model predicts:
 
-$$
+```math
 v_\theta(A_t^\tau,o_t,\tau)
-$$
+```
 
 Its training loss is:
 
-$$
+```math
 \boxed{
 \mathcal L(\theta)
 =
@@ -330,7 +330,7 @@ v_\theta(A_t^\tau,o_t,\tau)
 \right\|_2^2
 \right]
 }
-$$
+```
 
 <a id="en-flow-matching-qualification" data-pair-id="flow-matching-qualification"></a>
 ### 5.5 A necessary technical qualification
@@ -339,7 +339,7 @@ During training, each noise–demonstration pair supplies a target $A_t-\epsilon
 
 Under the idealization of infinite data and mean-squared-error optimization, the learned field is the conditional vector field:
 
-$$
+```math
 v^*(x,o,\tau)
 =
 \mathbb E
@@ -348,7 +348,7 @@ A_t-\epsilon
 \mid
 A_t^\tau=x,\ o_t=o,\ \tau
 \right]
-$$
+```
 
 π₀ therefore learns distributional transport from Gaussian noise to an action distribution conditioned on the observation. It is not retrieving one particular training demonstration. Different initial noise samples can still yield different plausible actions; a conditional expectation vector field does not reduce the policy to one simple “average action.”
 
@@ -360,35 +360,35 @@ $$
 <a id="en-inference-start" data-pair-id="inference-start"></a>
 ### 6.1 Start from fresh noise
 
-$$
+```math
 \hat A_t^{(0)}\sim\mathcal N(0,I)
-$$
+```
 
 At inference time, the current observation $o_t$ is available, but the correct action answer $A_t$ is not.
 
 <a id="en-inference-ode" data-pair-id="inference-ode"></a>
 ### 6.2 The learned ODE
 
-$$
+```math
 \frac{d\hat A_t^\tau}{d\tau}
 =
 v_\theta(\hat A_t^\tau,o_t,\tau)
-$$
+```
 
 <a id="en-inference-euler" data-pair-id="inference-euler"></a>
 ### 6.3 Discretize it with the forward Euler method
 
 π₀ uses:
 
-$$
+```math
 K=10,
 \qquad
 \delta=\frac{1}{K}=0.1
-$$
+```
 
 The update is:
 
-$$
+```math
 \boxed{
 \hat A_t^{(k+1)}
 =
@@ -400,39 +400,39 @@ v_\theta
 \hat A_t^{(k)},o_t,\frac{k}{K}
 \right)
 }
-$$
+```
 
 for $k=0,1,\ldots,9$. The final output is:
 
-$$
+```math
 \hat A_t=\hat A_t^{(10)}
-$$
+```
 
 <a id="en-inference-no-proof" data-pair-id="inference-no-proof"></a>
 ### 6.4 Euler does not prove that ten steps must recover a real action
 
 Consider a teaching example in which the velocity is assumed to be a known constant:
 
-$$
+```math
 v_\theta=A_t-\epsilon
-$$
+```
 
 Then:
 
-$$
+```math
 \hat A_t^{(k)}
 =
 \epsilon+\frac{k}{K}(A_t-\epsilon)
-$$
+```
 
 At $k=K$:
 
-$$
+```math
 \hat A_t^{(K)}
 =
 \epsilon+(A_t-\epsilon)
 =A_t
-$$
+```
 
 This algebra verifies only a known, constant-velocity path paired with one demonstration. It does not prove that ten steps are theoretically necessary or always sufficient in the real model, nor that every noise sample converges to a designated demonstration action. If the velocity were truly constant and the endpoint known, one step with $\delta=1$ would already reach it.
 
@@ -441,13 +441,13 @@ Multiple steps are useful because the learned vector field changes with the curr
 <a id="en-inference-h-vs-k" data-pair-id="inference-h-vs-k"></a>
 ### 6.5 $H=50$ and $K=10$ mean different things
 
-$$
+```math
 \boxed{
 10\text{ Flow updates}
 \longrightarrow
 1\text{ action chunk containing 50 physical actions}
 }
-$$
+```
 
 - $H=50$ is the number of physical time steps in the action chunk.
 - $K=10$ is the number of numerical integration steps used to generate that one chunk.
@@ -517,13 +517,13 @@ Task-specific post-training uses more consistent, skilled, and targeted demonstr
 <a id="en-data-recipe-system" data-pair-id="data-recipe-system"></a>
 ### 8.4 The complete recipe
 
-$$
+```math
 \boxed{
 \text{broad pretraining for capability coverage}
 \quad+\quad
 \text{high-quality post-training for behavioral proficiency}
 }
-$$
+```
 
 This is methodologically similar to broad pretraining followed by targeted adaptation. π₀’s task post-training, however, should not be equated directly with language-model RLHF or alignment.
 
@@ -603,25 +603,25 @@ A more precise distinction is:
 
 A π₀-style direct policy learns:
 
-$$
+```math
 p(A_t\mid o_t)
-$$
+```
 
 Its central question is: “Given the current observation, how should I act now?”
 
 A world model may learn:
 
-$$
+```math
 p(z_{t+1:t+H}\mid z_t,A_t)
-$$
+```
 
 Its central question is: “If these actions are taken, how might the world change?” Here $z$ may be an image, a visual latent, a state, or another world representation. It need not be a human-viewable video.
 
 One teaching abstraction of a joint WAM is:
 
-$$
+```math
 p(A_t,z_{t+1:t+H}\mid o_t)
-$$
+```
 
 This is not a canonical definition. Specific systems may use other factorizations, prediction only as training supervision, or an action-only output at deployment.
 
@@ -799,7 +799,7 @@ If you can answer these ten questions, you have captured the core of π₀:
 
 - Equations, architecture, data, and experimental claims primarily follow π₀ arXiv v4.
 - Historical zero-shot wording follows v1, with the v4 revision stated explicitly.
-- The paper’s derivation uses $\tau=0$ for noise and $\tau=1$ for action. The current openpi code uses the opposite time convention—$t=1$ for noise, $t=0$ for action, and $dt<0$. The substitution $t=1-\tau$ makes them equivalent; this is not a contradiction.
+- The paper’s derivation uses $\tau=0$ for noise and $\tau=1$ for action. The current openpi code uses the opposite time convention— $t=1$ for noise, $t=0$ for action, and $dt<0$. The substitution $t=1-\tau$ makes them equivalent; this is not a contradiction.
 - The main text therefore keeps the action dimension generic as $d$. Eighteen dimensions are the paper’s padded cross-robot data interface; the current open-source `Pi0Config` defaults to `action_dim=32`. They describe different implementation layers and must not be conflated.
 - The openpi repository was confirmed as public through the GitHub connector on August 2, 2026.
 - The Hugging Face page uses a snapshot verified on August 1, 2026 and serves only as metadata and an ecosystem index.
