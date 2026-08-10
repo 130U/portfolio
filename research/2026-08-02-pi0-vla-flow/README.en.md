@@ -799,7 +799,7 @@ If you can answer these ten questions, you have captured the core of π₀:
 
 - Equations, architecture, data, and experimental claims primarily follow π₀ arXiv v4.
 - Historical zero-shot wording follows v1, with the v4 revision stated explicitly.
-- The paper’s derivation uses $\tau=0$ for noise and $\tau=1$ for action. The current openpi code uses the opposite time convention—$t=1$ for noise, $t=0$ for action, and $dt<0$. The substitution $t=1-\tau$ makes them equivalent; this is not a contradiction.
+- The paper’s derivation uses $\tau=0$ for noise and $\tau=1$ for action. The current openpi code uses the opposite time convention— $t=1$ for noise, $t=0$ for action, and $dt<0$. The substitution $t=1-\tau$ makes them equivalent; this is not a contradiction.
 - The main text therefore keeps the action dimension generic as $d$. Eighteen dimensions are the paper’s padded cross-robot data interface; the current open-source `Pi0Config` defaults to `action_dim=32`. They describe different implementation layers and must not be conflated.
 - The openpi repository was confirmed as public through the GitHub connector on August 2, 2026.
 - The Hugging Face page uses a snapshot verified on August 1, 2026 and serves only as metadata and an ecosystem index.
