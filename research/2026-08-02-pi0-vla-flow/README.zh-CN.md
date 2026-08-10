@@ -30,17 +30,17 @@ lang: zh-CN
 
 最简洁的架构表达是：
 
-$$
+```math
 \pi_0
 =
 \underbrace{\text{VLM 语义骨干}}_{\text{编码看到了什么、任务要求什么}}
 +
 \underbrace{\text{连续 Flow 动作专家}}_{\text{决定接下来怎样运动}}
-$$
+```
 
 但 Flow Matching 只是动作生成机制，不是 π₀ 的全部。完整配方还包括：
 
-$$
+```math
 \boxed{
 \pi_0
 =
@@ -54,7 +54,7 @@ $$
 +
 \text{滚动执行}
 }
-$$
+```
 
 **论文事实：**
 
@@ -140,9 +140,9 @@ action expert 从一块高斯噪声开始，经过 10 次 Flow 更新，得到�
 
 物理时间 $t$ 的观察可写为：
 
-$$
+```math
 o_t=[I_t^1,\ldots,I_t^n,\ell_t,q_t]
-$$
+```
 
 其中：
 
@@ -155,26 +155,26 @@ $q_t$ 不是模型内部状态，也不是所谓“action 状态”，而是机�
 <a id="zh-inputs-outputs-vector" data-pair-id="inputs-outputs-vector"></a>
 ### 2. 单步动作向量
 
-$$
+```math
 a_t\in\mathbb R^d
-$$
+```
 
 $a_t$ 表示一个物理时间步的连续控制向量；$d$ 是单步动作维数，不同机器人可以不同。
 
 <a id="zh-inputs-outputs-chunk" data-pair-id="inputs-outputs-chunk"></a>
 ### 3. 动作块
 
-$$
+```math
 A_t=[a_t,a_{t+1},\ldots,a_{t+H-1}]
 \in\mathbb R^{H\times d}
-$$
+```
 
 π₀ 使用 $H=50$。若展平：
 
-$$
-\operatorname{vec}(A_t)\in\mathbb R^D,
+```math
+\mathrm{vec}(A_t)\in\mathbb R^D,
 \qquad D=Hd
-$$
+```
 
 几个容易混淆的概念必须分开：
 
@@ -190,11 +190,11 @@ $$
 <a id="zh-inputs-outputs-distribution" data-pair-id="inputs-outputs-distribution"></a>
 ### 4. 模型真正学习的对象
 
-$$
+```math
 \boxed{
 p_{\mathrm{data}}(A_t\mid o_t)
 }
-$$
+```
 
 通俗地说：给定当前画面、语言目标和机器人姿态，生成一段合理的未来动作。生成的是动作，不是未来图像或未来世界状态。
 
@@ -241,44 +241,44 @@ $$
 
 高斯噪声是容易采样的简单分布：
 
-$$
+```math
 \epsilon\sim\mathcal N(0,I)
-$$
+```
 
 $\epsilon$ 与动作块 $A_t$ 形状相同。这里的噪声不是注入真实机器人的物理干扰，也不是普通正则化噪声；它是生成模型的起始分布。
 
 模型要学习的是：
 
-$$
+```math
 \text{简单高斯分布}
 \longrightarrow
 \text{给定观察条件后的动作分布}
-$$
+```
 
 <a id="zh-flow-matching-path" data-pair-id="flow-matching-path"></a>
 ### 2. 构造训练路径
 
 采样 Flow 时间：
 
-$$
+```math
 \tau\in[0,1]
-$$
+```
 
 在噪声和真实示范动作之间做线性插值：
 
-$$
+```math
 \boxed{
 A_t^\tau=(1-\tau)\epsilon+\tau A_t
 }
-$$
+```
 
 端点为：
 
-$$
+```math
 A_t^0=\epsilon,
 \qquad
 A_t^1=A_t
-$$
+```
 
 $\tau=0$ 是纯噪声，$\tau=1$ 是真实动作块，中间状态是一块“半噪声、半动作”的候选动作。这条直线位于生成空间，不代表机械臂在物理空间中沿直线移动。
 
@@ -287,23 +287,23 @@ $\tau=0$ 是纯噪声，$\tau=1$ 是真实动作块，中间状态是一块“�
 
 将插值式写成：
 
-$$
+```math
 A_t^\tau=\epsilon+\tau(A_t-\epsilon)
-$$
+```
 
 对 $\tau$ 求导：
 
-$$
+```math
 \boxed{
 \frac{dA_t^\tau}{d\tau}=A_t-\epsilon
 }
-$$
+```
 
 因此，对每一组采样的 $(\epsilon,A_t)$，监督目标速度是：
 
-$$
+```math
 u=A_t-\epsilon
-$$
+```
 
 通俗地说，它告诉模型这块尚未完成的候选动作应该朝什么方向、以多大幅度修改。
 
@@ -312,13 +312,13 @@ $$
 
 模型预测：
 
-$$
+```math
 v_\theta(A_t^\tau,o_t,\tau)
-$$
+```
 
 训练损失为：
 
-$$
+```math
 \boxed{
 \mathcal L(\theta)
 =
@@ -330,7 +330,7 @@ v_\theta(A_t^\tau,o_t,\tau)
 \right\|_2^2
 \right]
 }
-$$
+```
 
 <a id="zh-flow-matching-qualification" data-pair-id="flow-matching-qualification"></a>
 ### 5. 必须保留的专业限定
@@ -339,7 +339,7 @@ $$
 
 在理想的无限数据和均方误差优化下，模型学习的是条件向量场：
 
-$$
+```math
 v^*(x,o,\tau)
 =
 \mathbb E
@@ -348,7 +348,7 @@ A_t-\epsilon
 \mid
 A_t^\tau=x,\ o_t=o,\ \tau
 \right]
-$$
+```
 
 这意味着 π₀ 学习的是怎样把高斯噪声分布运输成当前条件下的动作分布，而不是检索某一条训练示范。不同初始噪声仍可对应不同的合理动作；条件期望向量场不等于简单输出一条“平均动作”。
 
@@ -360,35 +360,35 @@ $$
 <a id="zh-inference-start" data-pair-id="inference-start"></a>
 ### 1. 从新噪声开始
 
-$$
+```math
 \hat A_t^{(0)}\sim\mathcal N(0,I)
-$$
+```
 
 推理时有当前观察 $o_t$，但没有真实动作答案 $A_t$。
 
 <a id="zh-inference-ode" data-pair-id="inference-ode"></a>
 ### 2. 学到的 ODE
 
-$$
+```math
 \frac{d\hat A_t^\tau}{d\tau}
 =
 v_\theta(\hat A_t^\tau,o_t,\tau)
-$$
+```
 
 <a id="zh-inference-euler" data-pair-id="inference-euler"></a>
 ### 3. 使用 Forward Euler 离散求解
 
 π₀ 设置：
 
-$$
+```math
 K=10,
 \qquad
 \delta=\frac{1}{K}=0.1
-$$
+```
 
 更新公式：
 
-$$
+```math
 \boxed{
 \hat A_t^{(k+1)}
 =
@@ -400,39 +400,39 @@ v_\theta
 \hat A_t^{(k)},o_t,\frac{k}{K}
 \right)
 }
-$$
+```
 
 其中 $k=0,1,\ldots,9$，最后得到：
 
-$$
+```math
 \hat A_t=\hat A_t^{(10)}
-$$
+```
 
 <a id="zh-inference-no-proof" data-pair-id="inference-no-proof"></a>
 ### 4. Euler 法没有证明“10 步必然得到真实动作”
 
 在一个教学特例中，若假设速度始终为已知常数：
 
-$$
+```math
 v_\theta=A_t-\epsilon
-$$
+```
 
 则：
 
-$$
+```math
 \hat A_t^{(k)}
 =
 \epsilon+\frac{k}{K}(A_t-\epsilon)
-$$
+```
 
 当 $k=K$ 时，确实有：
 
-$$
+```math
 \hat A_t^{(K)}
 =
 \epsilon+(A_t-\epsilon)
 =A_t
-$$
+```
 
 这只验证了一条已知、恒速的配对直线路径，不能证明真实模型中 10 步理论上必需、一定足够，或每个噪声样本都会逼近某个指定示范动作。事实上，如果速度恒定且终点已知，一步 $\delta=1$ 也能到达终点。
 
@@ -441,13 +441,13 @@ $$
 <a id="zh-inference-h-vs-k" data-pair-id="inference-h-vs-k"></a>
 ### 5. $H=50$ 与 $K=10$ 完全不同
 
-$$
+```math
 \boxed{
 10\text{ 次 Flow 更新}
 \longrightarrow
 1\text{ 个包含 50 步物理动作的 action chunk}
 }
-$$
+```
 
 - $H=50$：动作块包含的物理时间步数；
 - $K=10$：生成同一个动作块时的数值积分步数。
@@ -517,13 +517,13 @@ $$
 <a id="zh-data-recipe-system" data-pair-id="data-recipe-system"></a>
 ### 4. 整套配方
 
-$$
+```math
 \boxed{
 \text{广泛预训练负责能力覆盖}
 \quad+\quad
 \text{高质量后训练负责动作熟练度}
 }
-$$
+```
 
 这在方法论上类似“先广泛预训练，再有针对性地适配”，但 π₀ 的任务后训练不应简单等同于语言模型的 RLHF 或 alignment。
 
@@ -603,25 +603,25 @@ $$
 
 π₀ 式直接策略学习：
 
-$$
+```math
 p(A_t\mid o_t)
-$$
+```
 
 它问：“根据当前观察，我现在应该怎样行动？”
 
 World Model 可以学习：
 
-$$
+```math
 p(z_{t+1:t+H}\mid z_t,A_t)
-$$
+```
 
 它问：“如果执行这些动作，未来世界可能怎样变化？”其中 $z$ 可以是图像、视觉 latent、状态或其他世界表征，不必是人类可读视频。
 
 联合型 WAM 的一种教学抽象是：
 
-$$
+```math
 p(A_t,z_{t+1:t+H}\mid o_t)
-$$
+```
 
 但这不是统一定义；具体系统也可以采用其他分解方式、训练期预测监督或部署期 action-only 输出。
 
@@ -804,3 +804,4 @@ World Model 路线可以采用：
 - openpi 公共仓库状态于 2026-08-02 通过 GitHub connector 确认为公开仓库；
 - Hugging Face 页面沿用 2026-08-01 已核验快照，仅用于元数据与生态索引；
 - “我的思考”属于解释性推断，应与论文事实分开阅读。
+
