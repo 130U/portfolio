@@ -1,8 +1,0 @@
----
-import { getCollection } from "astro:content";
-import CollectionPage from "../../components/CollectionPage.astro";
-import { published } from "../../lib/site";
-
-const posts = published(await getCollection("posts")).filter((post) => post.data.collection === "research");
----
-<CollectionPage collection="research" posts={posts} />
