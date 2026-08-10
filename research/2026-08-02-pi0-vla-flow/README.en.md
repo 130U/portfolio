@@ -804,4 +804,3 @@ If you can answer these ten questions, you have captured the core of π₀:
 - The openpi repository was confirmed as public through the GitHub connector on August 2, 2026.
 - The Hugging Face page uses a snapshot verified on August 1, 2026 and serves only as metadata and an ecosystem index.
 - “My interpretation” is explanatory analysis and should be read separately from claims established by the paper.
-
