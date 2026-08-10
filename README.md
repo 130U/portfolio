@@ -1,25 +1,16 @@
 # Research Notes
 
-**A bilingual, evidence-led research archive by Theodore Ouyang.**
+面向人工智能、机器人与技术路径的双语研究档案。每项作品都把结论、来源、证据边界、审计记录与完整中英文版本保存在同一个项目文件夹中。
 
-围绕人工智能、机器人与技术路径，把复杂问题整理成可审阅、可引用、可复核的判断。
+## 阅读入口
 
-Every work is preserved as a complete Chinese edition and a complete English edition, with its evidence boundary and audit trail kept close to the writing.
+- [中文阅读站](https://research-notes-130u.jiligualapiqiu.chatgpt.site/) — 独立部署的完整中文阅读界面。
+- [English reading site](https://research-notes-130u.jiligualapiqiu.chatgpt.site/?lang=en) — Complete English editions with persistent language switching.
+- [全部研究](research/) · [技术文章](articles/) · [反思与随笔](reflections/)
 
-**[中文阅读](https://research-notes-130u.jiligualapiqiu.chatgpt.site/)** ·
-**[Read in English](https://research-notes-130u.jiligualapiqiu.chatgpt.site/?lang=en)** ·
-[Research](research/) · [Articles](articles/) · [Reflections](reflections/)
+## 已发布研究与文章
 
-`Astro 7` `TypeScript` `Bilingual` `Evidence-led` `GitHub Pages disabled`
-
-## At a glance
-
-- **Three published works:** two research dossiers and one technical essay.
-- **Complete bilingual editions:** language switching preserves the reader's position instead of replacing full works with summaries.
-- **Reviewable provenance:** manifests, source ledgers, audit notes, and preserved research archives travel with the relevant work.
-- **Independent reading surface:** the static Astro site is hosted separately from `theodoreoy.com` and from GitHub Pages.
-
-## Work
+以下索引由每项作品的 `post.json` 自动生成；中文、英文、网页阅读与项目文件夹保持一一对应。
 
 <!-- portfolio:index:start -->
 ### [R-001 · π₀：机器人怎样把“看懂任务”变成连续动作](research/2026-08-02-pi0-vla-flow/)
@@ -41,62 +32,18 @@ Every work is preserved as a complete Chinese edition and a complete English edi
 [中文全文](research/2026-08-03-manifold-world-model-landscape/README.zh-CN.md) · [English version](research/2026-08-03-manifold-world-model-landscape/README.en.md) · [Read on web](https://research-notes-130u.jiligualapiqiu.chatgpt.site/manifold-world-model-landscape/)
 <!-- portfolio:index:end -->
 
-## What this repository demonstrates
+## 研究与出版系统
 
-| Layer | What is shown |
+| 模块 | 展示内容 |
 | --- | --- |
-| Research | Source-led analysis with explicit separation between evidence, claims, explanation, and interpretation |
-| Editorial | Complete Chinese and English editions with stable metadata and collection indexes |
-| Product | A responsive reading interface with persistent language choice, accessible navigation, and compact-screen outlines |
-| Engineering | Schema validation, deterministic index generation, static-site auditing, and a version-locked Astro build |
+| 证据驱动研究 | 区分来源事实、作者主张、解释与研究判断，并为重要结论保留 source ledger、audit 与 red-team 记录。 |
+| 完整双语出版 | 每项作品均保留完整中文与英文版本，通过稳定语义锚点实现语言切换，而不是用摘要替代正文。 |
+| 内容与审计契约 | 使用 `post.json`、`SOURCES.yaml`、`AUDIT.md` 和稳定 ID 管理元数据、证据、状态与版本。 |
+| 阅读产品 | 以 Astro 构建响应式静态阅读界面，覆盖目录、数学公式、键盘导航、移动端与 reduced-motion。 |
+| 自动验证与发布 | 校验 schema、双语结构、索引、站内链接和构建产物，并与个人网站及 GitHub Pages 保持部署隔离。 |
 
-## Repository map
+## 完整材料
 
-Each work lives in its own folder. The report, sources, audit trail, figures,
-and any preserved research archive travel together instead of being scattered
-across the repository.
-
-```text
-portfolio/
-├─ research/
-│  └─ YYYY-MM-DD-project/
-│     ├─ README.zh-CN.md
-│     ├─ README.en.md
-│     ├─ post.json
-│     ├─ SOURCES.yaml
-│     └─ source-snapshot/      # when a project includes a full archive
-├─ articles/
-├─ reflections/
-└─ src/                        # shared reading interface
-```
-
-## Research and provenance
-
-Markdown inside each project folder is the canonical editable source. A
-`post.json` manifest drives the website and indexes; `SOURCES.yaml`, `AUDIT.md`,
-`MIGRATION.md`, and `source-snapshot/` preserve the available evidence and
-provenance for projects that need them. Generated HTML under `_site/` is
-disposable.
-
-## Local verification
-
-```powershell
-npm ci
-npm run check
-npm run build
-```
-
-`npm run check` validates content manifests, generated indexes, and Astro types. The build then copies public source artifacts and audits the generated site.
-
-## Maintenance and deployment boundary
-
-The repository uses a version-locked Astro static build. Operational details
-live in the [Publishing Standard](PUBLISHING_STANDARD.md); architectural
-decisions live in [ADR-001](ARCHITECTURE.md).
-
-GitHub Actions validates the archive, but **GitHub Pages remains disabled**. The public reading site is hosted independently so this project cannot inherit or alter the custom-domain behavior of the separate personal-site repository.
-
-## Rights
-
-No blanket license is granted. Unless a file says otherwise, reuse permission
-is not implied; third-party materials remain subject to their original rights.
+- [Research](research/) — 深度研究、来源清单、审计记录及必要的完整证据归档。
+- [Articles](articles/) — 面向更广泛读者的技术文章与路线比较。
+- [Reflections](reflections/) — 明确区分证据与个人判断的反思性写作。

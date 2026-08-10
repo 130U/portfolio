@@ -119,7 +119,7 @@ research/
 - `publishedAt`、`updatedAt` 与 `audit.reviewedAt` 必须使用含时区的 ISO date-time。
 - `readingMinutes` 是当前发布版本的统一阅读时间估计；内容大改时必须复核。
 - canonical URL 由 Astro 的 `site`、`base` 与 `slug` 构建，不在 manifest 重复手写。
-- 机器可读契约以 [`schemas/post.schema.json`](schemas/post.schema.json) 和 `src/content.config.ts` 为准。
+- 机器可读契约以 [`schemas/post.schema.json`](../../schemas/post.schema.json) 和 `src/content.config.ts` 为准。
 
 状态行为必须如下：
 
